@@ -27,7 +27,7 @@ namespace WallE_Visual
         {
             timer = new Timer( );
 
-            timer.Interval = 1800;
+            timer.Interval = 2000;
             timer.Start( );
             timer.Tick += Timer_Tick;
         }
