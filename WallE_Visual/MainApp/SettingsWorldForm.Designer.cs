@@ -35,13 +35,13 @@
             this.menuToolStripRestartWorld = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.simularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlWorldConfig = new System.Windows.Forms.Panel();
             this.wViewConfig = new WallE_Visual.WorldViewer.WorldViewer();
             this.tbarZoom = new System.Windows.Forms.TrackBar();
             this.lblZoom = new System.Windows.Forms.Label();
             this.lblMinZoom = new System.Windows.Forms.Label();
             this.lblMaxZoom = new System.Windows.Forms.Label();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnlWorldConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbarZoom)).BeginInit();
@@ -102,6 +102,13 @@
             this.simularToolStripMenuItem.Size = new System.Drawing.Size(353, 34);
             this.simularToolStripMenuItem.Text = "&Запустить";
             this.simularToolStripMenuItem.Click += new System.EventHandler(this.simularToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
+            this.exitToolStripMenuItem.Text = "Выход";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // pnlWorldConfig
             // 
@@ -175,13 +182,6 @@
             this.lblMaxZoom.TabIndex = 5;
             this.lblMaxZoom.Text = "4.0x";
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
-            this.exitToolStripMenuItem.Text = "Выход";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // SettingsWorldForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -193,7 +193,7 @@
             this.Controls.Add(this.tbarZoom);
             this.Controls.Add(this.pnlWorldConfig);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
