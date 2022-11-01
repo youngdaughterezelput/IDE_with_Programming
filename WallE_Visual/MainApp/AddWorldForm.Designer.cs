@@ -60,9 +60,9 @@
             this.lblRows.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblRows.Location = new System.Drawing.Point(62, 38);
             this.lblRows.Name = "lblRows";
-            this.lblRows.Size = new System.Drawing.Size(63, 19);
+            this.lblRows.Size = new System.Drawing.Size(54, 19);
             this.lblRows.TabIndex = 0;
-            this.lblRows.Text = "Filas:";
+            this.lblRows.Text = "Ряды:";
             // 
             // lblColumns
             // 
@@ -71,9 +71,9 @@
             this.lblColumns.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblColumns.Location = new System.Drawing.Point(35, 86);
             this.lblColumns.Name = "lblColumns";
-            this.lblColumns.Size = new System.Drawing.Size(90, 19);
+            this.lblColumns.Size = new System.Drawing.Size(81, 19);
             this.lblColumns.TabIndex = 2;
-            this.lblColumns.Text = "Columnas:";
+            this.lblColumns.Text = "Столбцы:";
             // 
             // nUpColumns
             // 

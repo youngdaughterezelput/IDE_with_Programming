@@ -95,10 +95,10 @@ namespace WallE.World.WorldObjects
         /// <summary>
         /// Construye un objeto del mundo Wall-E y lo añade al mundo.
         /// </summary>
-        /// <param name="shape">Forma del objeto.</param>
-        /// <param name="size">Tamaño del objeto.</param>
-        /// <param name="color">Color del objeto.</param>
-        /// <param name="number">ID del objeto.</param>
+        /// <param name="shape">Форма объекта.</param>
+        /// <param name="size">Размер робъекта.</param>
+        /// <param name="color">Цвет объекта.</param>
+        /// <param name="number">ID объекта.</param>
         public WallEObjects(int shape,int size,int color,Position position,ref Map world) : this(shape,size,color)
         {
             this.world = world;
@@ -123,7 +123,7 @@ namespace WallE.World.WorldObjects
                 this.ObjColor = color;
             }
             else
-                throw new InvalidOperationException("Parámetros inválidos.");
+                throw new InvalidOperationException("Недопустимый параметр.");
         }
         #endregion
 
@@ -194,7 +194,7 @@ namespace WallE.World.WorldObjects
             }
 
             if ( !factories.ContainsKey(nameWallEObjects) )
-                throw new InvalidOperationException("Instruccion inexistente.");
+                throw new InvalidOperationException("Несуществующая инструкция.");
 
             return factories[nameWallEObjects].Create( );
         }

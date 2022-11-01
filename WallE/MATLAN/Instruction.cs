@@ -37,7 +37,7 @@ namespace WallE.MATLAN
                 else
                     tempResult = arrayKeys[index - 1];
 
-                throw new InvalidOperationException("Instrucción: \"" + nameInstructions + "\" inexistente. Quizás quisiste decir: \"" + tempResult + "\".");
+                throw new InvalidOperationException("Инструкция: \"" + nameInstructions + "\" не существуют. Возможно, хотели: \"" + tempResult + "\".");
             }
             return factories[nameInstructions].Create( );
         }

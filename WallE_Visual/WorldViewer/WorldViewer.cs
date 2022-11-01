@@ -220,14 +220,14 @@ namespace WallE_Visual.WorldViewer
         {
             if ( World == null )
                 return;
-            string pathImage = Application.StartupPath + @"\recursos\img\WallEObjects";
+            string pathImage = Application.StartupPath + @"\resource\img\WallEObjects";
 
             foreach ( var wObjects in World.Where(c => c is WallEObjects) )
                 try
                 {
                     if ( !imgList.ContainsKey(wObjects.MainCharacteristics) )
                     {
-                        var img = Image.FromFile(pathImage + "\\" + wObjects.MainCharacteristics + ".jpg");
+                        var img = Image.FromFile(pathImage + "\\" + wObjects.MainCharacteristics + ".png");
                         imgList.Add(wObjects.MainCharacteristics,img);
                     }
                 }
@@ -249,7 +249,7 @@ namespace WallE_Visual.WorldViewer
             if ( addObject.ShowDialog( ) == DialogResult.OK )
             {
 
-                if ( Directory.Exists(Application.StartupPath + "\\recursos\\img\\WallEObjects\\" + addObject.WObject.MainCharacteristics + ".jpg") )
+                if ( Directory.Exists(Application.StartupPath + "\\resource\\img\\WallEObjects\\" + addObject.WObject.MainCharacteristics + ".png") )
                 {
                     MessageBox.Show("Нет изображения объекта: " + addObject.WObject.MainCharacteristics, "Ошибка изображения", MessageBoxButtons.OK,MessageBoxIcon.Error);
                     return;

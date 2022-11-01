@@ -302,6 +302,96 @@
   <ItemGroup>
     <None Include="bin\Debug\recursos\img\Instructions\splash1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Plant_Medium_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\addSomething.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\addWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\advance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\advance1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\configWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\debug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\look.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\newColumn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\newRow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\NoRut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\NoWorld.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\removeColumn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\splash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\trackbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\volver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\advance.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
