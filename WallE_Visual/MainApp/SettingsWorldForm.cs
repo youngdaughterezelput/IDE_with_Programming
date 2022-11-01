@@ -97,5 +97,10 @@ namespace WallE_Visual
                 this.wViewConfig.SetWorld(this.wViewConfig.World.Rows,this.wViewConfig.World.Columns);
         }
         #endregion
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

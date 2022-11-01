@@ -41,6 +41,7 @@
             this.lblZoom = new System.Windows.Forms.Label();
             this.lblMinZoom = new System.Windows.Forms.Label();
             this.lblMaxZoom = new System.Windows.Forms.Label();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnlWorldConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbarZoom)).BeginInit();
@@ -52,7 +53,8 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ссToolStripMenuItem});
+            this.ссToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -173,6 +175,13 @@
             this.lblMaxZoom.TabIndex = 5;
             this.lblMaxZoom.Text = "4.0x";
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
+            this.exitToolStripMenuItem.Text = "Выход";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // SettingsWorldForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -217,5 +226,6 @@
         private System.Windows.Forms.Label lblZoom;
         private System.Windows.Forms.Label lblMinZoom;
         private System.Windows.Forms.Label lblMaxZoom;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
