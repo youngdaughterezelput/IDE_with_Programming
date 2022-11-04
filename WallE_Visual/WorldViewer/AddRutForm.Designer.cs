@@ -123,7 +123,7 @@
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(156, 40);
             this.btnAccept.TabIndex = 4;
-            this.btnAccept.Text = "Accept";
+            this.btnAccept.Text = "Добавить";
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 

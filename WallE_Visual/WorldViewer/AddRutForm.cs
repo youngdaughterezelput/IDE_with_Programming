@@ -54,7 +54,7 @@ namespace WallE_Visual.WorldViewer
         {
             if ( Name == string.Empty )
             {
-                MessageBox.Show("Nombre la rutina.","Rutina sin nombre.",MessageBoxButtons.OK,MessageBoxIcon.Warning,MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Название процедуры.","Безымянная Процедура~.",MessageBoxButtons.OK,MessageBoxIcon.Warning,MessageBoxDefaultButton.Button1);
                 return;
             }
             this.DialogResult = DialogResult.OK;

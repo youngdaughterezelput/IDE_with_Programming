@@ -28,20 +28,20 @@ namespace WallE.Simulator
         bool lastExecutionInstruction;
 
         /// <summary>
-        /// Constructor de la ronda
+        /// "Построить"
         /// </summary>
-        /// <param name="tempListProgrammable">Lista de todos los objetos IProgrammables del mundo.</param>
+        /// <param name="tempListProgrammable">Список всех IProgrammable объектов в мире.</param>
         public Round(List<IProgrammable> tempListProgrammable)
         {
-            //Guardo la lista en el campo tempListProgrammable
+            //Сохраняю список в поле tempListProgrammable
             this.tempListProgrammable = tempListProgrammable;
-            //Tomo el enumerator de la ronda.
+            //Взть счетчик круга
             enumerator = GetEnumerator( );
             enumerator.MoveNext( );
         }
 
         /// <summary>
-        /// Devuelve un enumerator de objetos IProgrammables.
+        /// Возвращает перечислитель объектов IProgrammable.
         /// </summary>
         /// <returns></returns>
         public IEnumerator<IProgrammable> GetEnumerator( )
@@ -49,13 +49,13 @@ namespace WallE.Simulator
             return new RoundEnumerator(tempListProgrammable);
         }
         /// <summary>
-        /// Devuelve un enumerator de object.
+        ///Возвращает перечислитель объекта.
         /// </summary>
         /// <returns></returns>
         IEnumerator IEnumerable.GetEnumerator( ) => GetEnumerator( );
 
         /// <summary>
-        /// Ejecuta las listas de roboces hasta llegar a una acción física.
+        /// Запускайте списки роботов, пока не дойдете до действия.
         /// </summary>
         internal void Execute( )
         {
@@ -69,7 +69,7 @@ namespace WallE.Simulator
             }
         }
         /// <summary>
-        /// Ejecuta las listas de rutinas hasta llegar a una acción física pero instrucción por instrucción.
+        /// Выполняйте списки подпрограмм, пока не дойдете до действия --> инструкция за инструкцией.
         /// </summary>
         /// <returns></returns>
         internal bool ExecuteByInstruction( )
@@ -94,19 +94,19 @@ namespace WallE.Simulator
         class RoundEnumerator : IEnumerator<IProgrammable>
         {
             /// <summary>
-            /// Índice para la lista de objetos IProgrammables.
+            /// Индекс к списку объектов IProgrammable.
             /// </summary>
             int index;
             /// <summary>
-            /// Lista de objetos IProgrammable.
+            /// Список программируемых объектов.
             /// </summary>
             List<IProgrammable> tempListProgrammable;
             /// <summary>
-            /// Objeto IProgrammble actual.
+            /// Текущий объект IProgrammble.
             /// </summary>
             IProgrammable current;
             /// <summary>
-            /// Booleano que determina si hubo un movimiento.
+            /// Логическое значение, определяющее, был ли ход.
             /// </summary>
             bool move;
 
@@ -120,7 +120,7 @@ namespace WallE.Simulator
                 get
                 {
                     if ( !move )
-                        throw new InvalidOperationException("No ha hecho .MoveNext()");
+                        throw new InvalidOperationException("Робот не выполнил .MoveNext()");
                     return current;
                 }
             }

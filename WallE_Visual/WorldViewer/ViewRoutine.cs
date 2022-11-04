@@ -272,7 +272,7 @@ namespace WallE_Visual.WorldViewer
 
         #endregion
 
-        private void ayudaToolStripMenuItem_Click(object sender,EventArgs e)
+        private void Helpbtn_Click(object sender,EventArgs e)
         {
             new HelpViewRoutine( ).ShowDialog( );
         }

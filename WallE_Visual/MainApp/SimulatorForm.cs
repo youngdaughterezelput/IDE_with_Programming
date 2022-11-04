@@ -62,7 +62,7 @@ namespace WallE_Visual.MainApp
         }
         private void ThrowNewSystemError(object sender, EventArgs e)
         {
-            MessageBox.Show(Error.CurrentError.Message,"Error de sistema",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            MessageBox.Show(Error.CurrentError.Message, "Системная ошибка", MessageBoxButtons.OK,MessageBoxIcon.Error);
             this.Close( );
         }
         private void ThrowNewError(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace WallE_Visual.MainApp
             this.wView.Refresh( );
             play = false;
             WasError = true;
-            MessageBox.Show(Simulator.CurrentError.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(Simulator.CurrentError.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //this.Close( );
         }
         private void ajustarTamañoDelMundoToolStripMenuItem_Click(object sender,EventArgs e)

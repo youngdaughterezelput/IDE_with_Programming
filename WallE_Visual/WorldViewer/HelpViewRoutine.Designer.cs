@@ -38,7 +38,7 @@
             this.rtboxHelp.BackColor = System.Drawing.SystemColors.GrayText;
             this.rtboxHelp.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtboxHelp.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.rtboxHelp.Location = new System.Drawing.Point(7, 10);
+            this.rtboxHelp.Location = new System.Drawing.Point(12, 13);
             this.rtboxHelp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rtboxHelp.Name = "rtboxHelp";
             this.rtboxHelp.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;

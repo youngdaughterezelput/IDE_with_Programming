@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRoutineForm));
             this.pnlRutineView = new System.Windows.Forms.Panel();
-            this.rutView = new WallE_Visual.RutViews();
             this.gboxControlsList = new System.Windows.Forms.GroupBox();
             this.cboxList = new System.Windows.Forms.ComboBox();
             this.lblList = new System.Windows.Forms.Label();
@@ -49,8 +48,14 @@
             this.nuevaRutinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.Helpbtn = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.lblRutName = new System.Windows.Forms.Label();
+            this.rutView = new WallE_Visual.RutViews();
             this.pnlRutineView.SuspendLayout();
             this.gboxControlsList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbarZoom)).BeginInit();
@@ -66,18 +71,6 @@
             this.pnlRutineView.Name = "pnlRutineView";
             this.pnlRutineView.Size = new System.Drawing.Size(774, 625);
             this.pnlRutineView.TabIndex = 0;
-            // 
-            // rutView
-            // 
-            this.rutView.AutoSize = true;
-            this.rutView.BackColor = System.Drawing.Color.Transparent;
-            this.rutView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rutView.IsReadOnly = false;
-            this.rutView.Location = new System.Drawing.Point(0, 0);
-            this.rutView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.rutView.Name = "rutView";
-            this.rutView.Size = new System.Drawing.Size(860, 764);
-            this.rutView.TabIndex = 0;
             // 
             // gboxControlsList
             // 
@@ -97,7 +90,7 @@
             this.gboxControlsList.Size = new System.Drawing.Size(837, 102);
             this.gboxControlsList.TabIndex = 1;
             this.gboxControlsList.TabStop = false;
-            this.gboxControlsList.Text = "Список определений";
+            this.gboxControlsList.Text = "Список процедур";
             // 
             // cboxList
             // 
@@ -105,17 +98,17 @@
             this.cboxList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxList.ForeColor = System.Drawing.SystemColors.Window;
             this.cboxList.FormattingEnabled = true;
-            this.cboxList.Location = new System.Drawing.Point(194, 38);
+            this.cboxList.Location = new System.Drawing.Point(196, 44);
             this.cboxList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboxList.Name = "cboxList";
-            this.cboxList.Size = new System.Drawing.Size(231, 30);
+            this.cboxList.Size = new System.Drawing.Size(324, 30);
             this.cboxList.TabIndex = 4;
             this.cboxList.SelectedIndexChanged += new System.EventHandler(this.cboxList_SelectedIndexChanged);
             // 
             // lblList
             // 
             this.lblList.AutoSize = true;
-            this.lblList.Location = new System.Drawing.Point(80, 41);
+            this.lblList.Location = new System.Drawing.Point(110, 47);
             this.lblList.Name = "lblList";
             this.lblList.Size = new System.Drawing.Size(80, 22);
             this.lblList.TabIndex = 3;
@@ -125,17 +118,17 @@
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdd.Enabled = false;
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(588, 25);
+            this.btnAdd.Location = new System.Drawing.Point(602, 23);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(66, 65);
+            this.btnAdd.Size = new System.Drawing.Size(71, 70);
             this.btnAdd.TabIndex = 2;
-            this.tTipInfo.SetToolTip(this.btnAdd, "Añadir la rutina que se muestra a la lista. Si la rutina esta en la lista no pasa" +
-        " nada.");
+            this.tTipInfo.SetToolTip(this.btnAdd, "подпрограмма в списке, то ничего не произойдет.");
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -143,16 +136,17 @@
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDelete.Enabled = false;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(758, 22);
+            this.btnDelete.Location = new System.Drawing.Point(759, 23);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(62, 71);
+            this.btnDelete.Size = new System.Drawing.Size(64, 68);
             this.btnDelete.TabIndex = 1;
-            this.tTipInfo.SetToolTip(this.btnDelete, "Borrar la rutina mostrada.");
+            this.tTipInfo.SetToolTip(this.btnDelete, "Удалить отображаемую процедуру.");
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -160,15 +154,16 @@
             // 
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoad.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnLoad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLoad.BackgroundImage")));
             this.btnLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLoad.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoad.Location = new System.Drawing.Point(674, 29);
+            this.btnLoad.Location = new System.Drawing.Point(679, 23);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(66, 65);
+            this.btnLoad.Size = new System.Drawing.Size(74, 68);
             this.btnLoad.TabIndex = 0;
-            this.tTipInfo.SetToolTip(this.btnLoad, "Cargar un rutina de un .txt");
+            this.tTipInfo.SetToolTip(this.btnLoad, "Загрузите процедуру формата .txt");
             this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
@@ -181,7 +176,7 @@
             // tTipInfo
             // 
             this.tTipInfo.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.tTipInfo.ToolTipTitle = "Información";
+            this.tTipInfo.ToolTipTitle = "!Информация!";
             // 
             // lblZoom
             // 
@@ -233,16 +228,18 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opcionesToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
+            this.ayudaToolStripMenuItem,
+            this.файлToolStripMenuItem,
+            this.Helpbtn});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(854, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(854, 33);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -255,7 +252,7 @@
             this.opcionesToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opcionesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(16, 20);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(16, 29);
             this.opcionesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // nuevaRutinaToolStripMenuItem
@@ -285,14 +282,52 @@
             this.ayudaToolStripMenuItem.AutoToolTip = true;
             this.ayudaToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(16, 20);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(16, 29);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
-            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
+            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.Helpbtn_Click);
+            // 
+            // файлToolStripMenuItem
+            // 
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.создатьToolStripMenuItem,
+            this.btnSave});
+            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.файлToolStripMenuItem.Text = "Файл";
+            // 
+            // создатьToolStripMenuItem
+            // 
+            this.создатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNew});
+            this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(200, 34);
+            this.создатьToolStripMenuItem.Text = "Создать";
+            // 
+            // btnNew
+            // 
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(262, 34);
+            this.btnNew.Text = "Новая процедура";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(200, 34);
+            this.btnSave.Text = "Сохранить";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // Helpbtn
+            // 
+            this.Helpbtn.Name = "Helpbtn";
+            this.Helpbtn.Size = new System.Drawing.Size(100, 29);
+            this.Helpbtn.Text = "Помощь";
+            this.Helpbtn.Click += new System.EventHandler(this.Helpbtn_Click);
             // 
             // folderBrowser
             // 
-            this.folderBrowser.Description = "Seleccione la dirección donde desea guardar el .txt resultante de exportar la rut" +
-    "ina.";
+            this.folderBrowser.Description = "Выберите адрес, по которому вы хотите сохранить .txt, полученный в результате экс" +
+    "порта подпрограммы.";
             // 
             // lblRutName
             // 
@@ -305,11 +340,23 @@
             this.lblRutName.TabIndex = 6;
             this.lblRutName.Text = "label1";
             // 
+            // rutView
+            // 
+            this.rutView.AutoSize = true;
+            this.rutView.BackColor = System.Drawing.Color.Transparent;
+            this.rutView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rutView.IsReadOnly = false;
+            this.rutView.Location = new System.Drawing.Point(0, 0);
+            this.rutView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.rutView.Name = "rutView";
+            this.rutView.Size = new System.Drawing.Size(860, 764);
+            this.rutView.TabIndex = 0;
+            // 
             // ViewRoutineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(854, 814);
             this.Controls.Add(this.lblRutName);
             this.Controls.Add(this.lblMax);
@@ -328,7 +375,7 @@
             this.Name = "ViewRoutineForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Редактор определений";
+            this.Text = "Редактор";
             this.pnlRutineView.ResumeLayout(false);
             this.pnlRutineView.PerformLayout();
             this.gboxControlsList.ResumeLayout(false);
@@ -364,5 +411,10 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowser;
         private System.Windows.Forms.Label lblRutName;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnNew;
+        private System.Windows.Forms.ToolStripMenuItem btnSave;
+        private System.Windows.Forms.ToolStripMenuItem Helpbtn;
     }
 }

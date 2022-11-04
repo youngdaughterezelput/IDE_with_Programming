@@ -398,6 +398,21 @@
   <ItemGroup>
     <None Include="Resources\Robot_Green.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\drop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

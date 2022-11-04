@@ -52,44 +52,40 @@
             this.insertarColumnaToolStripMenuItem,
             this.insertarFilaToolStripMenuItem});
             this.conMenuOptions.Name = "conMenuOptions";
-            this.conMenuOptions.Size = new System.Drawing.Size(212, 114);
+            this.conMenuOptions.Size = new System.Drawing.Size(268, 171);
             this.conMenuOptions.Opening += new System.ComponentModel.CancelEventHandler(this.conMenuOptions_Opening);
             // 
             // añadirInstrucciToolStripMenuItem
             // 
-//            this.añadirInstrucciToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.addSomething;
             this.añadirInstrucciToolStripMenuItem.Name = "añadirInstrucciToolStripMenuItem";
-            this.añadirInstrucciToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
-            this.añadirInstrucciToolStripMenuItem.Text = "Añadir Instrucción";
+            this.añadirInstrucciToolStripMenuItem.Size = new System.Drawing.Size(267, 32);
+            this.añadirInstrucciToolStripMenuItem.Text = "Добавить инструкцию";
             this.añadirInstrucciToolStripMenuItem.Click += new System.EventHandler(this.añadirInstrucciToolStripMenuItem_Click);
             // 
             // eliminarInstrucciónToolStripMenuItem
             // 
-//            this.eliminarInstrucciónToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.delete;
             this.eliminarInstrucciónToolStripMenuItem.Name = "eliminarInstrucciónToolStripMenuItem";
-            this.eliminarInstrucciónToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
-            this.eliminarInstrucciónToolStripMenuItem.Text = "Eliminar Instrucción";
+            this.eliminarInstrucciónToolStripMenuItem.Size = new System.Drawing.Size(267, 32);
+            this.eliminarInstrucciónToolStripMenuItem.Text = "Удалить инструкцию";
             this.eliminarInstrucciónToolStripMenuItem.Click += new System.EventHandler(this.eliminarInstrucciónToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(208, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(264, 6);
             // 
             // insertarColumnaToolStripMenuItem
             // 
-//            this.insertarColumnaToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.newColumn;
             this.insertarColumnaToolStripMenuItem.Name = "insertarColumnaToolStripMenuItem";
-            this.insertarColumnaToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
-            this.insertarColumnaToolStripMenuItem.Text = "Insertar Columna";
+            this.insertarColumnaToolStripMenuItem.Size = new System.Drawing.Size(267, 32);
+            this.insertarColumnaToolStripMenuItem.Text = "Добавить Столбец";
             this.insertarColumnaToolStripMenuItem.Click += new System.EventHandler(this.insertarColumnaToolStripMenuItem_Click);
             // 
             // insertarFilaToolStripMenuItem
             // 
-//            this.insertarFilaToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.newRow;
             this.insertarFilaToolStripMenuItem.Name = "insertarFilaToolStripMenuItem";
-            this.insertarFilaToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
-            this.insertarFilaToolStripMenuItem.Text = "Insertar Fila";
+            this.insertarFilaToolStripMenuItem.Size = new System.Drawing.Size(267, 32);
+            this.insertarFilaToolStripMenuItem.Text = "Добавить ряд";
             this.insertarFilaToolStripMenuItem.Click += new System.EventHandler(this.insertarFilaToolStripMenuItem_Click);
             // 
             // toolTipDescription
@@ -100,12 +96,12 @@
             // pboxRut
             // 
             this.pboxRut.BackColor = System.Drawing.SystemColors.Control;
-//            this.pboxRut.BackgroundImage = global::WallE_Visual.Properties.Resources.NoRut;
             this.pboxRut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pboxRut.ContextMenuStrip = this.conMenuOptions;
             this.pboxRut.Location = new System.Drawing.Point(0, 0);
+            this.pboxRut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pboxRut.Name = "pboxRut";
-            this.pboxRut.Size = new System.Drawing.Size(676, 485);
+            this.pboxRut.Size = new System.Drawing.Size(760, 606);
             this.pboxRut.TabIndex = 0;
             this.pboxRut.TabStop = false;
             this.pboxRut.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxRut_Paint);
@@ -113,14 +109,15 @@
             // 
             // RutViews
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pboxRut);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RutViews";
-            this.Size = new System.Drawing.Size(679, 488);
+            this.Size = new System.Drawing.Size(764, 610);
             this.conMenuOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboxRut)).EndInit();
             this.ResumeLayout(false);

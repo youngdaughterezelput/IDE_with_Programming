@@ -28,7 +28,7 @@ namespace WallE_Visual.RutView
             this.lViewInstruction.Items.Clear( );
 
 
-            string path = Application.StartupPath + "\\recursos\\img\\Instructions\\";
+            string path = Application.StartupPath + "\\resource\\img\\Instructions\\";
             foreach ( var img in InstructionEnum.GetValues())
             {
                 iListImage.Images.Add(Image.FromFile(path + img.Value + ".png"));

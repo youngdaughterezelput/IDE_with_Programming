@@ -127,7 +127,7 @@ namespace WallE_Visual
                 for ( int i = 0; i <= Rows; i++ )
                     graph.DrawLine(pen,0,i * (int) heightPiece - 1,this.pboxRut.Width,i * (int) heightPiece - 1);
 
-                //Pinto imagenes
+                //Прорисовка изображения
                 LoadImages( );
                 var a = Routine.GetAllInstructionAndPositions( ).Where(c => c.Item1 is Instruction);
                 foreach ( var instruction in a )
@@ -141,7 +141,7 @@ namespace WallE_Visual
                     ( this.pboxRut.Width / Columns ) - 1);
                 }
 
-                //Pinto números
+                //ПРорисовка цифр
                 for ( int i = 0; i < Columns; i++ )
                     graph.DrawString(i.ToString( ),new Font(new FontFamily(GenericFontFamilies.Monospace),fontSize,FontStyle.Regular),Brushes.DarkGray,( i * pboxRut.Width ) / Columns,1);
 
@@ -153,7 +153,7 @@ namespace WallE_Visual
         {
             if ( Routine == null )
                 return;
-            string pathImage = Application.StartupPath + @"\recursos\img\Instructions";
+            string pathImage = Application.StartupPath + @"\resource\img\Instructions";
 
             foreach ( var instruction in Routine.GetAllInstruction() )
                 try
@@ -166,7 +166,7 @@ namespace WallE_Visual
                 }
                 catch ( Exception )
                 {
-                    MessageBox.Show("No existe imagen de la instrucción: " + instruction.ToString( ),"Error de imagen",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Нет изображения инструкции: " + instruction.ToString( ),"ERROR!Нет изображения объекта",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
         }
         private Position PointToPosition(Point lastPosition)
@@ -208,7 +208,7 @@ namespace WallE_Visual
                     this.Routine.Body.AddInstructionAt(instForm.SelectedInstruction,tempPosition); }
                 catch(Exception e )
                 {
-                    MessageBox.Show(e.Message, "Error de rutina.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(e.Message, "Ошибка процедуры.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 this.pboxRut.Refresh( );
             }
