@@ -9,26 +9,26 @@ using System.Media;
 namespace WallE.Errors
 {
     /// <summary>
-    /// Esta clase representa un error de cualquier tipo que puede ocurrir durante la simulación.
+    /// Класс представляет ошибку любого рода, которая может возникнуть во время моделирования.
     /// </summary>
     public class Error
     {
         #region Properties
         /// <summary>
-        /// Mensaje del error explicando las razones y consecuencias del error.
+        /// Сообщение об ошибке с объяснением причин и последствий ошибки.
         /// </summary>
         public string Message { get; private set; }
         /// <summary>
-        /// Error actual en la simulación.
+        /// Текущая ошибка в моделировании.
         /// </summary>
         public static Error CurrentError { get; private set; }
         #endregion
 
         #region Constructor
         /// <summary>
-        /// Constructor de error.
+        /// Ошибка конструктура.
         /// </summary>
-        /// <param name="message">Mensaje del error.</param>
+        /// <param name="message">Сообщение об ошибке.</param>
         public Error(string message)
         {
             this.Message = message;
@@ -37,7 +37,7 @@ namespace WallE.Errors
 
         #region Methods
         /// <summary>
-        /// La cadena de texto que representa un error determinado.
+        /// Текстовая строка, представляющая данную ошибку.
         /// </summary>
         /// <returns></returns>
         public override string ToString( )
@@ -45,10 +45,10 @@ namespace WallE.Errors
             return "ERROR!!!! " + this.Message;
         }
         /// <summary>
-        /// Método que reporta el error y levanta el evento SystemError
+        /// Метод, сообщающий об ошибке и вызывающий событие SystemError.
         /// </summary>
-        /// <param name="sender">Objeto IProgrammble que envia el error.</param>
-        /// <param name="error">Error a reportar.</param>
+        /// <param name="sender">Объект IProgrammble, который отправляет ошибку.</param>
+        /// <param name="error">Сообщение об ошибке.</param>
         public static void ReportError(IProgrammable sender,Error error)
         {
             CurrentError = error;
@@ -60,7 +60,7 @@ namespace WallE.Errors
 
         #region Event
         /// <summary>
-        /// Evento que se lanza cuando se detecta un error de ejecución de las rutinas, como pila de ejecución llena, la pila del robot esta sobrecargada.
+        /// Событие, которое запускается при обнаружении ошибки выполнения подпрограммы, например, стек выполнения заполнен, стек робота перегружен.
         /// </summary>
         public static event EventHandler SystemError;
         #endregion

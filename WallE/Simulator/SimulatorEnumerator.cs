@@ -21,7 +21,7 @@ namespace WallE.Simulator
             get
             {
                 if ( !move )
-                    throw new InvalidOperationException("No ha hecho .MoveNext().");
+                    throw new InvalidOperationException("Робот не выполнил .MoveNext().");
                 return current;
             }
         }

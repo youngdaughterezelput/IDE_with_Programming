@@ -17,11 +17,11 @@ namespace WallE.Simulator
     {
         public static bool IsExecutingByInstruction { get; private set; }
         /// <summary>
-        ///Lista con todos los objetos IProgrammables de la simulación. 
+        ///Список со всеми IProgrammable объектами моделирования. 
         /// </summary>
         List<IProgrammable> tempListProgrammable;
         /// <summary>
-        /// Enumerator de la ronda.
+        /// Счетчик с кольцевой развязки.
         /// </summary>
         IEnumerator<IProgrammable> enumerator;
 
