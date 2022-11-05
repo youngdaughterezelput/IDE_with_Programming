@@ -424,6 +424,15 @@
   <data name="backward" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\resource\img\Instructions\backward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="branch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\branch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="code" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\code.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="distance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\resource\img\Instructions\distance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -436,7 +445,40 @@
   <data name="left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\resource\img\Instructions\left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loaded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\loaded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\NE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="number" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\number.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\NW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="one" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\resource\img\Instructions\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\SE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shape" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\shape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\SW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\zero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

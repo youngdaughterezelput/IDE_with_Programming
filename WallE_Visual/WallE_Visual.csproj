@@ -416,6 +416,48 @@
   <ItemGroup>
     <None Include="bin\Debug\resource\img\Instructions\distance.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\NE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\NW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\SE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\SW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\loaded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\branch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\number.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\zero.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
