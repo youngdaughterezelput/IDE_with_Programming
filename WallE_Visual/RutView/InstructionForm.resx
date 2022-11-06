@@ -126,7 +126,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABK
-        RAAAAk1TRnQBSQFMAgEBawEAAbQBAAFAAQABEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        RAAAAk1TRnQBSQFMAgEBawEAAbQBAAFEAQABEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAAbABAQIAAQEBAAEIBgABbBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -451,6 +451,9 @@
   <data name="forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\resource\img\Instructions\forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="horizontalFlux" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\horizontalFlux.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\resource\img\Instructions\left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -502,7 +505,166 @@
   <data name="time" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\resource\img\Instructions\time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="verticalFlux" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\verticalFlux.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="zero" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\resource\img\Instructions\zero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\dec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="div" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\div.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getAt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getAt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getJ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getJ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="getP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\getP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\inc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\Inot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inot1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\Inot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\mul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="not" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\not.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setAt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setAt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setJ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setJ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setQ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setQ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setU" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setZ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resource\img\Instructions\setZ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

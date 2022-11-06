@@ -479,6 +479,165 @@
   <ItemGroup>
     <None Include="bin\Debug\resource\img\Instructions\splash1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\horizontalFlux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\verticalFlux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getAt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\div.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\dec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\Inot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\inc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\mul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\not.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setAt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\setZ.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

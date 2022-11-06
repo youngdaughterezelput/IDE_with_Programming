@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRoutineForm));
             this.pnlRutineView = new System.Windows.Forms.Panel();
+            this.rutView = new WallE_Visual.RutViews();
             this.gboxControlsList = new System.Windows.Forms.GroupBox();
             this.cboxList = new System.Windows.Forms.ComboBox();
             this.lblList = new System.Windows.Forms.Label();
@@ -44,10 +45,6 @@
             this.tbarZoom = new System.Windows.Forms.TrackBar();
             this.lblMax = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevaRutinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +52,6 @@
             this.Helpbtn = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.lblRutName = new System.Windows.Forms.Label();
-            this.rutView = new WallE_Visual.RutViews();
             this.pnlRutineView.SuspendLayout();
             this.gboxControlsList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbarZoom)).BeginInit();
@@ -71,6 +67,18 @@
             this.pnlRutineView.Name = "pnlRutineView";
             this.pnlRutineView.Size = new System.Drawing.Size(774, 625);
             this.pnlRutineView.TabIndex = 0;
+            // 
+            // rutView
+            // 
+            this.rutView.AutoSize = true;
+            this.rutView.BackColor = System.Drawing.Color.Transparent;
+            this.rutView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rutView.IsReadOnly = false;
+            this.rutView.Location = new System.Drawing.Point(0, 0);
+            this.rutView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.rutView.Name = "rutView";
+            this.rutView.Size = new System.Drawing.Size(860, 764);
+            this.rutView.TabIndex = 0;
             // 
             // gboxControlsList
             // 
@@ -232,8 +240,6 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcionesToolStripMenuItem,
-            this.ayudaToolStripMenuItem,
             this.файлToolStripMenuItem,
             this.Helpbtn});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -243,55 +249,13 @@
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // opcionesToolStripMenuItem
-            // 
-            this.opcionesToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevaRutinaToolStripMenuItem,
-            this.exportarToolStripMenuItem});
-            this.opcionesToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opcionesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(16, 29);
-            this.opcionesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // nuevaRutinaToolStripMenuItem
-            // 
-            this.nuevaRutinaToolStripMenuItem.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.nuevaRutinaToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuevaRutinaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.nuevaRutinaToolStripMenuItem.Name = "nuevaRutinaToolStripMenuItem";
-            this.nuevaRutinaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.nuevaRutinaToolStripMenuItem.Size = new System.Drawing.Size(300, 34);
-            this.nuevaRutinaToolStripMenuItem.Text = "Nueva Rutina";
-            this.nuevaRutinaToolStripMenuItem.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // exportarToolStripMenuItem
-            // 
-            this.exportarToolStripMenuItem.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.exportarToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(300, 34);
-            this.exportarToolStripMenuItem.Text = "Exportar";
-            this.exportarToolStripMenuItem.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.AutoToolTip = true;
-            this.ayudaToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(16, 29);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.Helpbtn_Click);
-            // 
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.создатьToolStripMenuItem,
             this.btnSave});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            this.файлToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
@@ -300,20 +264,22 @@
             this.создатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnNew});
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(200, 34);
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.создатьToolStripMenuItem.Text = "Создать";
             // 
             // btnNew
             // 
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(262, 34);
+            this.btnNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.btnNew.Size = new System.Drawing.Size(326, 34);
             this.btnNew.Text = "Новая процедура";
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnSave
             // 
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(200, 34);
+            this.btnSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.btnSave.Size = new System.Drawing.Size(270, 34);
             this.btnSave.Text = "Сохранить";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -339,18 +305,6 @@
             this.lblRutName.Size = new System.Drawing.Size(82, 24);
             this.lblRutName.TabIndex = 6;
             this.lblRutName.Text = "label1";
-            // 
-            // rutView
-            // 
-            this.rutView.AutoSize = true;
-            this.rutView.BackColor = System.Drawing.Color.Transparent;
-            this.rutView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rutView.IsReadOnly = false;
-            this.rutView.Location = new System.Drawing.Point(0, 0);
-            this.rutView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.rutView.Name = "rutView";
-            this.rutView.Size = new System.Drawing.Size(860, 764);
-            this.rutView.TabIndex = 0;
             // 
             // ViewRoutineForm
             // 
@@ -405,12 +359,8 @@
         private System.Windows.Forms.Label lblMax;
         private RutViews rutView;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevaRutinaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
         private System.Windows.Forms.FolderBrowserDialog folderBrowser;
         private System.Windows.Forms.Label lblRutName;
-        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem создатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnNew;
