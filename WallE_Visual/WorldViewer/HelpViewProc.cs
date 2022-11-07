@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WallE_Visual.WorldViewer
 {
-    public partial class HelpViewRoutine : Form
+    public partial class HelpViewProc : Form
     {
-        public HelpViewRoutine( )
+        public HelpViewProc( )
         {
             InitializeComponent( );
         }

@@ -17,7 +17,7 @@ namespace WallE.Routine
         /// </summary>
         /// <param name="routine">Rutina que se desea salvar.</param>
         /// <param name="path">Direccion donde se desea salva.</param>
-        public static void SaveRoutine(Rut routine,string path)
+        public static void SaveRoutine(Proc routine,string path)
         {
             if ( !Directory.Exists(path) )
                 Directory.CreateDirectory(path);
@@ -34,7 +34,7 @@ namespace WallE.Routine
         /// <param name="path">Dirección en el disco donde se encuentra la rutina.</param>
         /// <param name="loadOk">Devuelve true si la rutina tiene un start, devuelve false si no lo tiene.</param>
         /// <returns></returns>
-        public static Rut LoadRoutine(string path, out bool loadOk)
+        public static Proc LoadRoutine(string path, out bool loadOk)
         {
             loadOk = false;
             if ( Directory.Exists(path) )
@@ -42,8 +42,8 @@ namespace WallE.Routine
 
             string[] stringRut = File.ReadLines(path).ToArray( );
 
-            Rut rutResult =
-                new Rut(path.Split(new char[] { '\\' },StringSplitOptions.RemoveEmptyEntries).Last( ).Split(new char[] { '.' },StringSplitOptions.RemoveEmptyEntries).First( ));
+            Proc rutResult =
+                new Proc(path.Split(new char[] { '\\' },StringSplitOptions.RemoveEmptyEntries).Last( ).Split(new char[] { '.' },StringSplitOptions.RemoveEmptyEntries).First( ));
 
             int countInstruction = 0;
             try { countInstruction = int.Parse(stringRut[0]); }

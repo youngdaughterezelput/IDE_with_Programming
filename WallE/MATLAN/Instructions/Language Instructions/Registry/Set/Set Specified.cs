@@ -5,7 +5,7 @@ namespace WallE.MATLAN.Instructions
     public class SetA : Set
     {
         public override object Clone( ) => new SetA( );
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('A',value);
         }
@@ -25,7 +25,7 @@ namespace WallE.MATLAN.Instructions
     public class SetB : Set
     {
         public override object Clone( ) => new SetB( );
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('B',value);
         }
@@ -45,7 +45,7 @@ namespace WallE.MATLAN.Instructions
     public class SetC : Set
     {
         public override object Clone( ) => new SetC( );
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('C',value);
         }
@@ -66,7 +66,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetD( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('D',value);
         }
@@ -88,7 +88,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetE( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('E',value);
         }
@@ -110,7 +110,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetF( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('F',value);
         }
@@ -132,7 +132,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetG( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('G',value);
         }
@@ -154,7 +154,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetH( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('H',value);
         }
@@ -177,7 +177,7 @@ namespace WallE.MATLAN.Instructions
 
         public override object Clone( ) => new SetI( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('I',value);
         }
@@ -199,7 +199,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetJ( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('J',value);
         }
@@ -221,7 +221,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetK( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('K',value);
         }
@@ -243,7 +243,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetL( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('L',value);
         }
@@ -265,7 +265,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetM( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('M',value);
         }
@@ -287,7 +287,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetN( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('N',value);
         }
@@ -309,7 +309,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetO( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('O',value);
         }
@@ -331,7 +331,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetP( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('P',value);
         }
@@ -353,7 +353,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetQ( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('Q',value);
         }
@@ -375,7 +375,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetR( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('R',value);
         }
@@ -397,7 +397,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetS( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('S',value);
         }
@@ -419,7 +419,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetT( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('T',value);
         }
@@ -441,7 +441,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetU( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('U',value);
         }
@@ -463,7 +463,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetV( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('V',value);
         }
@@ -484,7 +484,7 @@ namespace WallE.MATLAN.Instructions
     public class SetW : Set
     {
         public override object Clone( ) => new SetW( );
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('W',value);
         }
@@ -507,7 +507,7 @@ namespace WallE.MATLAN.Instructions
         public override object Clone( ) => new SetX( );
 
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('X',value);
         }
@@ -529,7 +529,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetY( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('Y',value);
         }
@@ -551,7 +551,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new SetZ( );
 
-        protected override void SetByChar(Rut routine,int value)
+        protected override void SetByChar(Proc routine,int value)
         {
             routine.RegistryRoutine.AddValueAt('Z',value);
         }

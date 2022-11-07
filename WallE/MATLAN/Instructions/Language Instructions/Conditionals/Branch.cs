@@ -34,7 +34,7 @@ namespace WallE.MATLAN.Instructions
             return new Branch();
         }
 
-        public void Control(Rut routine)
+        public void Control(Proc routine)
         {
             if ( condition == 0 )
             {

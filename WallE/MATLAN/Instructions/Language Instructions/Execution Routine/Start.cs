@@ -20,7 +20,7 @@ namespace WallE.MATLAN.Instructions
         {
             return new Start();
         }
-        public void Control(Rut routine)
+        public void Control(Proc routine)
         {
             routine.Executing = true;
             routine.Body.Flux.Direction = 2;

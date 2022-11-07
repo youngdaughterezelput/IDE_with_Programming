@@ -18,7 +18,7 @@ namespace WallE.MATLAN.Instructions
         {
             return "SW";
         }
-        public void Control(Rut routine)
+        public void Control(Proc routine)
         {
             var flux = routine.Body.Flux;
             if ( flux.Direction == 0 )

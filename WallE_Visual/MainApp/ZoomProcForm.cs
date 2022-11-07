@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace WallE_Visual.MainApp
 {
-    public partial class ZoomRutForm : Form
+    public partial class ZoomProcForm : Form
     {
         RutViews rutView;
-        public ZoomRutForm( )
+        public ZoomProcForm( )
         {
             InitializeComponent( );
             this.tbarZoom.Value = 4;
         }
-        public ZoomRutForm(ref RutViews viewer) : this( )
+        public ZoomProcForm(ref RutViews viewer) : this( )
         {
             
             this.rutView = viewer;

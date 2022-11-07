@@ -14,15 +14,15 @@ namespace WallE.Simulator
     {
         #region Fields
         /// <summary>
-        /// Mundo de la simulacion
+        /// Модель мира
         /// </summary>
         private Map world;
         /// <summary>
-        /// Variable que guarda el estado inicial de la simulacion.
+        /// Переменная, которая сохраняет начальное состояние симуляции.
         /// </summary>
         private readonly Map initialWorldState;
         /// <summary>
-        /// Enumerator de rondas.
+        /// Счетчик кругов
         /// </summary>
         private IEnumerator<Round> enumerator;
         /// <summary>
@@ -33,7 +33,7 @@ namespace WallE.Simulator
 
         #region Properties
         /// <summary>
-        /// Tiempo entre rondas.
+        /// Время между кругами
         /// </summary>
         public double TimeSimulation
         {

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WallE_Visual.WorldViewer
 {
-    public partial class AddRutForm : Form
+    public partial class AddProcForm : Form
     {
         #region Properties
         public int Row { get; private set; }
@@ -18,7 +18,7 @@ namespace WallE_Visual.WorldViewer
         public string Name { get; private set; }
         #endregion
 
-        public AddRutForm( )
+        public AddProcForm( )
         {
             InitializeComponent( );
             Row = 1;

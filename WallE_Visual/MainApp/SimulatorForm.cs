@@ -31,7 +31,7 @@ namespace WallE_Visual.MainApp
             Simulator.NoAllowErrors = true;
             Simulator.Error += ThrowNewError;
             Error.SystemError += ThrowNewSystemError;
-            Rut.ExecuteInstruction += PaintRutine;
+            Proc.ExecuteInstruction += PaintRutine;
         }
         public SimulatorForm(Map world) : this( )
         {
@@ -51,9 +51,9 @@ namespace WallE_Visual.MainApp
         {
             if ( CurrentSimulator.IsDebugging )
             {
-                this.ajustarTamañoDeLaRutinaToolStripMenuItem.Enabled = true;
-                this.rutView.SetRut((Rut) sender);
-                this.rutView.PaintIn(Rut.LastInstruction);
+                this.adjustWorldStandartToolStripMenuItem.Enabled = true;
+                this.rutView.SetRut((Proc) sender);
+                this.rutView.PaintIn(Proc.LastInstruction);
             }
         }
         private void btnDebug_Click(object sender,EventArgs e)
@@ -143,8 +143,8 @@ namespace WallE_Visual.MainApp
         private void ReloadMenu( )
         {
             if ( rutView.Routine == null )
-                this.ajustarTamañoDeLaRutinaToolStripMenuItem.Enabled = false;
-            else this.ajustarTamañoDeLaRutinaToolStripMenuItem.Enabled = true;
+                this.adjustWorldStandartToolStripMenuItem.Enabled = false;
+            else this.adjustWorldStandartToolStripMenuItem.Enabled = true;
         }
         private void DoZoom( )
         {
@@ -192,7 +192,7 @@ namespace WallE_Visual.MainApp
         }
         private void DoRutZoom( )
         {
-            ZoomRutForm zoom = new ZoomRutForm(ref rutView);
+            ZoomProcForm zoom = new ZoomProcForm(ref rutView);
 
             if ( zoom.ShowDialog( ) == DialogResult.OK )
                 this.rutView.Refresh( );

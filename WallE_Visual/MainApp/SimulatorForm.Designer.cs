@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SimulatorForm));
             this.pnlWorld = new System.Windows.Forms.Panel();
+            this.wView = new WallE_Visual.WorldViewer.WorldViewer();
             this.gbosControls = new System.Windows.Forms.GroupBox();
             this.lblSeconds = new System.Windows.Forms.Label();
             this.nUpDownTime = new System.Windows.Forms.NumericUpDown();
@@ -46,16 +47,15 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.pnlRut = new System.Windows.Forms.Panel();
+            this.rutView = new WallE_Visual.RutViews();
             this.mStripOptions = new System.Windows.Forms.MenuStrip();
             this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajustarTamañoDelMundoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajustarTamañoDeLaRutinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adjustWorldSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adjustWorldStandartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolTipGuide = new System.Windows.Forms.ToolTip(this.components);
             this.wEConsole = new WallE_Visual.Wall_E_Console();
-            this.rutView = new WallE_Visual.RutViews();
-            this.wView = new WallE_Visual.WorldViewer.WorldViewer();
             this.pnlWorld.SuspendLayout();
             this.gbosControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUpDownTime)).BeginInit();
@@ -72,6 +72,18 @@
             this.pnlWorld.Name = "pnlWorld";
             this.pnlWorld.Size = new System.Drawing.Size(1012, 838);
             this.pnlWorld.TabIndex = 0;
+            // 
+            // wView
+            // 
+            this.wView.AutoSize = true;
+            this.wView.BackColor = System.Drawing.Color.Transparent;
+            this.wView.IsReadOnly = false;
+            this.wView.Location = new System.Drawing.Point(0, 0);
+            this.wView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.wView.Name = "wView";
+            this.wView.Size = new System.Drawing.Size(1135, 1039);
+            this.wView.SizePiece = 64F;
+            this.wView.TabIndex = 0;
             // 
             // gbosControls
             // 
@@ -299,55 +311,67 @@
             this.pnlRut.Size = new System.Drawing.Size(768, 612);
             this.pnlRut.TabIndex = 2;
             // 
+            // rutView
+            // 
+            this.rutView.AutoSize = true;
+            this.rutView.BackColor = System.Drawing.Color.Transparent;
+            this.rutView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rutView.IsReadOnly = true;
+            this.rutView.Location = new System.Drawing.Point(0, -4);
+            this.rutView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.rutView.Name = "rutView";
+            this.rutView.Size = new System.Drawing.Size(860, 764);
+            this.rutView.TabIndex = 0;
+            // 
             // mStripOptions
             // 
             this.mStripOptions.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mStripOptions.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mStripOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.volverToolStripMenuItem,
-            this.opcionesToolStripMenuItem});
+            this.optionToolStripMenuItem});
             this.mStripOptions.Location = new System.Drawing.Point(0, 0);
             this.mStripOptions.Name = "mStripOptions";
             this.mStripOptions.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.mStripOptions.Size = new System.Drawing.Size(1810, 36);
+            this.mStripOptions.Size = new System.Drawing.Size(1810, 28);
             this.mStripOptions.TabIndex = 4;
             this.mStripOptions.Text = "Volver";
             // 
             // volverToolStripMenuItem
             // 
-            this.volverToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.volver;
+            this.volverToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("volverToolStripMenuItem.Image")));
             this.volverToolStripMenuItem.Name = "volverToolStripMenuItem";
-            this.volverToolStripMenuItem.Size = new System.Drawing.Size(36, 32);
+            this.volverToolStripMenuItem.Size = new System.Drawing.Size(36, 24);
             this.volverToolStripMenuItem.ToolTipText = "Повторная настройка симуляции";
             this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
             // 
-            // opcionesToolStripMenuItem
+            // optionToolStripMenuItem
             // 
-            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajustarTamañoDelMundoToolStripMenuItem,
-            this.ajustarTamañoDeLaRutinaToolStripMenuItem});
-            this.opcionesToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.config;
-            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(36, 32);
-            this.opcionesToolStripMenuItem.ToolTipText = "Ajustes de tamaño.";
+            this.optionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adjustWorldSizeToolStripMenuItem,
+            this.adjustWorldStandartToolStripMenuItem});
+            this.optionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("optionToolStripMenuItem.Image")));
+            this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
+            this.optionToolStripMenuItem.Size = new System.Drawing.Size(36, 24);
+            this.optionToolStripMenuItem.ToolTipText = "Изменить размер.";
             // 
-            // ajustarTamañoDelMundoToolStripMenuItem
+            // adjustWorldSizeToolStripMenuItem
             // 
-            this.ajustarTamañoDelMundoToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.trackbar;
-            this.ajustarTamañoDelMundoToolStripMenuItem.Name = "ajustarTamañoDelMundoToolStripMenuItem";
-            this.ajustarTamañoDelMundoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
-            this.ajustarTamañoDelMundoToolStripMenuItem.Size = new System.Drawing.Size(431, 34);
-            this.ajustarTamañoDelMundoToolStripMenuItem.Text = "&Настроить размер мира";
-            this.ajustarTamañoDelMundoToolStripMenuItem.Click += new System.EventHandler(this.ajustarTamañoDelMundoToolStripMenuItem_Click);
+            this.adjustWorldSizeToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.trackbar;
+            this.adjustWorldSizeToolStripMenuItem.Name = "adjustWorldSizeToolStripMenuItem";
+            this.adjustWorldSizeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
+            this.adjustWorldSizeToolStripMenuItem.Size = new System.Drawing.Size(431, 34);
+            this.adjustWorldSizeToolStripMenuItem.Text = "&Настроить размер мира";
+            this.adjustWorldSizeToolStripMenuItem.Click += new System.EventHandler(this.ajustarTamañoDelMundoToolStripMenuItem_Click);
             // 
-            // ajustarTamañoDeLaRutinaToolStripMenuItem
+            // adjustWorldStandartToolStripMenuItem
             // 
-            this.ajustarTamañoDeLaRutinaToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.trackbar;
-            this.ajustarTamañoDeLaRutinaToolStripMenuItem.Name = "ajustarTamañoDeLaRutinaToolStripMenuItem";
-            this.ajustarTamañoDeLaRutinaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.ajustarTamañoDeLaRutinaToolStripMenuItem.Size = new System.Drawing.Size(431, 34);
-            this.ajustarTamañoDeLaRutinaToolStripMenuItem.Text = "&Настроить стандартный размер";
-            this.ajustarTamañoDeLaRutinaToolStripMenuItem.Click += new System.EventHandler(this.ajustarTamañoDeLaRutinaToolStripMenuItem_Click);
+            this.adjustWorldStandartToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.trackbar;
+            this.adjustWorldStandartToolStripMenuItem.Name = "adjustWorldStandartToolStripMenuItem";
+            this.adjustWorldStandartToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
+            this.adjustWorldStandartToolStripMenuItem.Size = new System.Drawing.Size(431, 34);
+            this.adjustWorldStandartToolStripMenuItem.Text = "&Настроить стандартный размер";
+            this.adjustWorldStandartToolStripMenuItem.Click += new System.EventHandler(this.ajustarTamañoDeLaRutinaToolStripMenuItem_Click);
             // 
             // timer
             // 
@@ -367,30 +391,6 @@
             this.wEConsole.Name = "wEConsole";
             this.wEConsole.Size = new System.Drawing.Size(767, 316);
             this.wEConsole.TabIndex = 5;
-            // 
-            // rutView
-            // 
-            this.rutView.AutoSize = true;
-            this.rutView.BackColor = System.Drawing.Color.Transparent;
-            this.rutView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rutView.IsReadOnly = true;
-            this.rutView.Location = new System.Drawing.Point(0, -4);
-            this.rutView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.rutView.Name = "rutView";
-            this.rutView.Size = new System.Drawing.Size(860, 764);
-            this.rutView.TabIndex = 0;
-            // 
-            // wView
-            // 
-            this.wView.AutoSize = true;
-            this.wView.BackColor = System.Drawing.Color.Transparent;
-            this.wView.IsReadOnly = false;
-            this.wView.Location = new System.Drawing.Point(0, 0);
-            this.wView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.wView.Name = "wView";
-            this.wView.Size = new System.Drawing.Size(1135, 1039);
-            this.wView.SizePiece = 64F;
-            this.wView.TabIndex = 0;
             // 
             // SimulatorForm
             // 
@@ -444,9 +444,9 @@
         private System.Windows.Forms.Label lblErrors;
         private System.Windows.Forms.MenuStrip mStripOptions;
         private System.Windows.Forms.ToolStripMenuItem volverToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajustarTamañoDelMundoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajustarTamañoDeLaRutinaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adjustWorldSizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adjustWorldStandartToolStripMenuItem;
         private System.Windows.Forms.TextBox tboxNumberRound;
         private System.Windows.Forms.Label lblNumberRound;
         private System.Windows.Forms.NumericUpDown nUpDownTime;

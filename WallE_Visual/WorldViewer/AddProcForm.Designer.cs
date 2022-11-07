@@ -1,6 +1,6 @@
 ﻿namespace WallE_Visual.WorldViewer
 {
-    partial class AddRutForm
+    partial class AddProcForm
     {
         /// <summary>
         /// Required designer variable.

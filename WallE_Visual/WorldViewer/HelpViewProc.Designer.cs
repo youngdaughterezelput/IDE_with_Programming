@@ -1,6 +1,6 @@
 ﻿namespace WallE_Visual.WorldViewer
 {
-    partial class HelpViewRoutine
+    partial class HelpViewProc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent( )
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpViewRoutine));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpViewProc));
             this.rtboxHelp = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 

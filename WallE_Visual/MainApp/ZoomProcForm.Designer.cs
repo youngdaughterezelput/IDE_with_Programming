@@ -1,6 +1,6 @@
 ﻿namespace WallE_Visual.MainApp
 {
-    partial class ZoomRutForm
+    partial class ZoomProcForm
     {
         /// <summary>
         /// Required designer variable.

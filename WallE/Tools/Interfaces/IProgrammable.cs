@@ -15,8 +15,8 @@ namespace WallE.Tools
     {
         LinealMemory Memory { get; set; }
         Stack<int> Stack { get; set; }
-        Stack<Rut> ExecutingStack { get; set; }
-        RoutineList ListRoutine { get; set; }
+        Stack<Proc> ExecutingStack { get; set; }
+        ProcList ListRoutine { get; set; }
         int Times { get; set; }
         void Back( );
         void Advance( );

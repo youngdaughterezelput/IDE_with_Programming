@@ -27,7 +27,7 @@ namespace WallE.MATLAN.Instructions
             SetByChar(robot.ExecutingStack.Peek(),value);
         }
 
-        protected abstract void SetByChar(Rut routine,int value);
+        protected abstract void SetByChar(Proc routine,int value);
 
     }
 

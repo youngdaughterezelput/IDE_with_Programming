@@ -12,7 +12,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new VerticalFlux( );
 
-        public void Control(Rut routine) { }
+        public void Control(Proc routine) { }
 
         public override void Execute(IProgrammable robot)
         {

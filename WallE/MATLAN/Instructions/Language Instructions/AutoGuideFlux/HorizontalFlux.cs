@@ -12,11 +12,11 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new HorizontalFlux( );
 
-        public void Control(Rut routine) { }
+        public void Control(Proc routine) { }
 
         public override void Execute(IProgrammable robot)
         {
-            Control((Rut) robot.ExecutingStack.Peek( ));
+            Control((Proc) robot.ExecutingStack.Peek( ));
         }
         public override string ToString( ) => "horizontalFlux";
         public override bool Equals(object obj)

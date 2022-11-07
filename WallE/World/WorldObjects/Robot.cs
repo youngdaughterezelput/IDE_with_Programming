@@ -27,7 +27,7 @@ namespace WallE.World.WorldObjects
         /// <summary>
         /// Representa la pila de rutinas que se van ejecutando en la simulación del mundo.
         /// </summary>
-        public Stack<Rut> ExecutingStack { get; set; }
+        public Stack<Proc> ExecutingStack { get; set; }
 
         /// <summary>
         /// Representa la memoria lineal del robot.
@@ -44,7 +44,7 @@ namespace WallE.World.WorldObjects
         /// <summary>
         /// Representa la lista de rutinas del robot.
         /// </summary>
-        public RoutineList ListRoutine { get; set; }
+        public ProcList ListRoutine { get; set; }
 
         /// <summary>
         /// Cantidad de rondas de simulación del robot.
@@ -99,23 +99,23 @@ namespace WallE.World.WorldObjects
         /// <param name="direction">Dirección del robot en el mundo.</param>
         public Robot(Position position,ref Map world,int direction = 1,int color = 1) : base(4,3,color,position,ref world)
         {
-            this.ListRoutine = new RoutineList( );
+            this.ListRoutine = new ProcList( );
             this.ListRoutine.bot = this;
             this.Directions = direction;
             this.Memory = new LinealMemory( );
             this.Stack = new Stack<int>( );
-            this.ExecutingStack = new Stack<Rut>( );
+            this.ExecutingStack = new Stack<Proc>( );
             this.time = 0;
         }
 
         public Robot(int direction = 1,int color = 1) : base(4,3,color)
         {
-            this.ListRoutine = new RoutineList( );
+            this.ListRoutine = new ProcList( );
             this.ListRoutine.bot = this;
             this.Directions = direction;
             this.Memory = new LinealMemory( );
             this.Stack = new Stack<int>( );
-            this.ExecutingStack = new Stack<Rut>( );
+            this.ExecutingStack = new Stack<Proc>( );
             this.time = 0;
         }
         #endregion
@@ -235,7 +235,7 @@ namespace WallE.World.WorldObjects
             if ( this.ObjectInside != null )
                 robotClone.ObjectInside = (WallEObjects) this.ObjectInside.Clone( );
             robotClone.Memory = (LinealMemory) this.Memory.Clone( );
-            robotClone.ListRoutine = (RoutineList) this.ListRoutine.Clone( );
+            robotClone.ListRoutine = (ProcList) this.ListRoutine.Clone( );
             robotClone.ListRoutine.bot = robotClone;
 
             return robotClone;

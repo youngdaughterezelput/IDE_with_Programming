@@ -18,7 +18,7 @@ namespace WallE_Visual
     public partial class RutViews : UserControl
     {
         #region Fields
-        public Rut Routine
+        public Proc Routine
         {
             get; private set;
         }
@@ -41,7 +41,7 @@ namespace WallE_Visual
             InitializeComponent( );
             this.pboxRut.ContextMenuStrip = null;
         }
-        public RutViews(Rut rut) : this()
+        public RutViews(Proc rut) : this()
         {
             this.Routine = rut;
             IsReadOnly = false;
@@ -173,7 +173,7 @@ namespace WallE_Visual
         {
             return new Position(lastPosition.Y * Rows / this.pboxRut.Height,lastPosition.X * Columns / this.pboxRut.Width);
         }
-        public void SetRut( Rut rut)
+        public void SetRut( Proc rut)
         {
             this.Routine = rut;
             if(!IsReadOnly)
@@ -182,7 +182,7 @@ namespace WallE_Visual
         }
         public void SetRut(int row, int column)
         {
-            var rut = new Rut( );
+            var rut = new Proc( );
 
             rut.Body.AddRowAt(row - 1);
             rut.Body.AddColumnAt(column - 1);

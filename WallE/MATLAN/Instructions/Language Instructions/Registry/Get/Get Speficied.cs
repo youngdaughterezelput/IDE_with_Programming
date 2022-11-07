@@ -11,7 +11,7 @@ namespace WallE.MATLAN.Instructions
     public sealed class GetA : Get
     {
         public override object Clone( ) => new GetA( );
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['A'];
             try { robot.Stack.Push(value); }
@@ -37,7 +37,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetB( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['B'];
             try { robot.Stack.Push(value); }
@@ -62,7 +62,7 @@ namespace WallE.MATLAN.Instructions
     public sealed class GetC : Get
     {
         public override object Clone( ) => new GetC( );
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['C'];
             try { robot.Stack.Push(value); }
@@ -89,7 +89,7 @@ namespace WallE.MATLAN.Instructions
     public sealed class GetD : Get
     {
         public override object Clone( ) => new GetD( );
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['D'];
             try { robot.Stack.Push(value); }
@@ -116,7 +116,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetE( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['E'];
             try { robot.Stack.Push(value); }
@@ -143,7 +143,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetF( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['F'];
             try { robot.Stack.Push(value); }
@@ -170,7 +170,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetG( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['G'];
             try { robot.Stack.Push(value); }
@@ -196,7 +196,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetH( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['H'];
             try { robot.Stack.Push(value); }
@@ -222,7 +222,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetI( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['I'];
             try { robot.Stack.Push(value); }
@@ -247,7 +247,7 @@ namespace WallE.MATLAN.Instructions
     public sealed class GetJ : Get
     {
         public override object Clone( ) => new GetJ( );
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['J'];
             try { robot.Stack.Push(value); }
@@ -272,7 +272,7 @@ namespace WallE.MATLAN.Instructions
     public sealed class GetK : Get
     {
         public override object Clone( ) => new GetK( );
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['K'];
             try { robot.Stack.Push(value); }
@@ -298,7 +298,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetL( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['L'];
             try { robot.Stack.Push(value); }
@@ -324,7 +324,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetM( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['M'];
             try { robot.Stack.Push(value); }
@@ -350,7 +350,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetN( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['N'];
             try { robot.Stack.Push(value); }
@@ -376,7 +376,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetO( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['O'];
             try { robot.Stack.Push(value); }
@@ -402,7 +402,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetP( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['P'];
             try { robot.Stack.Push(value); }
@@ -428,7 +428,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetQ( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['Q'];
             try { robot.Stack.Push(value); }
@@ -454,7 +454,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetR( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['R'];
             try { robot.Stack.Push(value); }
@@ -480,7 +480,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetS( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['S'];
             try { robot.Stack.Push(value); }
@@ -506,7 +506,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetT( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['T'];
             try { robot.Stack.Push(value); }
@@ -532,7 +532,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetU( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['U'];
             try { robot.Stack.Push(value); }
@@ -558,7 +558,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetV( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['V'];
             try { robot.Stack.Push(value); }
@@ -584,7 +584,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetW( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['W'];
             try { robot.Stack.Push(value); }
@@ -610,7 +610,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetX( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['X'];
             try { robot.Stack.Push(value); }
@@ -637,7 +637,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetY( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['Y'];
             try { robot.Stack.Push(value); }
@@ -663,7 +663,7 @@ namespace WallE.MATLAN.Instructions
     {
         public override object Clone( ) => new GetZ( );
 
-        protected override void GetByChar(IProgrammable robot,Rut routine)
+        protected override void GetByChar(IProgrammable robot,Proc routine)
         {
             int value = routine.RegistryRoutine['Z'];
             try { robot.Stack.Push(value); }

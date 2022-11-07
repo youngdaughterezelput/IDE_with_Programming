@@ -23,7 +23,7 @@ namespace WallE.MATLAN.Instructions
             return new Return();
         }
 
-        public void Control(Rut routine)
+        public void Control(Proc routine)
         {
             routine.Executing = false;
             routine.Body.FluxReset( );

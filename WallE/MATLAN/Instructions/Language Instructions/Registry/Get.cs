@@ -14,6 +14,6 @@ namespace WallE.MATLAN.Instructions
         {
             GetByChar(robot,robot.ExecutingStack.Peek());
         }
-        protected abstract void GetByChar(IProgrammable robot,Rut routine);
+        protected abstract void GetByChar(IProgrammable robot,Proc routine);
     }
 }

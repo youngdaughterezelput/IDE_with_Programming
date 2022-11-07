@@ -12,7 +12,7 @@ namespace WallE.Routine
     /// <summary>
     /// Representa una rutina en MATLAN
     /// </summary>
-    public class Rut : ICloneable, IEnumerable<Instruction>
+    public class Proc : ICloneable, IEnumerable<Instruction>
     {
         #region Fields
         /// <summary>
@@ -54,7 +54,7 @@ namespace WallE.Routine
         /// <summary>
         /// Construye una rutina.
         /// </summary>
-        public Rut( )
+        public Proc( )
         {
             Simulator.Simulator.Error += StopExecutingByError;
             this.Body = new MatrixInstruction(0,0);
@@ -65,7 +65,7 @@ namespace WallE.Routine
         /// Construye una rutina dado una matriz de instrucciones.
         /// </summary>
         /// <param name="body"></param>
-        public Rut(Rut.MatrixInstruction body)
+        public Proc(Proc.MatrixInstruction body)
         {
             this.Body = body;
             this.RegistryRoutine = new Registry( );
@@ -74,7 +74,7 @@ namespace WallE.Routine
         /// Construye una rutina con una matriz vacia, y un nombre
         /// </summary>
         /// <param name="name">Nombre de la matriz.</param>
-        public Rut(string name) : this( )
+        public Proc(string name) : this( )
         {
             this.Name = name;
         }
@@ -94,7 +94,7 @@ namespace WallE.Routine
         /// </summary>
         /// <param name="routine">Rutina que ejecuto la instruccion</param>
         /// <param name="instructionPosition">Posicion de la instruccion en la rutina.</param>
-        public static void Executed(Rut routine,Position instructionPosition)
+        public static void Executed(Proc routine,Position instructionPosition)
         {
             LastInstruction = instructionPosition;
             ExecuteInstruction(routine,new EventArgs( ));
@@ -199,9 +199,9 @@ namespace WallE.Routine
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            if ( !( obj is Rut ) )
+            if ( !( obj is Proc ) )
                 return false;
-            return this.Body.Equals(( (Rut) obj ).Body);
+            return this.Body.Equals(( (Proc) obj ).Body);
         }
         public override int GetHashCode( )
         {
@@ -213,7 +213,7 @@ namespace WallE.Routine
         /// <returns></returns>
         public object Clone( )
         {
-            var rut = new Rut((MatrixInstruction) this.Body.Clone( ));
+            var rut = new Proc((MatrixInstruction) this.Body.Clone( ));
             rut.Index = this.Index;
             return rut;
         }
@@ -255,7 +255,7 @@ namespace WallE.Routine
         /// </summary>
         /// <param name="routine"></param>
         /// <returns></returns>
-        public static bool ValidateRut(Rut routine)
+        public static bool ValidateRut(Proc routine)
         {
             return routine.Body.StartPosition != null;
         }

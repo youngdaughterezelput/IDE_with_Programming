@@ -33,7 +33,7 @@ namespace WallE.MATLAN.Instructions
                 WallE.Simulator.WallE_Console.Print(robot,error.Message);
                 return;
             }
-            Rut routineCall = (Rut) robot.ListRoutine[indexRoutine].Clone( );
+            Proc routineCall = (Proc) robot.ListRoutine[indexRoutine].Clone( );
             routineCall.RobotRoutine = robot;
 
             try

@@ -64,11 +64,11 @@
     <Compile Include="MainApp\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainApp\ZoomRutForm.cs">
+    <Compile Include="MainApp\ZoomProcForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainApp\ZoomRutForm.Designer.cs">
-      <DependentUpon>ZoomRutForm.cs</DependentUpon>
+    <Compile Include="MainApp\ZoomProcForm.Designer.cs">
+      <DependentUpon>ZoomProcForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainApp\ZoomWorldForm.cs">
       <SubType>Form</SubType>
@@ -89,17 +89,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RutView\InstructionForm.cs">
+    <Compile Include="ProcView\InstructionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RutView\InstructionForm.Designer.cs">
+    <Compile Include="ProcView\InstructionForm.Designer.cs">
       <DependentUpon>InstructionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RutView\RutView.cs">
+    <Compile Include="ProcView\ProcView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RutView\RutView.Designer.cs">
-      <DependentUpon>RutView.cs</DependentUpon>
+    <Compile Include="ProcView\ProcView.Designer.cs">
+      <DependentUpon>ProcView.cs</DependentUpon>
     </Compile>
     <Compile Include="WallE_Console\Wall_E_Console.cs">
       <SubType>UserControl</SubType>
@@ -113,11 +113,11 @@
     <Compile Include="WorldViewer\AddObjectForm.Designer.cs">
       <DependentUpon>AddObjectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WorldViewer\AddRutForm.cs">
+    <Compile Include="WorldViewer\AddProcForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WorldViewer\AddRutForm.Designer.cs">
-      <DependentUpon>AddRutForm.cs</DependentUpon>
+    <Compile Include="WorldViewer\AddProcForm.Designer.cs">
+      <DependentUpon>AddProcForm.cs</DependentUpon>
     </Compile>
     <Compile Include="WorldViewer\EditObject.cs">
       <SubType>Form</SubType>
@@ -125,17 +125,17 @@
     <Compile Include="WorldViewer\EditObject.Designer.cs">
       <DependentUpon>EditObject.cs</DependentUpon>
     </Compile>
-    <Compile Include="WorldViewer\HelpViewRoutine.cs">
+    <Compile Include="WorldViewer\HelpViewProc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WorldViewer\HelpViewRoutine.Designer.cs">
-      <DependentUpon>HelpViewRoutine.cs</DependentUpon>
+    <Compile Include="WorldViewer\HelpViewProc.Designer.cs">
+      <DependentUpon>HelpViewProc.cs</DependentUpon>
     </Compile>
-    <Compile Include="WorldViewer\ViewRoutine.cs">
+    <Compile Include="WorldViewer\ViewProc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WorldViewer\ViewRoutine.Designer.cs">
-      <DependentUpon>ViewRoutine.cs</DependentUpon>
+    <Compile Include="WorldViewer\ViewProc.Designer.cs">
+      <DependentUpon>ViewProc.cs</DependentUpon>
     </Compile>
     <Compile Include="WorldViewer\WorldViewer.cs">
       <SubType>UserControl</SubType>
@@ -152,8 +152,8 @@
     <EmbeddedResource Include="MainApp\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainApp\ZoomRutForm.resx">
-      <DependentUpon>ZoomRutForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainApp\ZoomProcForm.resx">
+      <DependentUpon>ZoomProcForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainApp\ZoomWorldForm.resx">
       <DependentUpon>ZoomWorldForm.cs</DependentUpon>
@@ -166,11 +166,12 @@
     <EmbeddedResource Include="MainApp\SettingsWorldForm.resx">
       <DependentUpon>SettingsWorldForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RutView\InstructionForm.resx">
+    <EmbeddedResource Include="ProcView\InstructionForm.resx">
       <DependentUpon>InstructionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="RutView\RutView.resx">
-      <DependentUpon>RutView.cs</DependentUpon>
+    <EmbeddedResource Include="ProcView\ProcView.resx">
+      <DependentUpon>ProcView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WallE_Console\Wall_E_Console.resx">
       <DependentUpon>Wall_E_Console.cs</DependentUpon>
@@ -178,17 +179,17 @@
     <EmbeddedResource Include="WorldViewer\AddObjectForm.resx">
       <DependentUpon>AddObjectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WorldViewer\AddRutForm.resx">
-      <DependentUpon>AddRutForm.cs</DependentUpon>
+    <EmbeddedResource Include="WorldViewer\AddProcForm.resx">
+      <DependentUpon>AddProcForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorldViewer\EditObject.resx">
       <DependentUpon>EditObject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WorldViewer\HelpViewRoutine.resx">
-      <DependentUpon>HelpViewRoutine.cs</DependentUpon>
+    <EmbeddedResource Include="WorldViewer\HelpViewProc.resx">
+      <DependentUpon>HelpViewProc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WorldViewer\ViewRoutine.resx">
-      <DependentUpon>ViewRoutine.cs</DependentUpon>
+    <EmbeddedResource Include="WorldViewer\ViewProc.resx">
+      <DependentUpon>ViewProc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorldViewer\WorldViewer.resx">
       <DependentUpon>WorldViewer.cs</DependentUpon>
@@ -637,6 +638,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\resource\img\Instructions\setZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\getZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\lnot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\and.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\land.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\eq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\geq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\leq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\lor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\lt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\lxor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\mod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\neq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\or.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\ternary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\sub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\Instructions\gt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

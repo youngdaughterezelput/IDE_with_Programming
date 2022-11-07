@@ -14,13 +14,13 @@ namespace WallE.Routine
     /// <summary>
     /// Representa la lista de rutina que tiene un robot.
     /// </summary>
-    public class RoutineList : IEnumerable<Rut>, ICloneable
+    public class ProcList : IEnumerable<Proc>, ICloneable
     {
         #region Fields
         /// <summary>
         /// Lista de rutinas.
         /// </summary>
-        List<Rut> list;
+        List<Proc> list;
         internal IProgrammable bot;
         #endregion
 
@@ -37,7 +37,7 @@ namespace WallE.Routine
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
-        public Rut this[int index]
+        public Proc this[int index]
         {
             get { return list[index]; }
             private set { list[index] = value; }
@@ -48,17 +48,17 @@ namespace WallE.Routine
         /// <summary>
         /// Construye una lista de rutinas vacía.
         /// </summary>
-        public RoutineList( )
+        public ProcList( )
         {
-            this.list = new List<Rut>( );
+            this.list = new List<Proc>( );
         }
         /// <summary>
         /// Construye una lista de rutinas a partir de un array de rutinas.
         /// </summary>
         /// <param name="list"></param>
-        public RoutineList(params Rut[] list)
+        public ProcList(params Proc[] list)
         {
-            this.list = list.ToList<Rut>( );
+            this.list = list.ToList<Proc>( );
         }
         #endregion
 
@@ -79,7 +79,7 @@ namespace WallE.Routine
         /// Añadir una rutina a esta lista.
         /// </summary>
         /// <param name="routine">Array de rutinas que se desean añadir a la lista del robot.</param>
-        public void AddRoutine(params Rut[] routine)
+        public void AddRoutine(params Proc[] routine)
         {
             for ( int i = 0; i < routine.Length; i++ )
             {
@@ -91,7 +91,7 @@ namespace WallE.Routine
                 }
                 else
                 {
-                    Rut routineCopy = (Rut) routine[i].Clone( );
+                    Proc routineCopy = (Proc) routine[i].Clone( );
                     routineCopy.RobotRoutine = this.bot;
                     routineCopy.Index = list.Count;
                     this.list.Add(routineCopy);
@@ -113,7 +113,7 @@ namespace WallE.Routine
             this.list.RemoveAt(index);
         }
 
-        public IEnumerator<Rut> GetEnumerator( )
+        public IEnumerator<Proc> GetEnumerator( )
         {
             return list.GetEnumerator( );
         }
@@ -121,10 +121,10 @@ namespace WallE.Routine
 
         public object Clone( )
         {
-            RoutineList listClone = new RoutineList( ) { bot = this.bot };
+            ProcList listClone = new ProcList( ) { bot = this.bot };
 
             foreach ( var item in this )
-                listClone.AddRoutine((Rut) item.Clone( ));
+                listClone.AddRoutine((Proc) item.Clone( ));
             return listClone;
         }
 
@@ -150,7 +150,7 @@ namespace WallE.Routine
             //Si no hay rutinas en la pila de ejecucion de este robot, entonces apila la rutina con indice 0.
             if ( this.bot.ExecutingStack.Count == 0 )
             {
-                var rut = (Rut) list[0].Clone( );
+                var rut = (Proc) list[0].Clone( );
                 rut.RobotRoutine = bot;
                 ( (Robot) bot ).ExecutingStack.Push(rut);
             }
@@ -183,7 +183,7 @@ namespace WallE.Routine
             }
             if ( this.bot.ExecutingStack.Count == 0 )
             {
-                var rut = (Rut) list[0].Clone( );
+                var rut = (Proc) list[0].Clone( );
                 rut.RobotRoutine = bot;
                 ( (Robot) bot ).ExecutingStack.Push(rut);
             }

@@ -9,6 +9,6 @@ namespace WallE.Tools
 {
     public interface IControlFlux
     {
-        void Control(Rut routine);
+        void Control(Proc routine);
     }
 }

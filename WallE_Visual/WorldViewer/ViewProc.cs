@@ -101,7 +101,7 @@ namespace WallE_Visual.WorldViewer
         }
         private void AddRut( )
         {
-            if ( !Rut.ValidateRut(rutView.Routine) )
+            if ( !Proc.ValidateRut(rutView.Routine) )
             {
                 Error error = new Error("Определения: \"" + rutView.Routine.Name + "\" не имеет  {start}, поэтому процедуру нельзя добавить.");
                 MessageBox.Show(error.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -162,7 +162,7 @@ namespace WallE_Visual.WorldViewer
             {
                 foreach ( var file in this.ofileLoadRut.FileNames )
                 {
-                    Rut rut = null;
+                    Proc rut = null;
                     bool loadOk = false;
                     try
                     {
@@ -194,7 +194,7 @@ namespace WallE_Visual.WorldViewer
         {
             this.cboxList.Items.Clear( );
 
-            var list = wallE.ListRoutine.Select(new Func<Rut,object>(c =>
+            var list = wallE.ListRoutine.Select(new Func<Proc,object>(c =>
           {
               if ( c.Name == null || c.Name == string.Empty )
                   return c.Index;
@@ -211,7 +211,7 @@ namespace WallE_Visual.WorldViewer
         }
         private void NewRut( )
         {
-            AddRutForm add = new AddRutForm( );
+            AddProcForm add = new AddProcForm( );
 
             if ( add.ShowDialog( ) == DialogResult.OK )
             {
@@ -239,7 +239,7 @@ namespace WallE_Visual.WorldViewer
         }
         private void ShowSelectedRoutine( )
         {
-            Rut selectedRut = wallE.ListRoutine.Where(c => ( c.Name == (string) this.cboxList.SelectedItem )).Take(1).ToArray( )[0];
+            Proc selectedRut = wallE.ListRoutine.Where(c => ( c.Name == (string) this.cboxList.SelectedItem )).Take(1).ToArray( )[0];
 
             this.rutView.SetRut(selectedRut);
             this.pnlRutineView.Controls.Clear( );
@@ -274,7 +274,7 @@ namespace WallE_Visual.WorldViewer
 
         private void Helpbtn_Click(object sender,EventArgs e)
         {
-            new HelpViewRoutine( ).ShowDialog( );
+            new HelpViewProc( ).ShowDialog( );
         }
     }
 }
