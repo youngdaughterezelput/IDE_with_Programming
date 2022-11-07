@@ -104,7 +104,7 @@
     <Compile Include="MATLAN\Instructions\Language Instructions\Conditionals\Branch.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Registry\Get\Get Speficied.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Registry\Get.cs" />
-    <Compile Include="MATLAN\Instructions\Language Instructions\Routine\Call.cs" />
+    <Compile Include="MATLAN\Instructions\Language Instructions\Procedure\Call.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\Binary\Geq.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\Binary\Gt.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\Binary\Eq.cs" />
@@ -129,7 +129,7 @@
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\Binary\Neq.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\Binary\Lt.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\Binary\Leq.cs" />
-    <Compile Include="MATLAN\Instructions\Language Instructions\Routine\RecCall.cs" />
+    <Compile Include="MATLAN\Instructions\Language Instructions\Procedure\RecCall.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Console\Print.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Angular\NW.cs" />
     <Compile Include="MATLAN\Instructions\Programmable Instructions\Compass.cs" />
@@ -151,7 +151,7 @@
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\Binary\Sub.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\Ternary\Ternary.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\TernaryOperator.cs" />
-    <Compile Include="MATLAN\Instructions\Language Instructions\Routine\Routine.cs" />
+    <Compile Include="MATLAN\Instructions\Language Instructions\Procedure\Routine.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Registry\Set.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Registry\Set\Set Specified.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Angular\SE.cs" />

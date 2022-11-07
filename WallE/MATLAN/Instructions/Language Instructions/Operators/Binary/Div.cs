@@ -8,7 +8,7 @@ namespace WallE.MATLAN.Instructions
         public override void Operate(IProgrammable robot,params int[] operands)
         {
             if ( operands[1] == 0 )
-                throw new DivideByZeroException("No puede dividir por cero.");
+                throw new DivideByZeroException("Нельзя делить на ноль.");
             robot.Stack.Push(operands[0] / operands[1]);
         }
         public override object Clone( )
