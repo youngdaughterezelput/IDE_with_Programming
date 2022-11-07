@@ -16,7 +16,7 @@ namespace WallE.MATLAN.Instructions
             try { value = robot.Stack.Pop( ); }
             catch ( Exception )
             {
-                Error error = new Error("La pila no tiene la cantidad suficiente de elementos para operar unariamente.");
+                Error error = new Error("В стеке недостаточно элементов для унарной работы.");
                 if(Simulator.Simulator.NoAllowErrors)
                 {
                     Simulator.Simulator.ReportError(robot,error);

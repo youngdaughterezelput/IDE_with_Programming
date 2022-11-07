@@ -15,7 +15,7 @@ namespace WallE.MATLAN.Instructions
             int condition, operand1, operand2;
             if(robot.Stack.Count < 3)
             {
-                Error error = new Error("La pila no tiene los suficientes elementos para operar ternariamente.");
+                Error error = new Error("В стеке недостаточно элементов для работы троичных.");
                 if ( Simulator.Simulator.NoAllowErrors )
                 {
                     Simulator.Simulator.ReportError(robot,error);

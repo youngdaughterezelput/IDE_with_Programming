@@ -16,7 +16,7 @@ namespace WallE.MATLAN.Instructions
             int operand1, operand2;
             if(robot.Stack.Count < 2)
             {
-                Error error = new Error("La pila no tiene la cantidad suficiente de elementos para operar binariamente.");
+                Error error = new Error("В стеке недостаточно элементов для работы с двоичным кодом.");
                 if(Simulator.Simulator.NoAllowErrors)
                 {
                     Simulator.Simulator.ReportError(robot,error);
