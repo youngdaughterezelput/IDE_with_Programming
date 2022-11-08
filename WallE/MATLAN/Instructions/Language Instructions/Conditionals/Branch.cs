@@ -14,7 +14,7 @@ namespace WallE.MATLAN.Instructions
                 condition = robot.Stack.Pop( ); }
             catch ( Exception )
             {
-                Error error = new Error("Pila vacía, por tanto no puede sacar condición para el {branch}.");
+                Error error = new Error("Пустой стек, поэтому не удается получить условие для {branch}.");
                 if ( Simulator.Simulator.NoAllowErrors )
                 {
                     Simulator.Simulator.ReportError(robot,error);

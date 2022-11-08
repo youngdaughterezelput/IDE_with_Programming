@@ -5,7 +5,7 @@ using System;
 namespace WallE.MATLAN.Instructions
 {
 
-    //Ver bien....
+    //старт
     public class Start : Instruction, IControlFlux
     {
         public override void Execute(IProgrammable robot)

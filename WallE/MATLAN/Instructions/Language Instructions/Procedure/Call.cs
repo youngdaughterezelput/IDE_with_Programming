@@ -13,7 +13,7 @@ namespace WallE.MATLAN.Instructions
             try { indexRoutine = robot.Stack.Pop( ); }
             catch ( Exception )
             {
-                Error error = new Error("Pila vacía, por tanto no puede sacar un índice para una rutina.");
+                Error error = new Error("Пустой стек, поэтому невозможно получить индекс для подпрограммы.");
                 if ( Simulator.Simulator.NoAllowErrors )
                 {
                     Simulator.Simulator.ReportError(robot,error);
@@ -24,7 +24,7 @@ namespace WallE.MATLAN.Instructions
             }
             if ( robot.ListRoutine.Count - 1 < indexRoutine )
             {
-                Error error = new Error("Ese índice no es válido en la lista de las rutinas.");
+                Error error = new Error("Этот индекс недействителен в списке подпрограмм.");
                 if ( Simulator.Simulator.NoAllowErrors )
                 {
                     Simulator.Simulator.ReportError(robot,error);
@@ -42,7 +42,7 @@ namespace WallE.MATLAN.Instructions
             }
             catch ( Exception )
             {
-                Errors.Error.ReportError(robot,new Error("La pila de ejecución está llena."));
+                Errors.Error.ReportError(robot,new Error("Стек выполнения заполнен."));
             }
 
             routineCall.Executing = true;

@@ -19,7 +19,7 @@ namespace WallE.MATLAN.Instructions
                 robot.Stack.Push(index); }
             catch ( Exception )
             {
-                Error error = new Error("La pila del robot está llena, por tanto no puede añadir el índice de la rutina.");
+                Error error = new Error("Стек робота заполнен, поэтому он не может добавить процедурный индекс.");
                 Simulator.Simulator.ReportError(robot,error);
                 return;
             }

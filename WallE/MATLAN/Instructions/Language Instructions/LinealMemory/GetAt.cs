@@ -13,7 +13,7 @@ namespace WallE.MATLAN.Instructions
             try { index = robot.Stack.Pop( ); }
             catch ( Exception )
             {
-                Error error = new Error("Pila vacía, por tanto no puede sacar un índice de la pila para el {getAt}.");
+                Error error = new Error("Пустой стек, поэтому не удается получить индекс стека для {getAt}.");
                 if ( Simulator.Simulator.NoAllowErrors )
                 {
                     Simulator.Simulator.ReportError(robot,error);

@@ -17,7 +17,7 @@ namespace WallE.MATLAN.Instructions
             try { valueToPrint = robot.Stack.Pop( ); }
             catch ( Exception )
             {
-                Error error = new Error("Pila vacía, por tanto no existe nada que imprimir.");
+                Error error = new Error("Пустой стек, выводить нечего.");
                 if ( Simulator.Simulator.NoAllowErrors )
                 {
                     Simulator.Simulator.ReportError(robot,error);
