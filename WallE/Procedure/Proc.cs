@@ -10,49 +10,49 @@ using WallE.World.WorldObjects;
 namespace WallE.Routine
 {
     /// <summary>
-    /// Representa una rutina en MATLAN
+    /// Процедура в ML
     /// </summary>
     public class Proc : ICloneable, IEnumerable<Instruction>
     {
         #region Fields
         /// <summary>
-        /// Representa el enumerador de la rutina.
+        /// Представляет перчисленные подпрограммы.
         /// </summary>
         private IEnumerator<Instruction> enumerator;
         #endregion
 
         #region Properties
         /// <summary>
-        /// Cuerpo de la rutina
+        /// Основной блок
         /// </summary>
         public MatrixInstruction Body { get; private set; }
         /// <summary>
-        /// Nombre de la rutina no es obligatorio su uso es solo para distinguir entre rutinas, y para salvar la rutina, con un nombre.
+        /// Имя подпрограммы не является обязательным, оно используется только для различения подпрограмм и для сохранения подпрограммы с именем..
         /// </summary>
         public string Name { get; set; }
 
         ///<summary>
-        /// Registros de esta rutina.
+        /// Записи о процедуре.
         /// </summary>
         public Registry RegistryRoutine { get; internal set; }
 
         /// <summary>
-        /// Entero indicando el indice de esta rutina en la lista del robot.
+        /// Целое число, указывающее индекс этой процедуры в списке роботов.
         /// </summary>
         public int Index { get; internal set; }
         /// <summary>
-        /// Robot al que esta asociada esta rutina.
+        /// Робот, с которым связана эта процедура.
         /// </summary>
         internal IProgrammable RobotRoutine { get; set; }
         /// <summary>
-        /// Determina si se esta ejecutando la rutina actualmente.
+        /// Определяет, выполняется ли процедура в данный момент.
         /// </summary>
         public bool Executing { get; set; }
         #endregion
 
         #region Constructor
         /// <summary>
-        /// Construye una rutina.
+        /// Постройка процедуры
         /// </summary>
         public Proc( )
         {
@@ -62,7 +62,7 @@ namespace WallE.Routine
             this.Name = string.Empty;
         }
         /// <summary>
-        /// Construye una rutina dado una matriz de instrucciones.
+        /// Создайте процедуру, учитывая набор инструкций.
         /// </summary>
         /// <param name="body"></param>
         public Proc(Proc.MatrixInstruction body)
@@ -71,9 +71,9 @@ namespace WallE.Routine
             this.RegistryRoutine = new Registry( );
         }
         /// <summary>
-        /// Construye una rutina con una matriz vacia, y un nombre
+        /// Создайте подпрограмму с пустым массивом и именем
         /// </summary>
-        /// <param name="name">Nombre de la matriz.</param>
+        /// <param name="name">Имя массива.</param>
         public Proc(string name) : this( )
         {
             this.Name = name;
@@ -82,18 +82,18 @@ namespace WallE.Routine
 
         #region Event
         /// <summary>
-        /// Evento que se lanzará cada vez que se pase hacia una nueva instruccion.
+        /// Событие, которое будет запускаться каждый раз, когда передается новая инструкция.
         /// </summary>
         public static event EventHandler ExecuteInstruction;
         /// <summary>
-        /// La posicion de la ultima instruccion que se ejecuto, por la cual se lanza el evento
+        /// Позиция последней выполненной инструкции, для которой срабатывает событие
         /// </summary>
         public static Position LastInstruction { get; private set; }
         /// <summary>
-        /// Metodo que activa el evento ExecuteInstruction
+        /// Метод, запускающий событие ExecuteInstruction
         /// </summary>
-        /// <param name="routine">Rutina que ejecuto la instruccion</param>
-        /// <param name="instructionPosition">Posicion de la instruccion en la rutina.</param>
+        /// <param name="routine">Подпрограмма, которая выполняет инструкцию</param>
+        /// <param name="instructionPosition">Позиция инструкции в программе.</param>
         public static void Executed(Proc routine,Position instructionPosition)
         {
             LastInstruction = instructionPosition;
@@ -104,15 +104,15 @@ namespace WallE.Routine
 
         #region Methods
         /// <summary>
-        /// Ejecuta la rutina.
+        /// Запустите процедуру 
         /// </summary>
         public void Execute( )
         {
-            //Mientras se este ejecutando la rutina, o sea no se haya llegado a un return o se haya acabado la matriz o se haya llegado a una accion fisica.
+            //Пока подпрограмма выполняется, то есть возврат не был достигнут, или массив был исчерпан, или было достигнуто физическое действие.
             while ( Executing )
             {
 
-                //Ejecuta una instruccion, si con esa termina la ejecucion actual sal del ciclo.
+                //Выполнить инструкцию, если на этом она завершает текущее выполнение, выйти из цикла.
                 if ( ExecuteByInstruction( ) )
                     break;
 
@@ -124,7 +124,7 @@ namespace WallE.Routine
             }
         }
         /// <summary>
-        /// Si ocurre un error detiene la ejecucion de esta rutina.
+        /// Если возникает ошибка, он останавливает выполнение этой процедуры.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -133,7 +133,8 @@ namespace WallE.Routine
             ( (IProgrammable) sender ).ExecutingStack.Peek( ).Executing = false;
         }
         /// <summary>
-        /// Ejecuta solo la siguiente instruccion de la rutina, y devuelve si con esa ejecucion el se termina o no momenteamente la ejecucion de esa rutina.
+        /// Выполняет только следующую инструкцию подпрограммы и возвращает значение, 
+        /// если при этом выполнении подпрограммы прекращается или не прекращается мгновенно.
         /// </summary>
         /// <returns></returns>
         public bool ExecuteByInstruction( )
@@ -141,46 +142,46 @@ namespace WallE.Routine
             if ( enumerator == null )
                 GetEnumerator( );
 
-            //Muevo el puntero
+            //я двигаю указатель
             enumerator.MoveNext( );
-            //Si no se mueve es porque se salio de los bordes de la matriz por tanto termina la ejecucion, devolviendo true.
+            //Если он не перемещается, это потому, что он вышел за границы массива, поэтому выполнение завершается, возвращая значение true.
             if ( !( (MatrixInstruction.MatrixEnumerator) enumerator ).Move )
             {
                 Executing = false;
                 return true;
             }
 
-            //Activo el evento ExecuteInstruction
+            //Инициировать событие ExecuteInstruction 
             Executed(this,this.Body.Flux.Position);
 
-            //Si la instruccion es vacia es un espacio en blanco devuelve false.
+            //Если оператор пуст, это пустое место, которое возвращает false.
             if ( enumerator.Current == null )
                 return false;
 
-            //Sino ejecutala.
+            //В противном случае запустите его.
             enumerator.Current.Execute(RobotRoutine);
 
             if ( !RobotRoutine.ExecutingStack.Peek( ).Equals(this) && RobotRoutine.ExecutingStack.Peek( ).Executing )
                 return true;
-            //Si no se esta ejecutando lo que esta en el tope de la pila y es esta rutina, sale devolviendo false.
+            //Если то, что находится наверху стека, не выполняется, и это именно эта подпрограмма, она завершается, возвращая false.
             if ( !RobotRoutine.ExecutingStack.Peek( ).Executing && RobotRoutine.ExecutingStack.Peek( ).Equals(this) )
                 return false;
 
-            //Si es una accion fisica lo que se ejecuto termina devolviendo true.
+            //Если было выполнено действие, оно в конечном итоге возвращает значение true.
             if ( enumerator.Current is IAction )
                 return true;
             return false;
         }
         /// <summary>
-        /// Salva la rutina en .txt
+        /// Сохраните процедуру в .txt
         /// </summary>
-        /// <param name="pathInitial">Direccion donde se desea salvar la rutina.</param>
+        /// <param name="pathInitial">Адрес, по которому вы хотите сохранить процедуру.</param>
         public void SaveRoutine(string pathInitial)
         {
             ControllerRoutine.SaveRoutine(this,pathInitial);
         }
         /// <summary>
-        /// Devuelve un string que representa la rutina.
+        /// Возвращает строку, представляющую подпрограмму.
         /// </summary>
         /// <returns></returns>
         public override string ToString( )
@@ -193,7 +194,7 @@ namespace WallE.Routine
             return s;
         }
         /// <summary>
-        /// Dos rutinas son iguales si tienen el mismo cuerpo de instrucciones.
+        /// Две подпрограммы равны, если они имеют одно и то же тело оператора.
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -208,7 +209,7 @@ namespace WallE.Routine
             return (int) Math.Sqrt(( this.Body.GetHashCode( ) + this.RegistryRoutine.GetHashCode( ) ));
         }
         /// <summary>
-        /// Devuelve otra matriz con las mismas instrucciones y el mismo indice.
+        /// Возвращает другой массив с теми же инструкциями и тем же индексом.
         /// </summary>
         /// <returns></returns>
         public object Clone( )
@@ -219,7 +220,7 @@ namespace WallE.Routine
         }
 
         /// <summary>
-        /// Devuelve un enumerator de instruccione. Modifica el campo enumerator de la clase.
+        /// Возвращает перечислитель операторов. Изменяет поле перечислителя класса.
         /// </summary>
         /// <returns></returns>
         public IEnumerator<Instruction> GetEnumerator( )
@@ -228,7 +229,7 @@ namespace WallE.Routine
         }
         IEnumerator IEnumerable.GetEnumerator( ) => GetEnumerator( );
         /// <summary>
-        /// Devuelve un enumerable de instrucciones y su posicion en la matriz.
+        /// Возвращает перечисляемое количество операторов и их положение в массиве.
         /// </summary>
         /// <returns></returns>
         public IEnumerable<Tuple<Instruction,Position>> GetAllInstructionAndPositions( )
@@ -239,7 +240,8 @@ namespace WallE.Routine
                         yield return Tuple.Create(Body[new Position(i,j)],new Position(i,j));
         }
         /// <summary>
-        /// Devuelve todas las instrucciones de la matriz aunque no nunca sean accesibles por el flujo, o sea, devuelve todo lo que esta en la matriz.
+        /// Возвращает все инструкции массива, даже если они никогда не доступны потоку, 
+        /// то есть возвращает все, что есть в массиве.
         /// </summary>
         /// <returns></returns>
         public IEnumerable<Instruction> GetAllInstruction( )
@@ -251,7 +253,7 @@ namespace WallE.Routine
         }
 
         /// <summary>
-        /// Valida una matriz, o sea, verifica que tenga un {start}.
+        /// Проверяет массив, то есть проверяет, что он имеет {start}.
         /// </summary>
         /// <param name="routine"></param>
         /// <returns></returns>
@@ -263,20 +265,20 @@ namespace WallE.Routine
 
 
         /// <summary>
-        /// Representa un registro de la rutina.
+        /// Представляет запись подпрограммы.
         /// </summary>
         public class Registry : ICloneable
         {
             #region Field
             /// <summary>
-            /// Registro.
+            /// Записать
             /// </summary>
             private Dictionary<char,int> registry;
             #endregion
 
             #region Properties
             /// <summary>
-            /// Indexador del registro
+            /// Индексация реестра
             /// </summary>
             /// <param name="letter"></param>
             /// <returns></returns>
@@ -284,7 +286,7 @@ namespace WallE.Routine
             {
                 get
                 {
-                    //Si no se ha guardado nada con esa llave entonces, devuelve 0.
+                    //Если с этим ключом ничего не было сохранено, возвращается 0.
                     if ( !registry.ContainsKey(letter) )
                         return 0;
                     return registry[letter];
@@ -294,7 +296,7 @@ namespace WallE.Routine
 
             #region Constructor
             /// <summary>
-            /// Construye un registro con capacidad para 26 letras (no Ñ)
+            /// Создайте регистр емкостью N букв
             /// </summary>
             public Registry( )
             {
@@ -304,20 +306,20 @@ namespace WallE.Routine
 
             #region Methods
             /// <summary>
-            /// Añade un valor al registro.
+            /// Добавить значение в реестр.
             /// </summary>
-            /// <param name="letter">Índice donde se desea añadir.</param>
-            /// <param name="value">Valor a añadir.</param>
+            /// <param name="letter">Индекс, в который необходимо добавить.</param>
+            /// <param name="value">Значение для добавления.</param>
             internal void AddValueAt(char letter,int value)
             {
 
                 if ( !Char.IsLetter(letter) )
-                    throw new ArgumentException("No es una letra: ",letter.ToString( ));
+                    throw new ArgumentException("Нет определения: ",letter.ToString( ));
                 this.registry[letter.ToString().ToUpper().ToCharArray()[0]] = value;
             }
 
             /// <summary>
-            /// Dos registros son iguales si los diccionarios asociados son iguales.
+            /// Две записи равны, если равны связанные словари.
             /// </summary>
             /// <param name="obj"></param>
             /// <returns></returns>
@@ -332,7 +334,7 @@ namespace WallE.Routine
                 return 2 * this.registry.GetHashCode( );
             }
             /// <summary>
-            /// Devuelve otro registro pero con los mismo valores, y llaves.
+            /// Возвращает другую запись, но с теми же значениями и ключами.
             /// </summary>
             /// <returns></returns>
             public object Clone( )
@@ -349,31 +351,31 @@ namespace WallE.Routine
             #region Properties
 
             /// <summary>
-            /// Matriz de instrucciones.
+            /// Матрица инструкций.
             /// </summary>
             internal Instruction[,] Matrix { get; private set; }
 
             /// <summary>
-            /// Cantidad de filas de la matriz.
+            /// Количество строк в матрице.
             /// </summary>
             public int Row => this.Matrix.GetLength(0);
 
             /// <summary>
-            /// Cantidad de columnas de la matriz.
+            /// Количество столбцов в матрице.
             /// </summary>
             public int Column => this.Matrix.GetLength(1);
 
             /// <summary>
-            /// Cantidad de instrucciones en la matriz.
+            /// Количество инструкций в массиве.
             /// </summary>
             internal int CountInstruction { get; private set; }
 
             /// <summary>
-            /// Posición de la instruccion Start en la matriz.
+            /// Позиция команды Start в массиве.
             /// </summary>
             internal Position StartPosition { get; private set; }
             /// <summary>
-            /// Cursor de recorrido en la matriz.
+            /// Курсор пути в массиве.
             /// </summary>
             internal Pointer Flux { get; private set; }
 
@@ -381,14 +383,14 @@ namespace WallE.Routine
 
             #region Constructor
             /// <summary>
-            /// Construye una matriz de instrucciones.
+            /// Создайте массив инструкций.
             /// </summary>
-            /// <param name="row">Cantidad de filas.</param>
-            /// <param name="column">Cantidad de columnas.</param>
+            /// <param name="row">Количество рядов.</param>
+            /// <param name="column">Количество столбцов.</param>
             public MatrixInstruction(int row,int column)
             {
                 if ( row < 0 || column < 0 )
-                    throw new ArgumentException("No puede construir una matriz de instrucciones una cantidad de filas o columnas menor a 0." );
+                    throw new ArgumentException("Невозможно построить массив операторов с количеством строк или столбцов меньше 0.");
 
                 this.Matrix = new Instruction[row, column];
                 this.StartPosition = null;
@@ -399,7 +401,7 @@ namespace WallE.Routine
 
             #region Instruction Methods
             /// <summary>
-            /// Añade la instruccion Start en una posición determinada.
+            /// Добавляет оператор Start в заданную позицию.
             /// </summary>
             /// <param name="start"></param>
             /// <param name="indexRow"></param>
@@ -414,25 +416,25 @@ namespace WallE.Routine
                     this.CountInstruction++;
                 }
                 else
-                    throw new InvalidOperationException("Existe un start.");
+                    throw new InvalidOperationException("Начало.");
             }
 
             /// <summary>
-            /// Añade una instrucción a la matriz en una posición determinada.
+            ///Добавляет инструкцию в массив в заданной позиции.
             /// </summary>
-            /// <param name="instruction">Instrucción a añadir.</param>
-            /// <param name="position">Posición en la que se desea añadir la instrucción.</param>
+            /// <param name="instruction">инструкция по добавлению.</param>
+            /// <param name="position">Позиция, в которую необходимо добавить инструкцию.</param>
             public void AddInstructionAt(Instruction instruction,Position position) => AddInstructionAt(instruction,position.X,position.Y);
             /// <summary>
-            /// Añade la instruccion Start en una posición determinada.
+            /// Добавляет оператор Start в заданную позицию.
             /// </summary>
             /// <param name="start"></param>
             /// <param name="indexRow"></param>
             /// <param name="indexColumn"></param>
             private void AddInstructionAt(Instruction instruction,int indexRow,int indexColumn)
             {
-               
-                //Si la posicion no existe entonces aumento mi matriz y añado la posicion.
+
+                //Если позиция не существует, то увеличиваю свой массив и добавляю позицию.
                 while ( indexRow >= this.Row )
                     AddLastRow( );
                 while ( indexColumn >= this.Column )
@@ -452,12 +454,12 @@ namespace WallE.Routine
             }
 
             /// <summary>
-            /// Remueve la instrucción en la posición.
+            /// Удаляет оператор в позиции.
             /// </summary>
             /// <param name="position"></param>
             public void RemoveInstructionAt(Position position) => RemoveInstructionAt(position.X,position.Y);
             /// <summary>
-            /// Remueve la instrucción en la posición.
+            /// Удаляет оператор в позиции.
             /// </summary>
             /// <param name="indexRow"></param>
             /// <param name="indexColumn"></param>
@@ -473,14 +475,14 @@ namespace WallE.Routine
 
             #region Structural Methods
             ///<summary>
-            /// Añade una fila al final de la matriz.
+            /// Добавьте строку в конец массива.
             /// </summary>
             private void AddLastRow( )
             {
                 AddRowAt(this.Row);
             }
             /// <summary>
-            /// Añade una columna al final de la matriz.
+            /// Добавляет столбец в конец массива.
             /// </summary>
             private void AddLastColumn( )
             {
@@ -488,7 +490,7 @@ namespace WallE.Routine
             }
 
             /// <summary>
-            /// Añade una fila al inicio de la matriz.
+            ///Добавляет строку в начало массива.
             /// </summary>
             private void AddFirstRow( )
             {
@@ -500,7 +502,7 @@ namespace WallE.Routine
                 this.Matrix = result;
             }
             /// <summary>
-            /// Añade una columna al inicio de la matriz.
+            /// Добавляет столбец в начало матрицы.
             /// </summary>
             private void AddFirstColumn( )
             {
@@ -513,7 +515,7 @@ namespace WallE.Routine
                 this.Matrix = result;
             }
             /// <summary>
-            /// Añade una fila en el índice.
+            /// Добавьте строку в index.
             /// </summary>
             /// <param name="index"></param>
             public void AddRowAt(int index)
@@ -547,7 +549,7 @@ namespace WallE.Routine
             }
 
             /// <summary>
-            /// Añade una columna en el índice.
+            /// Добавьте столбец в индекс.
             /// </summary>
             /// <param name="index"></param>
             public void AddColumnAt(int index)
@@ -581,7 +583,7 @@ namespace WallE.Routine
             }
 
             /// <summary>
-            /// Indexador de la matriz de instrucciones.
+            /// Индексатор массива инструкций.
             /// </summary>
             /// <param name="position"></param>
             /// <returns></returns>
@@ -595,7 +597,7 @@ namespace WallE.Routine
                 }
             }
             /// <summary>
-            /// Indexador de la matriz de instrucciones
+            /// Индексатор массива инструкций
             /// </summary>
             /// <param name="indexRow"></param>
             /// <param name="indexColumn"></param>
@@ -612,9 +614,9 @@ namespace WallE.Routine
                 set
                 {
                     if ( !( value is Instruction ) && value != null )
-                        throw new ArgumentException("No es una instruccion: ",value.ToString( ));
+                        throw new ArgumentException("Не инструкция: ",value.ToString( ));
                     if ( value is Start && StartPosition != null )
-                        throw new InvalidOperationException("Ya existe un Start en: " + StartPosition.ToString( ) + ".");
+                        throw new InvalidOperationException("Старт уже задан: " + StartPosition.ToString( ) + ".");
                     IsInside(indexRow,indexColumn);
                     this.Matrix[indexRow,indexColumn] = value;
                 }
@@ -624,7 +626,7 @@ namespace WallE.Routine
             #region Enumerable
 
             /// <summary>
-            /// Devuelve un enumerator de instrucciones de la matriz.
+            /// Возвращает перечислитель операторов массива.
             /// </summary>
             /// <returns></returns>
             public IEnumerator<Instruction> GetEnumerator( )
@@ -637,19 +639,19 @@ namespace WallE.Routine
 
             #region Auxiliar Methods
             /// <summary>
-            /// Lanza exception si los parametros no son validos.
+            ///Выдает исключение, если параметры недействительны.
             /// </summary>
             /// <param name="indexRow"></param>
             /// <param name="indexColumn"></param>
             public void IsInside(int indexRow,int indexColumn)
             {
                 if ( indexRow < 0 || indexRow > this.Row )
-                    throw new ArgumentOutOfRangeException("Fila incorrecta.");
+                    throw new ArgumentOutOfRangeException("Некорректный ряд.");
                 if ( indexColumn < 0 || indexColumn > this.Column )
-                    throw new ArgumentOutOfRangeException("Columna incorrecta.");
+                    throw new ArgumentOutOfRangeException("Некорректный столбец.");
             }
             /// <summary>
-            /// Devuelve una nueva matriz de instrucciones con estas mismas instrucciones.
+            /// Возвращает новый массив операторов с теми же операторами.
             /// </summary>
             /// <returns></returns>
             public object Clone( )
@@ -692,7 +694,7 @@ namespace WallE.Routine
             #region Manage Pointer
 
             /// <summary>
-            /// Pone el puntero de la matriz en la posicion del {start}
+            /// Поместите указатель массива в позицию {start}
             /// </summary>
             internal void FluxReset( )
             {
@@ -703,24 +705,24 @@ namespace WallE.Routine
             #endregion
 
             /// <summary>
-            /// Puntero  de recorrido de la matriz.
+            /// Указатель обхода массива.
             /// </summary>
             public class Pointer
             {
                 #region Fields
                 /// <summary>
-                /// Posicion del puntero en la matriz.
+                /// Положение указателя в массиве.
                 /// </summary>
                 private Position position;
                 #endregion
 
                 #region Properties
                 /// <summary>
-                /// Posicion del puntero en la matriz.
+                /// Положение указателя в массиве.
                 /// </summary>
                 public Position Position => this.position;
                 /// <summary>
-                /// Direccion del puntero en la matriz.
+                /// Адрес указателя в массиве.
                 /// </summary>
                 internal byte Direction { get; set; }
                 #endregion
@@ -735,7 +737,7 @@ namespace WallE.Routine
 
                 #region Methods
                 /// <summary>
-                /// Mueve el puntero hacia la posicion del frente.
+                /// Переместите указатель в переднее положение.
                 /// </summary>
                 /// <param name="matrix"></param>
                 public void Advance(MatrixInstruction matrix)
@@ -747,10 +749,10 @@ namespace WallE.Routine
                         this.position = new Position(-1,-1);
                 }
                 /// <summary>
-                /// Valida una posicion en la matriz.
+                /// Проверить позицию в массиве.
                 /// </summary>
-                /// <param name="position">Posicion a validar.</param>
-                /// <param name="matrix">Matriz donde se desea validar la posicion.</param>
+                /// <param name="position">Позиция для проверки.</param>
+                /// <param name="matrix">Матрица, где вы хотите проверить позицию.</param>
                 /// <returns></returns>
                 public bool IsInside(MatrixInstruction matrix)
                 {
@@ -783,7 +785,7 @@ namespace WallE.Routine
                     get
                     {
                         if ( !Move )
-                            throw new InvalidOperationException("Tiene que hacer .MoveNext()");
+                            throw new InvalidOperationException("Должен выполнить .MoveNext()");
                         return current;
                     }
                 }

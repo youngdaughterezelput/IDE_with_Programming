@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Representa la memoria lineal.
+    /// Представляет линейную память.
     /// </summary>
     public class LinealMemory : ICloneable
     {
         /// <summary>
-        /// Array que representa la memoria lineal.
+        /// Массив, представляющий линейную память.
         /// </summary>
         int[] memory;
 
         /// <summary>
-        /// Construye una memoria lineal.
+        /// РАзвитие линейную память.
         /// </summary>
         public LinealMemory( )
         {
@@ -25,28 +25,28 @@ namespace WallE.Tools
         }
 
         /// <summary>
-        /// Indexador de la memoria lineal.
+        /// Линейный индексатор памяти.
         /// </summary>
-        /// <param name="index">Indice de la memoria lineal.</param>
+        /// <param name="index">индекс линейной памяти.</param>
         /// <returns></returns>
         public int this[int index]
         {
             get
             {
                 if ( index < 0 || index >= 1000000 )
-                    throw new IndexOutOfRangeException("Índicie fuera de rango de la memoria lineal.");
+                    throw new IndexOutOfRangeException("Линейный индекс памяти вне допустимого диапазона.");
                 return this.memory[index];
             }
             internal set
             {
                 if ( index < 0 || index >= 1000000 )
-                    throw new IndexOutOfRangeException("Índicie fuera de rango de la memoria lineal.");
+                    throw new IndexOutOfRangeException("Линейный индекс памяти вне допустимого диапазона.");
                 this.memory[index] = value;
             }
         }
 
         /// <summary>
-        /// Devuelve una nueva memoria lineal.
+        /// Возвращает новую линейную память.
         /// </summary>
         /// <returns></returns>
         public object Clone( )

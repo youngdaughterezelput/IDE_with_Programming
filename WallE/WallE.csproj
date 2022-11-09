@@ -46,7 +46,7 @@
     <Compile Include="MATLAN\InstructionFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\AutoGuideFlux\HorizontalFluxFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Registry\GetSpecifiedFactory.cs" />
-    <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Routine\CallFactory.cs" />
+    <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Procedure\CallFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Operators\Binary\GeqFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Operators\Binary\GtFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Operators\Binary\LandFactory.cs" />
@@ -91,8 +91,8 @@
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\LinealMemory\SetAtFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Operators\Binary\SubFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Operators\Ternary\TernaryFactory.cs" />
-    <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Routine\RecCallFactory.cs" />
-    <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Routine\RoutineFactory.cs" />
+    <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Procedure\RecCallFactory.cs" />
+    <Compile Include="MATLAN\InstructionFactory\LanguageFactory\Procedure\RoutineFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\T\TEFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\T\TNFactory.cs" />
     <Compile Include="MATLAN\InstructionFactory\LanguageFactory\T\TSFactory.cs" />
@@ -144,8 +144,8 @@
     <Compile Include="MATLAN\Instructions\Programmable Instructions\Backward.cs" />
     <Compile Include="MATLAN\Instructions\Programmable Instructions\Forward.cs" />
     <Compile Include="MATLAN\Instructions\Programmable Instructions\Webcam.cs" />
-    <Compile Include="MATLAN\Instructions\Language Instructions\Execution Routine\Start.cs" />
-    <Compile Include="MATLAN\Instructions\Language Instructions\Execution Routine\Return.cs" />
+    <Compile Include="MATLAN\Instructions\Language Instructions\Execution Procedure\Start.cs" />
+    <Compile Include="MATLAN\Instructions\Language Instructions\Execution Procedure\Return.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Stack\Zero.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\LinealMemory\SetAt.cs" />
     <Compile Include="MATLAN\Instructions\Language Instructions\Operators\Binary\Sub.cs" />

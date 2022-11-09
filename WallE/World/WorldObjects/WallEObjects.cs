@@ -13,15 +13,15 @@ namespace WallE.World.WorldObjects
 
         #region Fields
         /// <summary>
-        /// Forma del objeto.
+        /// Форма объекта.
         /// </summary>
         private int objShape;
         /// <summary>
-        /// Tamaño del objeto.
+        /// Размер объекта
         /// </summary>
         private int objSize;
         /// <summary>
-        /// Color del objeto.
+        /// Цвет.
         /// </summary>
         private int objColor;
 
@@ -32,7 +32,7 @@ namespace WallE.World.WorldObjects
         public virtual string MainCharacteristics => (Shapes)this.ObjShape + "_" + (Sizes) this.ObjSize +"_"+(Colors)this.ObjColor;
 
         /// <summary>
-        /// ID del objeto.
+        /// ID объекта
         /// </summary>
         public int ObjNumber
         {
@@ -47,7 +47,7 @@ namespace WallE.World.WorldObjects
             set
             {
                 if ( value > Shapes.GetValues( ).Skip(1).Select(c => c.ID).Max( ) || value < Shapes.GetValues( ).Skip(1).Select(c => c.ID).Min( ) )
-                    throw new InvalidOperationException("Forma invalida");
+                    throw new InvalidOperationException("Форма некорректна");
                 objShape = value;
             }
         }
@@ -60,7 +60,7 @@ namespace WallE.World.WorldObjects
             set
             {
                 if ( value > Sizes.GetValues( ).Skip(1).Select(c => c.ID).Max( ) || value < Sizes.GetValues( ).Skip(1).Select(c => c.ID).Min( ) )
-                    throw new InvalidOperationException("Forma invalida");
+                    throw new InvalidOperationException("Форма некорректна");
                 objSize = value;
             }
         }
@@ -73,12 +73,12 @@ namespace WallE.World.WorldObjects
             set
             {
                 if ( value > Colors.GetValues( ).Skip(1).Select(c => c.ID).Max( ) || value < Colors.GetValues( ).Skip(1).Select(c => c.ID).Min( ) )
-                    throw new InvalidOperationException("Forma invalida");
+                    throw new InvalidOperationException("Форма некорректна");
                 objColor = value;
             }
         }
         /// <summary>
-        /// Posicion del objeto en el mundo.
+        /// Положение объекта в мире.
         /// </summary>
         public Position ObjPosition
         {
@@ -129,7 +129,7 @@ namespace WallE.World.WorldObjects
 
         #region Methods
         /// <summary>
-        /// Devuelve el string que representa un objeto.
+        /// Возвращает строку, представляющую объект.
         /// </summary>
         /// <returns></returns>
         public override string ToString( )
@@ -137,7 +137,7 @@ namespace WallE.World.WorldObjects
             return (Shapes) this.ObjShape + " " + this.ObjNumber + " " +(Sizes)this.ObjSize + " "+(Colors)this.ObjColor;
         }
         /// <summary>
-        /// Determina si la instancia es igual a un WallEObjects específico
+        /// Определяет, равен ли экземпляр определенному WallEObjects
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -161,12 +161,12 @@ namespace WallE.World.WorldObjects
 
         #region Static Methods
         /// <summary>
-        /// Determina si estos parámetros son válidos para construir un objeto.
+        /// Определяет, допустимы ли эти параметры для построения объекта.
         /// </summary>
-        /// <param name="shape">Forma del objeto.</param>
-        /// <param name="size">Tamaño del objeto.</param>
-        /// <param name="color">Color del objeto.</param>
-        /// <param name="number">ID del objeto.</param>
+        /// <param name="shape">Форма объекта.</param>
+        /// <param name="size">Размер объекта.</param>
+        /// <param name="color">Цвет.</param>
+        /// <param name="number">ID.</param>
         /// <returns></returns>
         private static bool IsValidParameters(int shape,int size,int color)
         {

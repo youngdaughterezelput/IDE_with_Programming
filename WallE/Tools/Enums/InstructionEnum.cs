@@ -135,19 +135,19 @@ namespace WallE.Tools
         }
 
         /// <summary>
-        /// Devuelve una colección de todos los posible valores de colores.
+        /// Возвращает коллекцию всех возможных значений цвета
         /// </summary>
         /// <returns></returns>
         public static ReadOnlyCollection<InstructionEnum> GetValues( ) => GetBaseValues( );
         /// <summary>
-        /// Devuelve un color por su identificador.
+        /// Возвращает цвет по его идентификатору.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public static InstructionEnum GetByID(int id) => GetBaseByID(id);
 
         /// <summary>
-        /// Obtiene el nombre de la instruccion empezando en mayuscula.
+        /// Получает имя инструкции, начинающееся с прописной буквы.
         /// </summary>
         /// <param name="instruction"></param>
         /// <returns></returns>
@@ -166,13 +166,13 @@ namespace WallE.Tools
         }
 
         /// <summary>
-        /// Cast explícito de integer a Color.
+        /// Явное приведение из целого числа к цвету.
         /// </summary>
         /// <param name="id"></param>
         public static explicit operator InstructionEnum(int id) => GetBaseByID(id);
 
         /// <summary>
-        /// Cast explicito de Colors a integer
+        /// Явное приведение цветов к целому числу
         /// </summary>
         /// <param name="color"></param>
         public static explicit operator int (InstructionEnum color) => color.ID;

@@ -12,13 +12,13 @@ using WallE.MATLAN;
 namespace WallE.Routine
 {
     /// <summary>
-    /// Representa la lista de rutina que tiene un robot.
+    /// Представляет список подпрограмм, который есть у робота.
     /// </summary>
     public class ProcList : IEnumerable<Proc>, ICloneable
     {
         #region Fields
         /// <summary>
-        /// Lista de rutinas.
+        /// Список процедур
         /// </summary>
         List<Proc> list;
         internal IProgrammable bot;
@@ -26,14 +26,14 @@ namespace WallE.Routine
 
         #region Properties
         /// <summary>
-        /// Cantidad de rutinas en la lista.
+        /// Количество подпрограмм в списке.
         /// </summary>
         public int Count => this.list.Count;
 
 
 
         /// <summary>
-        /// Indexador de la lista de rutinas.
+        /// Обычный индексатор списка.
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
@@ -46,14 +46,14 @@ namespace WallE.Routine
 
         #region Constructor
         /// <summary>
-        /// Construye una lista de rutinas vacía.
+        /// Создайте пустой список рутинных действий.
         /// </summary>
         public ProcList( )
         {
             this.list = new List<Proc>( );
         }
         /// <summary>
-        /// Construye una lista de rutinas a partir de un array de rutinas.
+        /// Создайте список подпрограмм из массива подпрограмм.
         /// </summary>
         /// <param name="list"></param>
         public ProcList(params Proc[] list)
@@ -64,9 +64,9 @@ namespace WallE.Routine
 
         #region Methods
         /// <summary>
-        /// Carga una rutina de un .txt a esta lista.
+        /// Загрузите процедуру из .txt в этот список.
         /// </summary>
-        /// <param name="path">Path del .txt de la rutina.</param>
+        /// <param name="path">Путь подпрограммы .txt.</param>
         /// <returns></returns>
         public void LoadRoutine(string path)
         {
@@ -76,9 +76,9 @@ namespace WallE.Routine
         }
 
         /// <summary>
-        /// Añadir una rutina a esta lista.
+        /// Необходимо добавить процедуру в список
         /// </summary>
-        /// <param name="routine">Array de rutinas que se desean añadir a la lista del robot.</param>
+        /// <param name="routine">Массив подпрограмм для добавления в список робота.</param>
         public void AddRoutine(params Proc[] routine)
         {
             for ( int i = 0; i < routine.Length; i++ )
@@ -101,13 +101,13 @@ namespace WallE.Routine
         }
 
         /// <summary>
-        /// Remueve la rutina en la índice dado.
+        /// Удалить подпрограмму по заданному индексу.
         /// </summary>
         /// <param name="index"></param>
         public void RemoveRoutineAt(int index)
         {
             if ( index >= this.list.Count )
-                throw new IndexOutOfRangeException("Ese índice no existe.");
+                throw new IndexOutOfRangeException("такого индекса не существует.");
             for ( int i = index + 1; i < list.Count; i++ )
                 list[i].Index = i - 1;
             this.list.RemoveAt(index);
@@ -129,16 +129,17 @@ namespace WallE.Routine
         }
 
         /// <summary>
-        /// Ejecutar la lista de rutinas de un IProgrammable determinado.
+        /// Выполнить список подпрограмм данного IProgrammable.
         /// </summary>
         internal void Execute( )
         {
             //Robot sin rutinas
             if ( list.Count == 0 || list[0] == null )
             {
-                //En dependencia de como el usuario quiera el control de errores se lanza un error o simplemente se imprime en la consola de la aplicacion el error.
-                Errors.Error error = new Errors.Error("Robot sin rutinas o sin programa principal.");
-                //El usuario no quiere errores, se acaba la simulacion.
+                //В зависимости от того, как пользователь хочет контролировать ошибки,
+                //выдается ошибка или ошибка просто печатается в консоли приложения.
+                Errors.Error error = new Errors.Error("Робот без подпрограмм или без основной программы.");
+                //Пользователь не хочет ошибок, симуляция окончена.
                 if ( Simulator.Simulator.NoAllowErrors )
                 {
                     Simulator.Simulator.ReportError(bot,error);
@@ -147,32 +148,32 @@ namespace WallE.Routine
                 Simulator.WallE_Console.Print(bot,error.ToString( ));
                 return;
             }
-            //Si no hay rutinas en la pila de ejecucion de este robot, entonces apila la rutina con indice 0.
+            //Если в стеке выполнения этого робота нет подпрограмм, то он помещает подпрограмму с индексом 0.
             if ( this.bot.ExecutingStack.Count == 0 )
             {
                 var rut = (Proc) list[0].Clone( );
                 rut.RobotRoutine = bot;
                 ( (Robot) bot ).ExecutingStack.Push(rut);
             }
-            //Se marca como que se esta ejecutando
+            //Он помечен как работающий
             this.bot.ExecutingStack.Peek( ).Executing = true;
-            //Se ejecuta hasta una accion fisica o que el flujo salga de la matriz.
+            //Он выполняется до тех пор, пока  действие или поток не покинет матрицу.
             this.bot.ExecutingStack.Peek( ).Execute( );
-            //Si al salir ha terminado de ejecutarse quitala del tope de la pila.
+            //Если он завершил выполнение при выходе, удалите его из вершины стека.
             if ( !bot.ExecutingStack.Peek( ).Executing )
                 bot.ExecutingStack.Pop( );
         }
         /// <summary>
-        /// Ejecuta la lista de rutinas del objeto IProgrammable instruccion por instruccion.
+        /// Выполняет список подпрограмм в объекте IProgrammable, оператор за оператором.
         /// </summary>
         /// <returns></returns>
         internal bool ExecuteByInstruction( )
         {
-            /* Este metodo es parecido al de ejecutar hasta una accion fisica solo con la diferencia que lo que se ejecuta es un instruccion y se sale del metodo.
-            Se devuelve un booleano para decir si con esa instruccion el objeto IProgrammable termina su turno.*/
+            /* Этот метод подобен выполнению до физического действия только с той разницей, что выполняется инструкция, а метод завершается.
+             Возвращается логическое значение, указывающее, завершает ли объект IProgrammable свой ход этой инструкцией.*/
             if ( list.Count == 0 || list[0] == null )
             {
-                Errors.Error error = new Errors.Error("Robot sin rutinas o sin programa principal.");
+                Errors.Error error = new Errors.Error("Робот без подпрограмм или без основной программы.");
                 if ( Simulator.Simulator.NoAllowErrors )
                 {
                     Simulator.Simulator.ReportError(bot,error);

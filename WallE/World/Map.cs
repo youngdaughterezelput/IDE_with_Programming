@@ -10,76 +10,76 @@ using System.Collections;
 namespace WallE.World
 {
     /// <summary>
-    /// Representa el mapa del mundo Wall-E
+    /// Представляет собой карту мира Wall-E
     /// </summary>
     public class Map : IEnumerable<WallEObjects>, ICloneable
     {
         #region Fields
 
         /// <summary>
-        /// Representa el mapa.
+        /// Представляет карту.
         /// </summary>
         private WallEObjects[,] map;
         #endregion
 
         #region Properties
         /// <summary>
-        /// Cantidad de objetos.
+        /// Количество объектов.
         /// </summary>
         public int CountObjects { get; set; }
 
         /// <summary>
-        /// Representa la cantidad de filas del mapa.
+        /// Представляет количество строк на карте.
         /// </summary>
         public int Rows => this.map.GetLength(0);
 
         /// <summary>
-        /// Representa la cantidad de columnas del mapa.
+        /// Представляет количество столбцов на карте.
         /// </summary>
         public int Columns => this.map.GetLength(1);
 
         /// <summary>
-        /// Indexador del mapa
+        /// индексатор карт
         /// </summary>
-        /// <param name="position">Posición a indexar.</param>
+        /// <param name="position">Позиция для индексации.</param>
         /// <returns></returns>
         public WallEObjects this[Position position]
         {
             get
             {
                 if ( !IsValidPosition(this,position) )
-                    throw new InvalidOperationException("Posicion invalida.");
+                    throw new InvalidOperationException("Позиция не корректна.");
                 return this.map[position.X,position.Y];
             }
         }
 
         /// <summary>
-        /// Indexador del mapa
+        /// индексатор карт
         /// </summary>
-        /// <param name="indexRow">Fila a indexar.</param>
-        /// <param name="indexColumn">Columna a indexar.</param>
+        /// <param name="indexRow">Строка для индексации.</param>
+        /// <param name="indexColumn">Столбец для индексации.</param>
         /// <returns></returns>
         public WallEObjects this[int indexRow, int indexColumn] => this[new Position(indexRow,indexColumn)];
         #endregion
 
         #region Constructor
         /// <summary>
-        /// Construye la instancia de un mapa.
+        /// Создайте экземпляр карты.
         /// </summary>
-        /// <param name="rows">Cantidad de filas. Por defecto 10</param>
-        /// <param name="columns">Cantidad de columnas. Por defecto 20.</param>
+        /// <param name="rows">Количество рядов. По умолчанию 10</param>
+        /// <param name="columns">Число столбцов. По умолчанию 20.</param>
         public Map(int row = 10,int columns = 20) : this(null,row,columns) { }
 
         /// <summary>
-        /// Construye la instancia de un mapa.
+        /// Создайте экземпляр карты.
         /// </summary>
-        /// <param name="knowObjectsPosition">Objetos que tiene una posición conocida.</param>
-        /// <param name="rows">Cantidad de filas.</param>
-        /// <param name="columns">Cantidad de columnas.</param>
+        /// <param name="knowObjectsPosition">Объекты, которые имеют известное положение.</param>
+        /// <param name="rows">количество рядов.</param>
+        /// <param name="columns">количество столбцов.</param>
         public Map(Tuple<WallEObjects,Position>[] knowObjectsPosition,int rows = 10,int columns = 20)
         {
             if ( rows <= 0 || columns <= 0 )
-                throw new ArgumentException("Parámetros inválidos.");
+                throw new ArgumentException("Параметры не корректны.");
             this.map = new WallEObjects[rows, columns];
 
             if ( knowObjectsPosition != null )
@@ -92,16 +92,16 @@ namespace WallE.World
         #region Controller Wall-E Objects
 
         /// <summary>
-        /// Añade un objeto nuevo en la posicion.
+        /// Добавьте новый объект в позицию.
         /// </summary>
-        /// <param name="objects">Nuevo objeto.</param>
+        /// <param name="objects">Новый объект.</param>
         /// <param name="position"></param>
         public void AddNewObjectAt(WallEObjects objects)
         {
             if ( !IsValidPosition(this,objects.ObjPosition) )
-                throw new InvalidOperationException("No puede añadir un objeto en una posicion incorrecta.");
+                throw new InvalidOperationException("Вы не можете добавить объект в неправильное положение.");
             if ( !CanAddAt(objects.ObjPosition) )
-                throw new InvalidOperationException("Posicion ocupada en el mapa.");
+                throw new InvalidOperationException("Позиция занята на карте.");
 
             this.map[objects.ObjPosition.X,objects.ObjPosition.Y] = objects;
             var tempWorld = this;
@@ -636,7 +636,7 @@ namespace WallE.World
             get
             {
                 if ( !move )
-                    throw new InvalidOperationException("No ha hecho MoveNext()");
+                    throw new InvalidOperationException("Не выполнил MoveNext()");
                 return current;
             }
         }

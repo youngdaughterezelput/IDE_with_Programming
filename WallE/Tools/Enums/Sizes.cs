@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Representa todos los tamaños que pueden tener los objetos.
+    /// Представляет все размеры, которые могут иметь объекты.
     /// </summary>
     public class Sizes : EnumBaseType<Sizes>
     {
@@ -22,24 +22,24 @@ namespace WallE.Tools
 
         }
         /// <summary>
-        /// Devuelve una colección de todos los posible valores de tamaños.
+        /// Возвращает коллекцию всех возможных значений размера.
         /// </summary>
         /// <returns></returns>
         public static ReadOnlyCollection<Sizes> GetValues( ) => GetBaseValues( );
         /// <summary>
-        /// Devuelve un tamaño por su identificador.
+        /// Возвращает размер по его идентификатору.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public static Sizes GetByID(int id) => GetBaseByID(id);
         /// <summary>
-        /// Cast explícito de integer a Size.
+        /// Явное приведение из целого числа к размеру.
         /// </summary>
         /// <param name="id"></param>
         public static explicit operator Sizes(int id) => GetByID(id);
 
         /// <summary>
-        /// Cast explicito de Size a integer
+        /// Явное приведение Size к целому числу
         /// </summary>
         /// <param name="size"></param>
         public static explicit operator int (Sizes size) => size.ID;

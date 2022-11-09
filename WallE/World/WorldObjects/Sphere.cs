@@ -8,7 +8,7 @@ using WallE.Tools;
 namespace WallE.World.WorldObjects
 {
     /// <summary>
-    /// Objeto esfera
+    /// Сфера
     /// </summary>
     public class Sphere : WallEObjects
     {
@@ -21,7 +21,7 @@ namespace WallE.World.WorldObjects
 
         #region Constructors
         /// <summary>
-        /// Construye una instancia de una esfera.
+        /// Создайте экземпляр сферы.
         /// </summary>
         /// <param name="number"></param>
         /// <param name="size"></param>
@@ -35,7 +35,7 @@ namespace WallE.World.WorldObjects
 
         #region Methods
         /// <summary>
-        /// Devuelve el string que representa una esfera.
+        /// Возвращает строку, представляющую сферу.
         /// </summary>
         /// <returns></returns>
         public override string ToString( )
@@ -44,7 +44,7 @@ namespace WallE.World.WorldObjects
         }
 
         /// <summary>
-        /// Determina si la instancia es igual a un objeto.
+        /// Определяет, равен ли экземпляр объекту.
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -59,7 +59,7 @@ namespace WallE.World.WorldObjects
             return base.GetHashCode( );
         }
         /// <summary>
-        /// Devuelve un clon de esta planta.
+        /// Возвращает клон  растения.
         /// </summary>
         /// <returns></returns>
         public override object Clone( )

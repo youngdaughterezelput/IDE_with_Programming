@@ -7,24 +7,24 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Representa posiciones en un array bidimensional
+    /// Представляет позиции в двумерном массиве
     /// </summary>
     public class Position : ICloneable
     {
         #region Fields
         /// <summary>
-        /// Representa las coordenadas de los ejes X.
+        /// Представлять позицию в двумерном массиве
         /// </summary>
         int x;
         /// <summary>
-        /// Representa las coordenadas de los ejes Y.
+        /// Представляет координаты осей Y.
         /// </summary>
         int y;
         #endregion
 
         #region Properties
         /// <summary>
-        /// Representa las coordenadas de los ejes X.
+        /// Представляет координаты осей X.
         /// </summary>
         public int X
         {
@@ -32,12 +32,12 @@ namespace WallE.Tools
             private set
             {
                 if ( value < -1 )
-                    throw new ArgumentException("Coordenada X incorrecta.");
+                    throw new ArgumentException("Координата Х не корректна.");
                 this.x = value;
             }
         }
         /// <summary>
-        /// Representa las coordenadas de los ejes Y.
+        /// Представляет координаты осей Y.
         /// </summary>
         public int Y
         {
@@ -45,7 +45,7 @@ namespace WallE.Tools
             private set
             {
                 if ( value < -1 )
-                    throw new ArgumentException("Coordenada Y incorrecta.");
+                    throw new ArgumentException("Координата Y не корректна.");
                 this.y = value;
             }
         }
@@ -53,10 +53,10 @@ namespace WallE.Tools
 
         #region Constructor
         /// <summary>
-        /// Construye una posición correcta.
+        /// Выстроить правильную позицию.
         /// </summary>
-        /// <param name="axisX">Coordenada X.</param>
-        /// <param name="axisY">Coordenada Y.</param>
+        /// <param name="axisX">Координация X.</param>
+        /// <param name="axisY">Координация Y.</param>
         public Position(int axisX = 0,int axisY = 0)
         {
             this.X = axisX;
@@ -67,7 +67,7 @@ namespace WallE.Tools
 
         #region Methods
         /// <summary>
-        /// Determina si un objeto es igual al Position actual.
+        /// Определяет, равен ли объект текущей позиции.
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -82,7 +82,7 @@ namespace WallE.Tools
             return base.GetHashCode( );
         }
         /// <summary>
-        /// Devuelve el string que representa este Position.
+        /// Возвращает строку, представляющую эту позицию.
         /// </summary>
         /// <returns></returns>
         public override string ToString( )

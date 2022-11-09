@@ -44,30 +44,30 @@ namespace WallE.Simulator
             set
             {
                 if ( value < 0.2 )
-                    throw new ArgumentException("Valor de tiempo no valido. Debe ser mayor que 0.2 segundos");
+                    throw new ArgumentException("Недопустимое значение времени. Должно быть больше 0,2 секунды");
                 time = value;
             }
         }
         /// <summary>
-        /// Se esta haciendo debug o no.
+        /// Отладка //нет
         /// </summary>
         public bool IsDebugging { get; private set; }
         /// <summary>
-        /// Se desea permitir errores.
+        /// Допустить вывод ошибок
         /// </summary>
         public static bool NoAllowErrors { get; set; }
         public static Error CurrentError { get;  internal set; }
         /// <summary>
-        /// Mundo de la simulacion.
+        /// Мир симуляции.
         /// </summary>
         public Map World => this.world;
 
         /// <summary>
-        /// Cantidad de rondas del simulador.
+        /// Количество раундов симулятора.
         /// </summary>
         public int Rounds { get; private set; }
         /// <summary>
-        /// Se esta simulando en este momento.
+        /// Симуляция в текущем режиме
         /// </summary>
         public bool IsRunning { get; /*private*/ set; }
 
@@ -91,7 +91,7 @@ namespace WallE.Simulator
 
         #region Execution
         /// <summary>
-        /// Detiene la simulacion y la devuelve a su estado inicial.
+        /// Останавливает симуляцию и возвращает ее в исходное состояние.
         /// </summary>
         public virtual void Stop( )
         {
@@ -104,7 +104,7 @@ namespace WallE.Simulator
 
         }
         /// <summary>
-        /// Detiene la simulacion en la proxima ronda.
+        /// Останавливает симуляцию на следующем раунде.
         /// </summary>
         public virtual void Pause( )
         {
@@ -112,7 +112,7 @@ namespace WallE.Simulator
             IsDebugging = false;
         }
         /// <summary>
-        /// Avanza una ronda de la simulacion.
+        /// Продвиньтесь на один раунд симуляции.
         /// </summary>
         public virtual void Advance( )
         {
@@ -131,7 +131,7 @@ namespace WallE.Simulator
             IsRunning = false;
         }
         /// <summary>
-        /// Hace la ejecucion instruccion por instruccion.
+        /// Выполняет инструкцию за инструкцией.
         /// </summary>
         public virtual void Debug( )
         {
@@ -149,7 +149,7 @@ namespace WallE.Simulator
 
         #region Auxiliar Methods
         /// <summary>
-        /// Devuelve una ronda nueva.
+        /// Возвращает новый раунд.
         /// </summary>
         /// <returns></returns>
         public IEnumerator<Round> GetEnumerator( )
@@ -164,9 +164,9 @@ namespace WallE.Simulator
 
         #region Events
         /// <summary>
-        /// Metodo que reporta un error en la simulacion.
+        /// Метод, который сообщает об ошибке в моделировании.
         /// </summary>
-        /// <param name="robot">Objeto IProgrammable que tiene un error.</param>
+        /// <param name="robot">IProgrammable объект с ошибкой.</param>
         /// <param name="error"></param>
         public static void ReportError(IProgrammable robot,Errors.Error error)
         {
@@ -174,7 +174,7 @@ namespace WallE.Simulator
             Error(robot,new EventArgs( ));
         }
         /// <summary>
-        /// Evento que se lanza cuando hay un error.
+        /// Событие, возникающее при возникновении ошибки.
         /// </summary>
         public static event EventHandler Error;
         #endregion 

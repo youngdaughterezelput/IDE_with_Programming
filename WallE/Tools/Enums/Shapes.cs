@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Representa todas las formas que pueden tener los objetos.
+    /// Он представляет все формы, которые могут иметь объекты.
     /// </summary>
     public class Shapes : EnumBaseType<Shapes>
     {
@@ -26,23 +26,23 @@ namespace WallE.Tools
 
         #region Methods
         /// <summary>
-        /// Devuelve una colección de todos los posible valores de formas.
+        /// Возвращает коллекцию всех возможных значений формы.
         /// </summary>
         /// <returns></returns>
         public static ReadOnlyCollection<Shapes> GetValues( ) => GetBaseValues( );
         /// <summary>
-        /// Devuelve una forma por su identificador.
+        /// Возвращает форму по ее идентификатору.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public static Shapes GetByID(int id) => GetBaseByID(id);
         /// <summary>
-        /// Cast explícito de integer a Shape.
+        /// Явное приведение целого числа к Shape.
         /// </summary>
         /// <param name="id"></param>
         public static explicit operator Shapes(int id) => (Shapes) GetByID(id);
         /// <summary>
-        /// Cast explicito de Shapes a integer
+        /// Явное приведение фигур к целому числу
         /// </summary>
         /// <param name="shape"></param>
         public static explicit operator int (Shapes shape) => shape.ID;

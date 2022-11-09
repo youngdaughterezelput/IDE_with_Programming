@@ -15,39 +15,39 @@ namespace WallE.World.WorldObjects
         public override string MainCharacteristics => (Shapes) this.ObjShape + "_" + (Colors) this.ObjColor;
 
         /// <summary>
-        /// Representa el objeto embebido en el interior del robot.
+        /// Представляет встроенный объект внутри робота.
         /// </summary>
         WallEObjects objectsInside;
 
         /// <summary>
-        /// Representa la pila del robot.
+        /// Представляет стек роботов.
         /// </summary>
         public Stack<int> Stack { get; set; }
 
         /// <summary>
-        /// Representa la pila de rutinas que se van ejecutando en la simulación del mundo.
+        /// Представляет собой стек подпрограмм, которые выполняются при моделировании мира.
         /// </summary>
         public Stack<Proc> ExecutingStack { get; set; }
 
         /// <summary>
-        /// Representa la memoria lineal del robot.
+        /// Представляет линейную память робота.
         /// </summary>
         public LinealMemory Memory { get; set; }
 
         /// <summary>
-        /// Cantidad de rondas de simulación del robot.
+        /// Количество раундов моделирования роботов.
         /// </summary>
         int time;
         #endregion
 
         #region Properties
         /// <summary>
-        /// Representa la lista de rutinas del robot.
+        /// Представляет список подпрограмм робота.
         /// </summary>
         public ProcList ListRoutine { get; set; }
 
         /// <summary>
-        /// Cantidad de rondas de simulación del robot.
+        /// Количество раундов моделирования роботов.
         /// </summary>
         public int Times
         {
@@ -56,18 +56,18 @@ namespace WallE.World.WorldObjects
             set
             {
                 if ( value < 0 )
-                    throw new ArgumentException("Ronda inválida.");
+                    throw new ArgumentException("Круг не корректный.");
                 this.time = value;
             }
         }
 
         /// <summary>
-        /// Determina la dirección del robot en el mundo.
+        /// Определяет адрес робота в мире.
         /// </summary>
         public int Directions { get; set; }
 
         /// <summary>
-        /// Representa el objeto que esta en el interior del robot.
+        /// Представляет объект, который находится внутри робота.
         /// </summary>
         public WallEObjects ObjectInside
         {
@@ -75,13 +75,13 @@ namespace WallE.World.WorldObjects
             set
             {
                 if ( value is IProgrammable )
-                    throw new InvalidOperationException("Un robot no puede cargar a otro objeto programable. En este caso a: " + value.ToString( ) + ".");
+                    throw new InvalidOperationException("Робот не может взаимодействовать с другим программируемым объектом. В этом случае: " + value.ToString( ) + ".");
                 this.objectsInside = value;
             }
         }
 
         /// <summary>
-        /// Determina si este objeto es un obstaculo
+        /// Определить, является ли этот объект препятствием
         /// </summary>
         public override bool IsObstacle => true;
 
@@ -92,11 +92,11 @@ namespace WallE.World.WorldObjects
 
         #region Constructors
         /// <summary>
-        /// Construye una instacia de un robot.
+        /// Создание экземпляра робота.
         /// </summary>
-        /// <param name="number">ID del robot.</param>
-        /// <param name="List">Lista de rutinas del robot.</param>
-        /// <param name="direction">Dirección del robot en el mundo.</param>
+        /// <param name="number">ID  robot.</param>
+        /// <param name="List">Список процедур робота</param>
+        /// <param name="direction">Адрес робота в мире.</param>
         public Robot(Position position,ref Map world,int direction = 1,int color = 1) : base(4,3,color,position,ref world)
         {
             this.ListRoutine = new ProcList( );
@@ -123,14 +123,14 @@ namespace WallE.World.WorldObjects
         #region Methods
         #region Implement of ISensor
         /// <summary>
-        /// Apila la dirección del robot en el mundo.
+        /// Стек адрес робота в мире.
         /// </summary>
         public void Direction( )
         {
             try { this.Stack.Push(Directions); }
             catch ( Exception )
             {
-                Simulator.Simulator.ReportError(this,new Errors.Error("La pila está llena, por tanto no podrá añadir ese valor."));
+                Simulator.Simulator.ReportError(this,new Errors.Error("Стек заполнен, поэтому вы не сможете добавить это значение."));
             }
         }
         public void Time( )
@@ -138,11 +138,11 @@ namespace WallE.World.WorldObjects
             try { this.Stack.Push(Times); }
             catch ( Exception )
             {
-                Simulator.Simulator.ReportError(this,new Errors.Error("La pila está llena, por tanto no podrá añadir ese valor."));
+                Simulator.Simulator.ReportError(this,new Errors.Error("Стек заполнен, поэтому вы не сможете добавить это значение."));
             }
         }
         /// <summary>
-        /// Distancia del robot al objeto más cercano o a los bordes del mundo.
+        /// Расстояние от робота до ближайшего объекта или до края мира.
         /// </summary>
         /// <returns></returns>
         public void Distance( )
@@ -150,44 +150,44 @@ namespace WallE.World.WorldObjects
             try { this.Stack.Push(this.world.ObjectMoreNear(this)); }
             catch ( Exception )
             {
-                Simulator.Simulator.ReportError(this,new Errors.Error("La pila está llena, por tanto no podrá añadir ese valor."));
+                Simulator.Simulator.ReportError(this,new Errors.Error("Стек заполнен, поэтому вы не сможете добавить это значение."));
             }
         }
         /// <summary>
-        /// Determina el color del objeto enfrente del robot.
+        /// Определяет цвет объекта перед роботом.
         /// </summary>
         public void Color( ) {
             try
             { this.Stack.Push(this.world.ColorScanner(this)); }
             catch ( Exception )
             {
-                Simulator.Simulator.ReportError(this,new Errors.Error("La pila está llena, por tanto no podrá añadir ese valor."));
+                Simulator.Simulator.ReportError(this,new Errors.Error("Стек заполнен, поэтому вы не сможете добавить это значение."));
             }
         }
         /// <summary>
-        /// Apila la forma del objeto enfrente.
+        /// Сложите форму объекта впереди.
         /// </summary>
         public void Shape( ) {
             try
             { this.Stack.Push(this.world.ShapeScanner(this)); }
             catch ( Exception )
             {
-                Simulator.Simulator.ReportError(this,new Errors.Error("La pila está llena, por tanto no podrá añadir ese valor."));
+                Simulator.Simulator.ReportError(this,new Errors.Error("Стек заполнен, поэтому вы не сможете добавить это значение."));
             }
         }
         /// <summary>
-        /// Detemrmina el ID del objeto enfrente.
+        /// Определяет ID объекта впереди.
         /// </summary>
         public void Code( ) {
             try
             { this.Stack.Push(this.world.Scanner(this)); }
             catch ( Exception )
             {
-                Simulator.Simulator.ReportError(this,new Errors.Error("La pila está llena, por tanto no podrá añadir ese valor."));
+                Simulator.Simulator.ReportError(this,new Errors.Error("Стек заполнен, поэтому вы не сможете добавить это значение."));
             }
         }
         /// <summary>
-        /// Determina si este robot tiene un objeto en su interior.
+        ///Определите, есть ли внутри этого робота предмет.
         /// </summary>
         public void Loaded( )
         {
@@ -197,14 +197,14 @@ namespace WallE.World.WorldObjects
                 this.Stack.Push(1); }
             catch ( Exception )
             {
-                Simulator.Simulator.ReportError(this,new Errors.Error("La pila está llena, por tanto no podrá añadir ese valor."));
+                Simulator.Simulator.ReportError(this,new Errors.Error("Стек заполнен, поэтому вы не сможете добавить это значение."));
             }
         }
         #endregion
 
         #region Basic type
         /// <summary>
-        /// Devuelve el string de una instancia de un robot.
+        /// Возвращает строку экземпляра робота.
         /// </summary>
         /// <returns></returns>
         public override string ToString( )
@@ -212,7 +212,7 @@ namespace WallE.World.WorldObjects
             return (Shapes) this.ObjShape + " " + this.ObjNumber + " " + (Colors) this.ObjColor + " " + (Direction) this.Directions;
         }
         /// <summary>
-        /// Determina si la instacia del robot es igual a otro objeto.
+        /// Определяет, равен ли экземпляр робота другому объекту.
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -260,16 +260,16 @@ namespace WallE.World.WorldObjects
 
             if ( !IsMovable((Direction) Directions) )
                 return;
-            //Si no hay nadie enfrente
+            //Если впереди никого нет
             if ( world[frontPosition] == null )
                 world.MoveObjectTo(ObjPosition,frontPosition);
-            //Si lo que esta enfrente es cargable y el robot esta vacio
+            //Если то, что впереди, загружаемое, а робот пустой
             else if ( this.world[frontPosition].IsLoad && this.ObjectInside == null )
             {
                 this.world.RemoveAt(frontPosition,out this.objectsInside);
                 this.world.MoveObjectTo(ObjPosition,frontPosition);
             }
-            //Si lo que esta enfrente es una bola movible avanza
+            //Если то, что находится впереди, является Sphere, то оно продвигается
             else if ( this.world[frontPosition] is Sphere && this.world[frontPosition].IsMovable((Direction) Directions) )
             {
                 Position lastEmptyPosition;
@@ -284,11 +284,12 @@ namespace WallE.World.WorldObjects
                     }
                 }
             }
-            //Si lo que esta enfrente es un objeto que no se puede mover o que es un obstaculo por sus caracteristicas propias no se avanza
+            //Если то, что находится впереди, является объектом, который не может быть перемещен или является препятствием из-за его собственных характеристик,
+            //никакого прогресса не происходит.
             else if ( ( this.ObjectInside != null && this.world[frontPosition].IsLoad )
                 || this.world[frontPosition].IsObstacle )
                 return;
-            //Si lo que esta enfrente es movible entonces avanza.
+            //Если то, что находится перед вами, подвижно, то двигайтесь вперед.
             else if ( this.world[frontPosition].IsMovable((Direction) Directions) )
             {
                 world.MoveObjectTo(frontPosition,frontPosition.FrontPosition(Directions));
@@ -301,13 +302,13 @@ namespace WallE.World.WorldObjects
             Position frontPosition = ObjPosition.FrontPosition(Directions);
 
             if ( Map.IsValidPosition(world,frontPosition) )
-                //Si tiene algo en su interior y la posicion de enfrente esta vacia lo suelta...
+                //Если у вас есть что-то внутри, а позиция впереди пуста, отпустите это...
                 if ( this.ObjectInside != null && world[frontPosition] == null )
                 {
-                    //Si el objeto nunca estuvo en el mundo entonces añadele un id (caso en que un robot comience con un objeto dentro.
+                    //Если объект никогда не был в мире, добавьте к нему идентификатор (на случай, если робот запустится с объектом внутри.)
                     if ( this.ObjectInside.ObjNumber == 0 )
                         this.ObjectInside.ObjNumber = this.world.CountObjects++;
-                    //Suelta el objeto en su interior enfrente...
+                    //Бросьте предмет  перед собой...
                     world.InsertOldObjectAt(this.ObjectInside,frontPosition);
                     this.ObjectInside = null;
                 }

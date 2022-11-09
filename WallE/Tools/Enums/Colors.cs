@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Representa todos los colores que pueden tener los objetos.
+    /// Представляет все цвета, которые могут иметь объекты.
     /// </summary>
     public class Colors : EnumBaseType<Colors>
     {
@@ -26,25 +26,25 @@ namespace WallE.Tools
         {
         }
         /// <summary>
-        /// Devuelve una colección de todos los posible valores de colores.
+        /// Возвращает коллекцию всех возможных значений цвета.
         /// </summary>
         /// <returns></returns>
         public static ReadOnlyCollection<Colors> GetValues( ) => GetBaseValues( );
         /// <summary>
-        /// Devuelve un color por su identificador.
+        /// Возвращает цвет по его идентификатору.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public static Colors GetByID(int id) => GetBaseByID(id);
 
         /// <summary>
-        /// Cast explícito de integer a Color.
+        /// Явное приведение из целого числа к цвету.
         /// </summary>
         /// <param name="id"></param>
         public static explicit operator Colors(int id) => GetBaseByID(id);
 
         /// <summary>
-        /// Cast explicito de Colors a integer
+        /// Явное приведение цветов к целому числу
         /// </summary>
         /// <param name="color"></param>
         public static explicit operator int (Colors color) => color.ID;

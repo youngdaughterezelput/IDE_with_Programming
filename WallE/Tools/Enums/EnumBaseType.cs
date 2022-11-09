@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Simula el funcionamiento de un enum pero este es extensible.
+    /// Bмитирует работу перечисления,  является расширяемым.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public abstract class EnumBaseType<T> where T : EnumBaseType<T>
@@ -31,7 +31,7 @@ namespace WallE.Tools
         protected static T GetBaseByID(int id)
         {
             if ( id < 0 )
-                throw new ArgumentException("Llave no válida.");
+                throw new ArgumentException("неправильный ключ.");
             foreach ( T t in enumValues )
                 if ( t.ID == id )
                     return t;

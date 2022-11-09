@@ -7,37 +7,38 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Conjunto de sensores que puede implementar un objeto.
+    /// Набор датчиков, которые может использовать объект.
     /// </summary>
     public interface ISensitive
     {
         /// <summary>
-        /// Determina la cantidad de espacios vacíos desde el frente del objeto hasta el más cercano o hasta el fin del terreno.
+        /// Определяет количество пустых мест от стартовой части 
+        /// объекта до ближайшего или конца местности.
         /// </summary>
         /// <returns></returns>
         void Distance( );
         /// <summary>
-        /// Determina el color del objeto enfrente del objeto.
+        /// Определяет цвет объекта перед объектом.
         /// </summary>
         void Color( );
         /// <summary>
-        /// Determina la forma del objeto en frente al que implemente la interface.
+        /// Определяет форму объекта перед тем, который реализует интерфейс.
         /// </summary>
         void Shape( );
         /// <summary>
-        /// Determina el ID del objeto en frente al que implemente la interface.
+        /// Определяет идентификатор объекта, для которого реализуется интерфейс.
         /// </summary>
         void Code( );
         /// <summary>
-        /// Determina si el objeto tiene otro en su interior.
+        /// Определяет, есть ли внутри объекта другой объект.
         /// </summary>
         void Loaded( );
         /// <summary>
-        /// Determina la cantidad de rondas de simulación.
+        /// Определяет количество раундов моделирования.
         /// </summary>
         void Time( );
         /// <summary>
-        /// Determina la dirección del objeto en el mundo
+        /// Определяет направление объекта в мире
         /// </summary>
         void Direction( );
     }

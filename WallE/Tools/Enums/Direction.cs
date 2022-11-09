@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Representa un enum de direcciones extensible
+    /// Представляет расширяемое перечисление адресов
     /// </summary>
     public class Direction : EnumBaseType<Direction>
     {
@@ -25,23 +25,23 @@ namespace WallE.Tools
 
         #region Methods
         /// <summary>
-        /// Devuelve una colección de todas las direcciones.
+        /// Возвращает коллекцию всех адресов.
         /// </summary>
         /// <returns></returns>
         public static ReadOnlyCollection<Direction> GetValues( ) => GetBaseValues( );
         /// <summary>
-        /// Devuelve una dirección por su ID.
+        /// Возвращает адрес по его ID.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public static Direction GetByID(int id) => GetBaseByID(id);
         /// <summary>
-        /// Cast explícito de integer a Direction.
+        /// Явное приведение целого числа к Direction.
         /// </summary>
         /// <param name="direction"></param>
         public static explicit operator Direction(int direction) => GetByID(direction);
         /// <summary>
-        /// Cast explicito de Direction a integer
+        /// Явное приведение Direction к целому числу
         /// </summary>
         /// <param name="direction"></param>
         public static explicit operator int (Direction direction) => direction.ID;

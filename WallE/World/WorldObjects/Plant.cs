@@ -8,7 +8,7 @@ using WallE.Tools;
 namespace WallE.World.WorldObjects
 {
     /// <summary>
-    /// Planta de Wall-E
+    /// Plant  Wall-E
     /// </summary>
     public class Plant : WallEObjects
     {
@@ -21,7 +21,7 @@ namespace WallE.World.WorldObjects
 
         #region Constructors
         /// <summary>
-        /// Construye una instancia de planta verde.
+        /// Создайте экземпляр  растения.
         /// </summary>
         /// <param name="number"></param>
         /// <param name="size"></param>
@@ -37,7 +37,7 @@ namespace WallE.World.WorldObjects
 
         #region Methods
         /// <summary>
-        /// Devuelve el string que representa una instancia de una planta.
+        /// Возвращает строку, представляющую экземпляр растения.
         /// </summary>
         /// <returns></returns>
         public override string ToString( )
@@ -45,7 +45,7 @@ namespace WallE.World.WorldObjects
             return base.ToString( );
         }
         /// <summary>
-        /// Determina si una planta es igual a un objeto específico.
+        /// Определяет, равно ли растение конкретному объекту.
         /// </summary>
         /// <param name="obj">Objeto a comparar.</param>
         /// <returns></returns>
@@ -61,7 +61,7 @@ namespace WallE.World.WorldObjects
             return base.GetHashCode( );
         }
         /// <summary>
-        /// Devuelve un clon de esta planta.
+        /// Возвращает клон этого растения.
         /// </summary>
         /// <returns></returns>
         public override object Clone( )

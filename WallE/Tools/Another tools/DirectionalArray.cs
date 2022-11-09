@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    ///Representa un array de direcciones.
+    ///Представляет массив адресов.
     /// </summary>
     public static class DirectionalArray
     {
@@ -20,13 +20,13 @@ namespace WallE.Tools
         };
 
         /// <summary>
-        /// Metodo para añadir las coordenadas que describen la nueva direccion
+        /// Способ добавления координат, описывающих новый адрес
         /// </summary>
         /// <param name="rowColumn"></param>
         public static void AddDirectional(Tuple<int,int> rowColumn) => Directional.Add(rowColumn);
 
         /// <summary>
-        /// Indexador de la lista de direcciones.
+        /// Индексатор списка адресов.
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>

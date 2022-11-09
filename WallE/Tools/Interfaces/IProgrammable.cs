@@ -9,7 +9,7 @@ using WallE.Simulator;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Representa el comportamiento de todo objeto que se programe.
+    /// Представляет поведение любого запрограммированного объекта.
     /// </summary>
     public interface IProgrammable
     {
