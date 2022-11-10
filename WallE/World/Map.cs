@@ -109,13 +109,13 @@ namespace WallE.World
             objects.ObjNumber = ++this.CountObjects;
         }
         /// <summary>
-        /// Remueve el objeto de una posición determinada.
+        /// Удаляет объект с определенной позиции.
         /// </summary>
-        /// <param name="position">Posición determinada.</param>
+        /// <param name="position">Определенное положение.</param>
         public void RemoveAt(Position position,out WallEObjects objects)
         {
             if ( !IsValidPosition(this,position) )
-                throw new ArgumentException("Posicion incorrecta.");
+                throw new ArgumentException("Некорректная позиция.");
             objects = this.map[position.X,position.Y];
             if ( objects == null )
                 return;
@@ -124,14 +124,14 @@ namespace WallE.World
             this.CountObjects--;
         }
         /// <summary>
-        /// Mueve el objeto de la posicion inicial hasta la posicion final.
+        /// Переместите объект из начального положения в конечное положение.
         /// </summary>
         /// <param name="posInitial"></param>
         /// <param name="posEnd"></param>
         internal void MoveObjectTo(Position posInitial,Position posEnd)
         {
             if ( !IsValidPosition(this,posInitial) || !IsValidPosition(this,posEnd) )
-                throw new InvalidOperationException("Posiciones incorrectas.");
+                throw new InvalidOperationException("Некорректная позиция.");
 
             WallEObjects tempObject;
             RemoveAt(posInitial,out tempObject);
@@ -143,10 +143,10 @@ namespace WallE.World
         #region Auxiliar Methods
 
         /// <summary>
-        /// Añade un objeto en una posición del mapa.
+        /// Добавить объект в положение на карте.
         /// </summary>
-        /// <param name="wallEObject">Objeto a añadir.</param>
-        /// <param name="position">Posición donde se desea añadir.</param>
+        /// <param name="wallEObject">объект для добавления на карту.</param>
+        /// <param name="position">Позиция, где вы хотите добавить объект.</param>
         internal void InsertOldObjectAt(WallEObjects wallEObject,Position position)
         {
             if ( IsValidPosition(this,position) && CanAddAt(position) )
@@ -155,11 +155,11 @@ namespace WallE.World
                 wallEObject.ObjPosition = position;
             }
             else
-                throw new InvalidOperationException("No puede añadir un objeto en esa posición.");
+                throw new InvalidOperationException("Вы не можете добавить объект в эту позицию.");
         }
 
         /// <summary>
-        /// Determina si puede añadirse un WallE objects en una determinada posicion en el mapa.
+        /// Определяет, можно ли добавлять объекты WallE в определенное место на карте..
         /// </summary>
         /// <param name="position"></param>
         /// <returns></returns>
@@ -168,7 +168,7 @@ namespace WallE.World
             return this[position] == null;
         }
         /// <summary>
-        /// Devuelve un clon de este mapa.
+        ///Вернуть клон карты.
         /// </summary>
         /// <returns></returns>
         public object Clone( )
@@ -185,13 +185,13 @@ namespace WallE.World
             return mapClone;
         }
         /// <summary>
-        /// Devuelve el identificador del objeto que esta enfrente.
+        /// Возвращает идентификатор объекта, который находится впереди.
         /// </summary>
         /// <param name="bot"></param>
         /// <returns></returns>
         public int Scanner(IProgrammable bot)
         {
-            if ( bot is ISensitive ) //Borre el 'bot is WallEObjects'
+            if ( bot is ISensitive) //Удалить «бот WallEObjects»
             {
                 if ( !Map.IsValidPosition(this,( (WallEObjects) bot ).ObjPosition.FrontPosition(bot.Directions)) )
                     return 0;
@@ -199,16 +199,16 @@ namespace WallE.World
                     return 0;
                 return this[( (WallEObjects) bot ).ObjPosition.FrontPosition(bot.Directions)].ObjNumber;
             }
-            throw new InvalidOperationException("Este objeto no implementa este sensor.");
+            throw new InvalidOperationException("Этот объект не реализует этот датчик.");
         }
         /// <summary>
-        /// Devuelve la cantidad de casillas libres en el mundo hasta el objeto mas cercano o hasta el mundo.
+        ///Возвращает количество свободных плиток в мире до ближайшего объекта или до мира.
         /// </summary>
         /// <param name="bot"></param>
         /// <returns></returns>
         public int ObjectMoreNear(IProgrammable bot)
         {
-            if ( bot is ISensitive ) //Borre el 'bot is WallEObjects'
+            if ( bot is ISensitive) //Удалить «бот WallEObjects»
             {
                 int countEmptyPosition = 0;
 
@@ -219,16 +219,16 @@ namespace WallE.World
 
                 return countEmptyPosition;
             }
-            throw new InvalidOperationException("Este objeto no implementa este sensor.");
+            throw new InvalidOperationException("Этот объект не реализует этот датчик.");
         }
         /// <summary>
-        /// Devuelve la forma del objeto que esta enfrente.
+        /// Возвращает форму объекта перед ним.
         /// </summary>
         /// <param name="bot"></param>
         /// <returns></returns>
         public int ShapeScanner(IProgrammable bot)
         {
-            if ( bot is ISensitive ) //Borre el 'bot is WallEObjects'
+            if ( bot is ISensitive) //Удалить «бот WallEObjects»
             {
                 if ( !Map.IsValidPosition(this,( (WallEObjects) bot ).ObjPosition.FrontPosition(bot.Directions)) )
                     return 0;
@@ -237,10 +237,10 @@ namespace WallE.World
 
                 return this[( (WallEObjects) bot ).ObjPosition.FrontPosition(bot.Directions)].ObjShape;
             }
-            throw new InvalidOperationException("Este objeto no implementa este sensor.");
+            throw new InvalidOperationException("Этот объект не реализует этот датчик.");
         }
         /// <summary>
-        /// Devuelve el color del objeto que esta enfrente.
+        /// Возвращает цвет объекта перед ним.
         /// </summary>
         /// <param name="bot"></param>
         /// <returns></returns>
@@ -256,13 +256,13 @@ namespace WallE.World
 
                 return this[( (WallEObjects) bot ).ObjPosition.FrontPosition(bot.Directions)].ObjColor;
             }
-            throw new InvalidOperationException("Este objeto no implementa este sensor.");
+            throw new InvalidOperationException("Этот объект не реализует этот датчик.");
         }
         #endregion
 
         #region Basic type methods
         /// <summary>
-        /// Determina si un objeto es igual al mundo actual.
+        /// Определяет, равен ли объект текущему миру.
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -280,7 +280,7 @@ namespace WallE.World
             return true;
         }
         /// <summary>
-        /// Devuelve el codigo hash de este objeto.
+        /// Возвращает хэш-код этого объекта.
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode( )
@@ -292,7 +292,7 @@ namespace WallE.World
         }
 
         /// <summary>
-        /// Devuelve el string que representa el mundo.
+        /// Возвращает строку, представляющую мир.
         /// </summary>
         /// <returns></returns>
         public override string ToString( )
@@ -316,14 +316,14 @@ namespace WallE.World
 
         #region Map Methods
         ///<summary>
-        /// Añade una fila al final de la matriz.
+        /// Добавьте строку в конец массива.
         /// </summary>
         public void AddLastRow( )
         {
             AddRowAt(this.Rows);
         }
         /// <summary>
-        /// Añade una columna al final de la matriz.
+        /// Добавляет столбец в конец массива.
         /// </summary>
         public void AddLastColumn( )
         {
@@ -331,7 +331,7 @@ namespace WallE.World
         }
 
         /// <summary>
-        /// Añade una fila al inicio de la matriz.
+        /// Добавляет строку в начало массива.
         /// </summary>
         private void AddFirstRow( )
         {
@@ -347,7 +347,7 @@ namespace WallE.World
             this.map = result;
         }
         /// <summary>
-        /// Añade una columna al inicio de la matriz.
+        /// Добавляет столбец в начало матрицы.
         /// </summary>
         private void AddFirstColumn( )
         {
@@ -363,7 +363,7 @@ namespace WallE.World
             this.map = result;
         }
         /// <summary>
-        /// Añade una fila en el índice.
+        /// Добавьте строку в index.
         /// </summary>
         /// <param name="index"></param>
         public void AddRowAt(int index)
@@ -409,7 +409,7 @@ namespace WallE.World
         }
 
         /// <summary>
-        /// Añade una columna en el índice.
+        /// Добавить столбец в индекс.
         /// </summary>
         /// <param name="index"></param>
         public void AddColumnAt(int index)
@@ -455,16 +455,16 @@ namespace WallE.World
         }
 
         /// <summary>
-        /// Elimina la columna en el índice especificado.
+        /// Удаляет столбец по указанному индексу.
         /// </summary>
         /// <param name="index"></param>
         public void RemoveColumnAt(int index)
         {
             if ( index <= 0 && this.Columns == 1 )
-                throw new InvalidOperationException("No puede eliminar la única columna que tiene.");
+                throw new InvalidOperationException("Вы не можете удалить единственный столбец.");
 
             if ( index >= this.Columns )
-                throw new InvalidOperationException("No puede eliminar una columna que no existe.");
+                throw new InvalidOperationException("Вы не можете удалить несуществующий столбец.");
 
             WallEObjects[,] mapTemp = new WallEObjects[this.Rows, this.Columns - 1];
             if ( index <= 0 )
@@ -500,9 +500,9 @@ namespace WallE.World
         public void RemoveRowAt(int index)
         {
             if ( index <= 0 && this.Rows == 1 )
-                throw new InvalidOperationException("No puede eliminar la única fila que tiene.");
+                throw new InvalidOperationException("Вы не можете удалить единственный ряд.");
             if ( index >= this.Rows )
-                throw new InvalidOperationException("No puede eliminar una fila que no existe.");
+                throw new InvalidOperationException("Вы не можете удалить несуществующий ряд.");
 
             WallEObjects[,] mapTemp = new WallEObjects[this.Rows - 1, this.Columns];
             if ( index <= 0 )
@@ -539,7 +539,7 @@ namespace WallE.World
 
         #region Enumerable
         /// <summary>
-        /// Devuelve un enumerable del mundo.
+        /// Возвращает перечисление мира.
         /// </summary>
         /// <returns></returns>
         public IEnumerator<WallEObjects> GetEnumerator( )
@@ -547,13 +547,13 @@ namespace WallE.World
             return new MapEnumerator(map);
         }
         /// <summary>
-        /// Devuelve un enumerable del mundo.
+        /// Возвращает перечисление мира.
         /// </summary>
         /// <returns></returns>
         IEnumerator IEnumerable.GetEnumerator( ) => GetEnumerator( );
 
         /// <summary>
-        /// Devuelve un enumerable con los IProgrammables del mundo.
+        /// Возвращает перечислимое с IProgrammables мира.
         /// </summary>
         /// <returns></returns>
         public List<IProgrammable> SelectIProgrammables( )
@@ -570,10 +570,10 @@ namespace WallE.World
 
         #region Static Methods
         /// <summary>
-        /// Rellena un mapa con los objetos conocidos.
+        /// Заполнить карту известными объектами.
         /// </summary>
-        /// <param name="map">Mapa creado vacío.</param>
-        /// <param name="knowObjectsPosition">Objetos cuya posición es conocida.</param>
+        /// <param name="map">Карта создана пустой.</param>
+        /// <param name="knowObjectsPosition">Объекты, положение которых известно.</param>
         /// <returns></returns>
         private WallEObjects[,] FillWith(WallEObjects[,] map,Tuple<WallEObjects,Position>[] knowObjectsPosition)
         {
@@ -586,10 +586,10 @@ namespace WallE.World
             return result;
         }
         /// <summary>
-        /// Determina dado un mapa y una posición si esta es válida.
+        /// Определяет заданную карту и позицию, если она действительна.
         /// </summary>
-        /// <param name="map">Mapa del mundo.</param>
-        /// <param name="position">Posición a validar.</param>
+        /// <param name="map">Карта мира.</param>
+        /// <param name="position">Позиция для проверки.</param>
         /// <returns></returns>
         public static bool IsValidPosition(Map map,Position position)
         {
@@ -597,12 +597,12 @@ namespace WallE.World
         }
         internal bool InLineSphere(Position position,int direction,out Position lastEmptyPosition)
         {
-            //Mientras la posicion sea valida y lo que haya enfrente sea una bola o este vacio ...
+            //Пока позиция действительна и то, что находится перед ней, является шаром или пусто...
             while ( Map.IsValidPosition(this,position.FrontPosition(direction))
                 && ( this[position.FrontPosition(direction)] is Sphere
                     || this[position.FrontPosition(direction)] == null ) )
             {
-                //Si la siguiente casilla esta vacia entonces si se cumple la condicion
+                //Если следующее поле пусто, то если условие выполнено
                 if ( this[position.FrontPosition(direction)] == null )
                 {
                     lastEmptyPosition = position.FrontPosition(direction);
