@@ -49,7 +49,7 @@
             this.pnlRut = new System.Windows.Forms.Panel();
             this.rutView = new WallE_Visual.RutViews();
             this.mStripOptions = new System.Windows.Forms.MenuStrip();
-            this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.folderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adjustWorldSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adjustWorldStandartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -328,7 +328,7 @@
             this.mStripOptions.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mStripOptions.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mStripOptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.volverToolStripMenuItem,
+            this.folderToolStripMenuItem,
             this.optionToolStripMenuItem});
             this.mStripOptions.Location = new System.Drawing.Point(0, 0);
             this.mStripOptions.Name = "mStripOptions";
@@ -337,13 +337,13 @@
             this.mStripOptions.TabIndex = 4;
             this.mStripOptions.Text = "Volver";
             // 
-            // volverToolStripMenuItem
+            // folderToolStripMenuItem
             // 
-            this.volverToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("volverToolStripMenuItem.Image")));
-            this.volverToolStripMenuItem.Name = "volverToolStripMenuItem";
-            this.volverToolStripMenuItem.Size = new System.Drawing.Size(36, 24);
-            this.volverToolStripMenuItem.ToolTipText = "Повторная настройка симуляции";
-            this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
+            this.folderToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("folderToolStripMenuItem.Image")));
+            this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
+            this.folderToolStripMenuItem.Size = new System.Drawing.Size(36, 24);
+            this.folderToolStripMenuItem.ToolTipText = "Повторная настройка симуляции";
+            this.folderToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
             // 
             // optionToolStripMenuItem
             // 
@@ -443,7 +443,7 @@
         private System.Windows.Forms.RadioButton rbtnYes;
         private System.Windows.Forms.Label lblErrors;
         private System.Windows.Forms.MenuStrip mStripOptions;
-        private System.Windows.Forms.ToolStripMenuItem volverToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem folderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adjustWorldSizeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adjustWorldStandartToolStripMenuItem;

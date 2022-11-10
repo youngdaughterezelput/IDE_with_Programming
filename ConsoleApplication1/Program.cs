@@ -226,7 +226,7 @@ namespace ConsoleApplication1
 
             bool load = false;
 
-            var maintemp = ControllerRoutine.LoadRoutine(@"C:\Users\Ariel\Desktop\asdghj.txt", out load);
+            var maintemp = ControllerRoutine.LoadRoutine(@"", out load);
 
             if ( !load )
                 return;
