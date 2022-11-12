@@ -22,7 +22,7 @@ namespace WallE_Visual.MainApp
         {
             InitializeComponent( );
             this.Row = 10;
-            this.Column = 20;
+            this.Column = 10;
         }
         #endregion
 

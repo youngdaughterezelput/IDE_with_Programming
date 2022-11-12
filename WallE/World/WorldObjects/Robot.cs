@@ -302,7 +302,7 @@ namespace WallE.World.WorldObjects
             Position frontPosition = ObjPosition.FrontPosition(Directions);
 
             if ( Map.IsValidPosition(world,frontPosition) )
-                //Если у вас есть что-то внутри, а позиция впереди пуста, отпустите это...
+                //Если робот "наехал" на объект...
                 if ( this.ObjectInside != null && world[frontPosition] == null )
                 {
                     //Если объект никогда не был в мире, добавьте к нему идентификатор (на случай, если робот запустится с объектом внутри.)

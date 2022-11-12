@@ -18,9 +18,9 @@ namespace WallE.Tools
         public readonly static Colors Yellow = new Colors("Yellow");
         public readonly static Colors Green = new Colors("Green");
         public readonly static Colors Blue = new Colors("Blue");
-        public readonly static Colors Brown = new Colors("Brown");
-        public readonly static Colors Black = new Colors("Black");
-        public readonly static Colors White = new Colors("White");
+        //public readonly static Colors Brown = new Colors("Brown");
+        //public readonly static Colors Black = new Colors("Black");
+        //public readonly static Colors White = new Colors("White");
 
         public Colors(string value) : base(value)
         {

@@ -184,10 +184,11 @@ namespace WallE_Visual.WorldViewer
                 for ( int i = 0; i < Rows; i++ )
                     graph.DrawLine(pen,0,i * (int) heightPiece - 1,this.pboxWorld.Width,i * (int) heightPiece - 1);
 
-                
-                //Прорисовка картинки
-                LoadImages( );
-                foreach ( var wObjects in World )
+                try
+                {
+                    //Прорисовка картинки
+                     LoadImages( );
+                    foreach ( var wObjects in World )
                 {
                     Image tempImg = (Image) imgList[wObjects.MainCharacteristics].Clone( );
                     if ( wObjects is IProgrammable )
@@ -207,13 +208,18 @@ namespace WallE_Visual.WorldViewer
                         ( this.pboxWorld.Height / Rows ) - 1,
                     ( this.pboxWorld.Width / Columns ) - 1);
                 }
+                    //Прорисовка цифр
+                    for (int i = 0; i < Columns; i++)
+                        graph.DrawString(i.ToString(), new Font(new FontFamily(GenericFontFamilies.Monospace), fontSize, FontStyle.Regular), Brushes.DarkGray, (i * pboxWorld.Width) / Columns, 1);
 
-                //Прорисовка цифр
-                for ( int i = 0; i < Columns; i++ )
-                    graph.DrawString(i.ToString( ),new Font(new FontFamily(GenericFontFamilies.Monospace),fontSize,FontStyle.Regular),Brushes.DarkGray,( i * pboxWorld.Width ) / Columns ,1);
+                    for (int i = 1; i < Rows; i++)
+                        graph.DrawString(i.ToString(), new Font(new FontFamily(GenericFontFamilies.Monospace), fontSize, FontStyle.Regular), Brushes.DarkGray, 1, (i * pboxWorld.Height) / Rows);
 
-                for ( int i = 1; i < Rows; i++ )
-                    graph.DrawString(i.ToString( ),new Font(new FontFamily(GenericFontFamilies.Monospace),fontSize,FontStyle.Regular),Brushes.DarkGray,1,( i * pboxWorld.Height ) / Rows );
+                }
+                catch
+                {
+                    MessageBox.Show("Нет такого изображения в среде");
+                }
             }
         }
         private void LoadImages( )

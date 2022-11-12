@@ -44,10 +44,10 @@
             this.btnAccept.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAccept.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccept.Location = new System.Drawing.Point(122, 155);
-            this.btnAccept.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAccept.Location = new System.Drawing.Point(81, 101);
+            this.btnAccept.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(125, 44);
+            this.btnAccept.Size = new System.Drawing.Size(83, 29);
             this.btnAccept.TabIndex = 4;
             this.btnAccept.Text = "Accept";
             this.btnAccept.UseVisualStyleBackColor = false;
@@ -58,9 +58,10 @@
             this.lblRows.AutoSize = true;
             this.lblRows.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRows.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRows.Location = new System.Drawing.Point(62, 38);
+            this.lblRows.Location = new System.Drawing.Point(41, 25);
+            this.lblRows.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRows.Name = "lblRows";
-            this.lblRows.Size = new System.Drawing.Size(54, 19);
+            this.lblRows.Size = new System.Drawing.Size(37, 13);
             this.lblRows.TabIndex = 0;
             this.lblRows.Text = "Ряды:";
             // 
@@ -69,9 +70,10 @@
             this.lblColumns.AutoSize = true;
             this.lblColumns.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColumns.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblColumns.Location = new System.Drawing.Point(35, 86);
+            this.lblColumns.Location = new System.Drawing.Point(23, 56);
+            this.lblColumns.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblColumns.Name = "lblColumns";
-            this.lblColumns.Size = new System.Drawing.Size(81, 19);
+            this.lblColumns.Size = new System.Drawing.Size(55, 13);
             this.lblColumns.TabIndex = 2;
             this.lblColumns.Text = "Столбцы:";
             // 
@@ -80,8 +82,8 @@
             this.nUpColumns.BackColor = System.Drawing.SystemColors.GrayText;
             this.nUpColumns.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nUpColumns.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nUpColumns.Location = new System.Drawing.Point(159, 82);
-            this.nUpColumns.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nUpColumns.Location = new System.Drawing.Point(106, 53);
+            this.nUpColumns.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nUpColumns.Maximum = new decimal(new int[] {
             500,
             0,
@@ -93,11 +95,11 @@
             0,
             0});
             this.nUpColumns.Name = "nUpColumns";
-            this.nUpColumns.Size = new System.Drawing.Size(72, 26);
+            this.nUpColumns.Size = new System.Drawing.Size(48, 20);
             this.nUpColumns.TabIndex = 3;
             this.nUpColumns.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nUpColumns.Value = new decimal(new int[] {
-            20,
+            10,
             0,
             0,
             0});
@@ -108,8 +110,8 @@
             this.nUpRows.BackColor = System.Drawing.SystemColors.GrayText;
             this.nUpRows.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nUpRows.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nUpRows.Location = new System.Drawing.Point(159, 35);
-            this.nUpRows.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nUpRows.Location = new System.Drawing.Point(106, 23);
+            this.nUpRows.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nUpRows.Maximum = new decimal(new int[] {
             500,
             0,
@@ -121,7 +123,7 @@
             0,
             0});
             this.nUpRows.Name = "nUpRows";
-            this.nUpRows.Size = new System.Drawing.Size(72, 26);
+            this.nUpRows.Size = new System.Drawing.Size(48, 20);
             this.nUpRows.TabIndex = 2;
             this.nUpRows.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nUpRows.Value = new decimal(new int[] {
@@ -134,10 +136,10 @@
             // AddWorldForm
             // 
             this.AcceptButton = this.btnAccept;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(361, 240);
+            this.ClientSize = new System.Drawing.Size(241, 156);
             this.Controls.Add(this.nUpRows);
             this.Controls.Add(this.nUpColumns);
             this.Controls.Add(this.lblColumns);
@@ -146,7 +148,7 @@
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "AddWorldForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

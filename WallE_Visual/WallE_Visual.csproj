@@ -714,6 +714,93 @@
   <ItemGroup>
     <None Include="bin\Debug\resource\img\Instructions\gt.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Robot_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Robot_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Medium_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Medium_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Large_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Medium_Green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Small_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Small_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Large_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Large_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Large_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Large_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Large_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Medium_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Medium_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Medium_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Medium_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Small_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Small_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Small_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Box_Small_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Large_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Medium_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Small_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Large_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Medium_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Sphere_Small_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Plant_Medium_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\img\WallEObjects\Plant_Medium_Blue.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
