@@ -1,6 +1,6 @@
 ﻿namespace WallE_Visual.WorldViewer
 {
-    partial class ViewRoutineForm
+    partial class ViewProcForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent( )
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRoutineForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewProcForm));
             this.pnlRutineView = new System.Windows.Forms.Panel();
             this.rutView = new WallE_Visual.RutViews();
             this.gboxControlsList = new System.Windows.Forms.GroupBox();
@@ -52,6 +52,8 @@
             this.Helpbtn = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.lblRutName = new System.Windows.Forms.Label();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.startDebug = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlRutineView.SuspendLayout();
             this.gboxControlsList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbarZoom)).BeginInit();
@@ -109,7 +111,7 @@
             this.cboxList.Location = new System.Drawing.Point(196, 44);
             this.cboxList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboxList.Name = "cboxList";
-            this.cboxList.Size = new System.Drawing.Size(324, 30);
+            this.cboxList.Size = new System.Drawing.Size(324, 22);
             this.cboxList.TabIndex = 4;
             this.cboxList.SelectedIndexChanged += new System.EventHandler(this.cboxList_SelectedIndexChanged);
             // 
@@ -118,7 +120,7 @@
             this.lblList.AutoSize = true;
             this.lblList.Location = new System.Drawing.Point(110, 47);
             this.lblList.Name = "lblList";
-            this.lblList.Size = new System.Drawing.Size(80, 22);
+            this.lblList.Size = new System.Drawing.Size(56, 14);
             this.lblList.TabIndex = 3;
             this.lblList.Text = "Список:";
             // 
@@ -193,7 +195,7 @@
             this.lblZoom.ForeColor = System.Drawing.SystemColors.Window;
             this.lblZoom.Location = new System.Drawing.Point(788, 591);
             this.lblZoom.Name = "lblZoom";
-            this.lblZoom.Size = new System.Drawing.Size(60, 22);
+            this.lblZoom.Size = new System.Drawing.Size(42, 14);
             this.lblZoom.TabIndex = 0;
             this.lblZoom.Text = "Zoom:";
             // 
@@ -204,7 +206,7 @@
             this.lblMin.ForeColor = System.Drawing.SystemColors.Window;
             this.lblMin.Location = new System.Drawing.Point(791, 546);
             this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(50, 22);
+            this.lblMin.Size = new System.Drawing.Size(35, 14);
             this.lblMin.TabIndex = 3;
             this.lblMin.Text = "1.0x";
             // 
@@ -217,7 +219,7 @@
             this.tbarZoom.Minimum = 1;
             this.tbarZoom.Name = "tbarZoom";
             this.tbarZoom.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.tbarZoom.Size = new System.Drawing.Size(69, 301);
+            this.tbarZoom.Size = new System.Drawing.Size(45, 301);
             this.tbarZoom.TabIndex = 0;
             this.tbarZoom.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.tbarZoom.Value = 4;
@@ -230,22 +232,22 @@
             this.lblMax.ForeColor = System.Drawing.SystemColors.Window;
             this.lblMax.Location = new System.Drawing.Point(791, 164);
             this.lblMax.Name = "lblMax";
-            this.lblMax.Size = new System.Drawing.Size(50, 22);
+            this.lblMax.Size = new System.Drawing.Size(35, 14);
             this.lblMax.TabIndex = 4;
             this.lblMax.Text = "4.0x";
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.Helpbtn});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(854, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(854, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -256,7 +258,7 @@
             this.btnSave});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // создатьToolStripMenuItem
@@ -264,14 +266,14 @@
             this.создатьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnNew});
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.создатьToolStripMenuItem.Text = "Создать";
             // 
             // btnNew
             // 
             this.btnNew.Name = "btnNew";
             this.btnNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.btnNew.Size = new System.Drawing.Size(326, 34);
+            this.btnNew.Size = new System.Drawing.Size(213, 22);
             this.btnNew.Text = "Новая процедура";
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
@@ -279,14 +281,14 @@
             // 
             this.btnSave.Name = "btnSave";
             this.btnSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.btnSave.Size = new System.Drawing.Size(270, 34);
+            this.btnSave.Size = new System.Drawing.Size(180, 22);
             this.btnSave.Text = "Сохранить";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Helpbtn
             // 
             this.Helpbtn.Name = "Helpbtn";
-            this.Helpbtn.Size = new System.Drawing.Size(100, 29);
+            this.Helpbtn.Size = new System.Drawing.Size(68, 20);
             this.Helpbtn.Text = "Помощь";
             this.Helpbtn.Click += new System.EventHandler(this.Helpbtn_Click);
             // 
@@ -302,9 +304,25 @@
             this.lblRutName.ForeColor = System.Drawing.SystemColors.Window;
             this.lblRutName.Location = new System.Drawing.Point(310, 39);
             this.lblRutName.Name = "lblRutName";
-            this.lblRutName.Size = new System.Drawing.Size(82, 24);
+            this.lblRutName.Size = new System.Drawing.Size(56, 17);
             this.lblRutName.TabIndex = 6;
             this.lblRutName.Text = "label1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startDebug});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(64, 20);
+            this.toolStripMenuItem1.Text = "Отладка";
+            // 
+            // startDebug
+            // 
+            this.startDebug.Name = "startDebug";
+            this.startDebug.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F5)));
+            this.startDebug.Size = new System.Drawing.Size(201, 22);
+            this.startDebug.Text = "Начать отладку";
+            this.startDebug.Click += new System.EventHandler(this.startDebug_Click);
             // 
             // ViewRoutineForm
             // 
@@ -366,5 +384,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnNew;
         private System.Windows.Forms.ToolStripMenuItem btnSave;
         private System.Windows.Forms.ToolStripMenuItem Helpbtn;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem startDebug;
     }
 }

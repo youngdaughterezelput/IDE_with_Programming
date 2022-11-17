@@ -112,7 +112,7 @@ namespace WallE_Visual.WorldViewer
         private void EditRoutine()
         {
             IProgrammable temp = wallE as IProgrammable;
-            ViewRoutineForm viewer = new ViewRoutineForm( temp);
+            ViewProcForm viewer = new ViewProcForm( temp);
 
             viewer.ShowDialog( );
         }

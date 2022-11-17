@@ -13,7 +13,7 @@ using WallE.Routine;
 
 namespace WallE_Visual.WorldViewer
 {
-    public partial class ViewRoutineForm : Form
+    public partial class ViewProcForm : Form
     {
         #region Fields
         private IProgrammable wallE;
@@ -22,7 +22,7 @@ namespace WallE_Visual.WorldViewer
         #endregion
 
         #region Constructors
-        public ViewRoutineForm( )
+        public ViewProcForm( )
         {
             InitializeComponent( );
 
@@ -32,14 +32,14 @@ namespace WallE_Visual.WorldViewer
             
             this.lblRutName.Text = string.Empty;
         }
-        public ViewRoutineForm(IProgrammable wObjects) : this( )
+        public ViewProcForm(IProgrammable wObjects) : this( )
         {
             this.wallE = wObjects;
             if ( wallE.ListRoutine.Count != 0 )
                 this.btnDelete.Enabled = true;
             else
                 this.btnDelete.Enabled = false;
-            RefreshCombos( );
+            RefreshCombo( );
         }
         #endregion
 
@@ -59,7 +59,7 @@ namespace WallE_Visual.WorldViewer
         private void cboxList_SelectedIndexChanged(object sender,EventArgs e)
         {
             if ( !CreateNew )
-                ShowSelectedRoutine( );
+                ShowSelectedProc( );
         }
         private void btnAdd_Click(object sender,EventArgs e)
         {
@@ -72,6 +72,16 @@ namespace WallE_Visual.WorldViewer
         private void tbarZoom_Scroll(object sender,EventArgs e)
         {
             Zoom_Scroll( );
+        }
+        private void Helpbtn_Click(object sender,EventArgs e)
+        {
+            new HelpViewProc( ).ShowDialog( );
+        }
+
+        private void startDebug_Click(object sender, EventArgs e)
+        {
+            RefreshCombo();
+            this.Close();
         }
         #endregion
 
@@ -118,7 +128,7 @@ namespace WallE_Visual.WorldViewer
             btnAdd.Enabled = false;
             CreateNew = false;
             this.lblRutName.Text = this.rutView.Routine.Name;
-            RefreshCombos( );
+            RefreshCombo( );
         }
         private void DeleteRut( )
         {
@@ -131,7 +141,7 @@ namespace WallE_Visual.WorldViewer
                     break;
                 }
 
-            RefreshCombos( );
+            RefreshCombo( );
 
             this.rutView = new RutViews( );
             this.pnlRutineView.Controls.Clear( );
@@ -147,7 +157,7 @@ namespace WallE_Visual.WorldViewer
                 this.lblRutName.Text = string.Empty;
                 return;
             }
-            ShowSelectedRoutine( );
+            ShowSelectedProc( );
         }
         private bool IsNumber(string word)
         {
@@ -188,9 +198,9 @@ namespace WallE_Visual.WorldViewer
                 }
             }
             this.btnDelete.Enabled = true;
-            RefreshCombos( );
+            RefreshCombo( );
         }
-        private void RefreshCombos( )
+        private void RefreshCombo( )
         {
             this.cboxList.Items.Clear( );
 
@@ -231,13 +241,13 @@ namespace WallE_Visual.WorldViewer
                 this.lblMin.Visible = true;
                 this.lblMax.Visible = true;
                 this.tbarZoom.Visible = true;
-                RefreshCombos( );
+                RefreshCombo( );
                 this.rutView.Refresh( );
                 ViewTrackBar( );
                 this.lblRutName.Text = rutView.Routine.Name;
             }
         }
-        private void ShowSelectedRoutine( )
+        private void ShowSelectedProc( )
         {
             Proc selectedRut = wallE.ListRoutine.Where(c => ( c.Name == (string) this.cboxList.SelectedItem )).Take(1).ToArray( )[0];
 
@@ -272,9 +282,6 @@ namespace WallE_Visual.WorldViewer
 
         #endregion
 
-        private void Helpbtn_Click(object sender,EventArgs e)
-        {
-            new HelpViewProc( ).ShowDialog( );
-        }
+        
     }
 }
