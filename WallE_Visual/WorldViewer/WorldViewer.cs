@@ -73,19 +73,19 @@ namespace WallE_Visual.WorldViewer
                 return;
             lastPosition = e.Location;
         }
-        private void verCaracteristicasToolStripMenuItem_MouseHover(object sender,EventArgs e)
+        private void characterToolStripMenuItem_MouseHover(object sender,EventArgs e)
         {
             ViewProperties( );
         }
-        private void eliminarObjetoToolStripMenuItem_Click(object sender,EventArgs e)
+        private void dropObjetoToolStripMenuItem_Click(object sender,EventArgs e)
         {
             DeleteObject( );
         }
-        private void añadirObjetoToolStripMenuItem_Click(object sender,EventArgs e)
+        private void addObjToolStripMenuItem_Click(object sender,EventArgs e)
         {
             AddObject( );
         }
-        private void editarObjetoToolStripMenuItem_Click(object sender,EventArgs e)
+        private void editObjetoToolStripMenuItem_Click(object sender,EventArgs e)
         {
             EditWallObject( );
         }
@@ -93,19 +93,19 @@ namespace WallE_Visual.WorldViewer
         {
             ReloadContextMenuStrip( );
         }
-        private void añadirColumnaToolStripMenuItem_Click(object sender,EventArgs e)
+        private void addColumnColumnaToolStripMenuItem_Click(object sender,EventArgs e)
         {
             AddColumn( );
         }
-        private void insertarFilaToolStripMenuItem_Click(object sender,EventArgs e)
+        private void addRowToolStripMenuItem_Click(object sender,EventArgs e)
         {
             AddRow( );
         }
-        private void eliminarColumnaToolStripMenuItem_Click(object sender,EventArgs e)
+        private void dropColumnToolStripMenuItem_Click(object sender,EventArgs e)
         {
             RemoveColumns( );
         }
-        private void eliminarFilaToolStripMenuItem_Click(object sender,EventArgs e)
+        private void dropRowsToolStripMenuItem_Click(object sender,EventArgs e)
         {
             RemoveRows( );
         }
@@ -311,14 +311,14 @@ namespace WallE_Visual.WorldViewer
             if ( Map.IsValidPosition(World,position) && World[position] == null )
             {
                 this.addObjToolStripMenuItem.Enabled = true;
-                this.editarObjetoToolStripMenuItem.Enabled = false;
-                this.eliminarObjetoToolStripMenuItem.Enabled = false;
+                this.editObjetoToolStripMenuItem.Enabled = false;
+                this.dropObjetoToolStripMenuItem.Enabled = false;
             }
             else
             {
                 this.addObjToolStripMenuItem.Enabled = false;
-                this.editarObjetoToolStripMenuItem.Enabled = true;
-                this.eliminarObjetoToolStripMenuItem.Enabled = true;
+                this.editObjetoToolStripMenuItem.Enabled = true;
+                this.dropObjetoToolStripMenuItem.Enabled = true;
             }
         }
 
