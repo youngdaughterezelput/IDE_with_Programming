@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using WallE.World.WorldObjects;
 using WallE.Tools;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public class Drop : Instruction,IAction
     {

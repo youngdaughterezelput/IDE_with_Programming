@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using WallE.MATLAN.Instructions;
+using WallE.InstrLan.Instructions;
 using System.Threading.Tasks;
 
-namespace WallE.MATLAN.InstructionFactory
+namespace WallE.InstrLan.InstructionFactory
 {
     public class TimeFactory : InstructionsFactory
     {

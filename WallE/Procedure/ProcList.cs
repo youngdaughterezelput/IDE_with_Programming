@@ -7,7 +7,7 @@ using System.IO;
 using System.Collections;
 using WallE.Tools;
 using WallE.World.WorldObjects;
-using WallE.MATLAN;
+using WallE.InstrLan;
 
 namespace WallE.Routine
 {

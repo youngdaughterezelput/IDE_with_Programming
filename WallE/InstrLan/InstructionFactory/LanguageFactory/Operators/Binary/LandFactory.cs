@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WallE.MATLAN.Instructions;
+using WallE.InstrLan.Instructions;
 
-namespace WallE.MATLAN.InstructionFactory
+namespace WallE.InstrLan.InstructionFactory
 {
     public class LandFactory : InstructionsFactory
     {

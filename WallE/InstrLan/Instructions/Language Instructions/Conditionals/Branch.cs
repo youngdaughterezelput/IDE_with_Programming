@@ -3,7 +3,7 @@ using WallE.Routine;
 using WallE.Tools;
 using WallE.Errors;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public class Branch : Instruction, IControlFlux
     {

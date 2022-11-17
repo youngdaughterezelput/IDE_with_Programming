@@ -1,6 +1,6 @@
-﻿using WallE.MATLAN.Instructions;
+﻿using WallE.InstrLan.Instructions;
 
-namespace WallE.MATLAN.InstructionFactory
+namespace WallE.InstrLan.InstructionFactory
 {
     public class DropFactory : InstructionsFactory
     {

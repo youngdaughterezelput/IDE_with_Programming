@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using WallE.Routine;
 using WallE.Tools;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public sealed class GetA : Get
     {

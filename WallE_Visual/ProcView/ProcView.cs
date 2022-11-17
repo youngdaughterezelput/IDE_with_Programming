@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WallE_Visual.RutView;
 using System.Windows.Forms;
-using WallE.MATLAN;
+using WallE.InstrLan;
 using WallE.Routine;
 using WallE.Tools;
 

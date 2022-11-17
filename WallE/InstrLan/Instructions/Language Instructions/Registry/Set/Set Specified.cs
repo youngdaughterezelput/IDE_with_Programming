@@ -1,6 +1,6 @@
 ﻿using WallE.Routine;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public class SetA : Set
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WallE.Tools;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public class Kinect : Instruction,ISensor
     {

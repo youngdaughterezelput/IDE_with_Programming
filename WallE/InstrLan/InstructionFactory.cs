@@ -1,4 +1,4 @@
-﻿namespace WallE.MATLAN
+﻿namespace WallE.InstrLan
 {
     public abstract class InstructionsFactory
     {

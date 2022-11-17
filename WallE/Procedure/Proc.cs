@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using WallE.Tools;
-using WallE.MATLAN;
-using WallE.MATLAN.Instructions;
+using WallE.InstrLan;
+using WallE.InstrLan.Instructions;
 using WallE.World.WorldObjects;
 
 namespace WallE.Routine

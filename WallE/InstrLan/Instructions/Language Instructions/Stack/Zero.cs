@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using WallE.Errors;
 using WallE.Tools;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public class Zero : Instruction
     {

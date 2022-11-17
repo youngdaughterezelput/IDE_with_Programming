@@ -7,7 +7,7 @@ using WallE.Errors;
 using WallE.Tools;
 
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public abstract class BinaryOperator : Instruction, IOperator<int>
     {

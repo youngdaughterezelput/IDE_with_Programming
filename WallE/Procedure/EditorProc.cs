@@ -2,8 +2,8 @@
 using System.Linq;
 using System.IO;
 using WallE.Tools;
-using WallE.MATLAN;
-using WallE.MATLAN.Instructions;
+using WallE.InstrLan;
+using WallE.InstrLan.Instructions;
 
 namespace WallE.Routine
 {

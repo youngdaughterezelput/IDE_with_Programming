@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using WallE.Tools;
 using WallE.Errors;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public abstract class AtomicOperator : Instruction, IOperator<int>
     {

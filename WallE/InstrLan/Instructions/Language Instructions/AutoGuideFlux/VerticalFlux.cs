@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using WallE.Tools;
 using WallE.Routine;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public class VerticalFlux : Instruction, IControlFlux
     {

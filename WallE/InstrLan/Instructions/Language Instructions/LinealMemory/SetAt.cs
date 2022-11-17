@@ -2,7 +2,7 @@
 using WallE.Tools;
 using WallE.Errors;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
     public class SetAt : Instruction
     {

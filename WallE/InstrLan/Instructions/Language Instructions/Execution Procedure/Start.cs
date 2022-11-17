@@ -2,7 +2,7 @@
 using WallE.Routine;
 using System;
 
-namespace WallE.MATLAN.Instructions
+namespace WallE.InstrLan.Instructions
 {
 
     //старт

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using WallE.Tools;
-using WallE.MATLAN;
+using WallE.InstrLan;
 using System.Windows.Forms;
 
 namespace WallE_Visual.RutView
