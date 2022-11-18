@@ -81,6 +81,7 @@ namespace WallE_Visual.WorldViewer
         private void startDebug_Click(object sender, EventArgs e)
         {
             RefreshCombo();
+            new EditObject().Close();
             this.Close();
         }
         #endregion
