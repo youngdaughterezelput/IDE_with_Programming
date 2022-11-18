@@ -22,7 +22,7 @@ namespace WallE.InstrLan.Instructions
                 WallE.Simulator.WallE_Console.Print(robot,error.Message);
                 return;
             }
-            if ( robot.ListRoutine.Count - 1 < indexRoutine )
+            if ( robot.ListRout.Count - 1 < indexRoutine )
             {
                 Error error = new Error("Этот индекс недействителен в списке подпрограмм.");
                 if ( Simulator.Simulator.NoAllowErrors )
@@ -33,7 +33,7 @@ namespace WallE.InstrLan.Instructions
                 WallE.Simulator.WallE_Console.Print(robot,error.Message);
                 return;
             }
-            Proc routineCall = (Proc) robot.ListRoutine[indexRoutine].Clone( );
+            Proc routineCall = (Proc) robot.ListRout[indexRoutine].Clone( );
             routineCall.RobotRut = robot;
 
             try

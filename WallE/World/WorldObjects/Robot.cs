@@ -44,7 +44,7 @@ namespace WallE.World.WorldObjects
         /// <summary>
         /// Представляет список подпрограмм робота.
         /// </summary>
-        public ProcList ListRoutine { get; set; }
+        public ProcList ListRout { get; set; }
 
         /// <summary>
         /// Количество раундов моделирования роботов.
@@ -99,8 +99,8 @@ namespace WallE.World.WorldObjects
         /// <param name="direction">Адрес робота в мире.</param>
         public Robot(Position position,ref Map world,int direction = 1,int color = 1) : base(4,3,color,position,ref world)
         {
-            this.ListRoutine = new ProcList( );
-            this.ListRoutine.bot = this;
+            this.ListRout = new ProcList( );
+            this.ListRout.bot = this;
             this.Directions = direction;
             this.Memory = new LinealMemory( );
             this.Stack = new Stack<int>( );
@@ -110,8 +110,8 @@ namespace WallE.World.WorldObjects
 
         public Robot(int direction = 1,int color = 1) : base(4,3,color)
         {
-            this.ListRoutine = new ProcList( );
-            this.ListRoutine.bot = this;
+            this.ListRout = new ProcList( );
+            this.ListRout.bot = this;
             this.Directions = direction;
             this.Memory = new LinealMemory( );
             this.Stack = new Stack<int>( );
@@ -235,8 +235,8 @@ namespace WallE.World.WorldObjects
             if ( this.ObjectInside != null )
                 robotClone.ObjectInside = (WallEObjects) this.ObjectInside.Clone( );
             robotClone.Memory = (LinealMemory) this.Memory.Clone( );
-            robotClone.ListRoutine = (ProcList) this.ListRoutine.Clone( );
-            robotClone.ListRoutine.bot = robotClone;
+            robotClone.ListRout = (ProcList) this.ListRout.Clone( );
+            robotClone.ListRout.bot = robotClone;
 
             return robotClone;
         }

@@ -63,7 +63,7 @@ namespace WallE.Simulator
             foreach ( var item in this )
             {
                 item.Times++;
-                item.ListRoutine.Execute( );
+                item.ListRout.Execute( );
                 if(Simulator.CurrentError != null)
                     return;
             }
@@ -77,13 +77,13 @@ namespace WallE.Simulator
             IsExecutingByInstruction = true;
             bool isntLastProgrammable = true;
             if ( !lastExecutionInstruction )
-                lastExecutionInstruction = enumerator.Current.ListRoutine.ExecuteByInstruction( );
+                lastExecutionInstruction = enumerator.Current.ListRout.ExecuteByInstruction( );
             else
             {
                 enumerator.Current.Times++;
                 if ( isntLastProgrammable = enumerator.MoveNext( ) )
                 {
-                    lastExecutionInstruction = enumerator.Current.ListRoutine.ExecuteByInstruction( );
+                    lastExecutionInstruction = enumerator.Current.ListRout.ExecuteByInstruction( );
                     enumerator.Current.Times++;
                 }
             }
