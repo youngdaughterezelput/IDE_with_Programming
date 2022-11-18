@@ -1,0 +1,11 @@
+10
+0 2 start
+1 0 SE
+1 2 TN
+1 4 SW
+2 2 loaded
+3 0 NE
+3 1 drop
+3 2 branch
+3 3 left
+3 4 NW

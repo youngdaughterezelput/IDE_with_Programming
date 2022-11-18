@@ -1,0 +1,6 @@
+5
+0 2 backward
+1 1 start
+1 2 verticalFlux
+2 1 NE
+2 2 left

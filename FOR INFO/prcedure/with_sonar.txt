@@ -1,0 +1,11 @@
+10
+0 2 start
+1 0 SE
+1 2 TS
+1 4 SW
+2 2 distance
+3 0 NE
+3 1 forward
+3 2 branch
+3 3 right
+3 4 NW
