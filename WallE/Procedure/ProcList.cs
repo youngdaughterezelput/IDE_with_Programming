@@ -9,7 +9,7 @@ using WallE.Tools;
 using WallE.World.WorldObjects;
 using WallE.InstrLan;
 
-namespace WallE.Routine
+namespace WallE.Rout
 {
     /// <summary>
     /// Представляет список подпрограмм, который есть у робота.
@@ -46,7 +46,7 @@ namespace WallE.Routine
 
         #region Constructor
         /// <summary>
-        /// Создайте пустой список рутинных действий.
+        /// Создайте пустой список процедурных действий.
         /// </summary>
         public ProcList( )
         {
@@ -83,16 +83,16 @@ namespace WallE.Routine
         {
             for ( int i = 0; i < routine.Length; i++ )
             {
-                if ( routine[i].RobotRoutine == null )
+                if ( routine[i].RobotRut == null )
                 {
-                    routine[i].RobotRoutine = this.bot;
+                    routine[i].RobotRut = this.bot;
                     routine[i].Index = list.Count;
                     this.list.Add(routine[i]);
                 }
                 else
                 {
                     Proc routineCopy = (Proc) routine[i].Clone( );
-                    routineCopy.RobotRoutine = this.bot;
+                    routineCopy.RobotRut = this.bot;
                     routineCopy.Index = list.Count;
                     this.list.Add(routineCopy);
                 }
@@ -152,7 +152,7 @@ namespace WallE.Routine
             if ( this.bot.ExecutingStack.Count == 0 )
             {
                 var rut = (Proc) list[0].Clone( );
-                rut.RobotRoutine = bot;
+                rut.RobotRut = bot;
                 ( (Robot) bot ).ExecutingStack.Push(rut);
             }
             //Он помечен как работающий
@@ -185,7 +185,7 @@ namespace WallE.Routine
             if ( this.bot.ExecutingStack.Count == 0 )
             {
                 var rut = (Proc) list[0].Clone( );
-                rut.RobotRoutine = bot;
+                rut.RobotRut = bot;
                 ( (Robot) bot ).ExecutingStack.Push(rut);
             }
 

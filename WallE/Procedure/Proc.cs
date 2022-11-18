@@ -7,7 +7,7 @@ using WallE.InstrLan;
 using WallE.InstrLan.Instructions;
 using WallE.World.WorldObjects;
 
-namespace WallE.Routine
+namespace WallE.Rout
 {
     /// <summary>
     /// Процедура в ML
@@ -43,7 +43,7 @@ namespace WallE.Routine
         /// <summary>
         /// Робот, с которым связана эта процедура.
         /// </summary>
-        internal IProgrammable RobotRoutine { get; set; }
+        internal IProgrammable RobotRut { get; set; }
         /// <summary>
         /// Определяет, выполняется ли процедура в данный момент.
         /// </summary>
@@ -159,12 +159,12 @@ namespace WallE.Routine
                 return false;
 
             //В противном случае запустите его.
-            enumerator.Current.Execute(RobotRoutine);
+            enumerator.Current.Execute(RobotRut);
 
-            if ( !RobotRoutine.ExecutingStack.Peek( ).Equals(this) && RobotRoutine.ExecutingStack.Peek( ).Executing )
+            if ( !RobotRut.ExecutingStack.Peek( ).Equals(this) && RobotRut.ExecutingStack.Peek( ).Executing )
                 return true;
             //Если то, что находится наверху стека, не выполняется, и это именно эта подпрограмма, она завершается, возвращая false.
-            if ( !RobotRoutine.ExecutingStack.Peek( ).Executing && RobotRoutine.ExecutingStack.Peek( ).Equals(this) )
+            if ( !RobotRut.ExecutingStack.Peek( ).Executing && RobotRut.ExecutingStack.Peek( ).Equals(this) )
                 return false;
 
             //Если было выполнено действие, оно в конечном итоге возвращает значение true.

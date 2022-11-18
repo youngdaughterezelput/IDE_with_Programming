@@ -1,6 +1,6 @@
 ﻿using System;
 using WallE.Errors;
-using WallE.Routine;
+using WallE.Rout;
 using WallE.Tools;
 
 namespace WallE.InstrLan.Instructions
@@ -34,7 +34,7 @@ namespace WallE.InstrLan.Instructions
                 return;
             }
             Proc routineCall = (Proc) robot.ListRoutine[indexRoutine].Clone( );
-            routineCall.RobotRoutine = robot;
+            routineCall.RobotRut = robot;
 
             try
             {

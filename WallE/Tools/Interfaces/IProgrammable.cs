@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WallE.Routine;
+using WallE.Rout;
 using WallE.Simulator;
 
 namespace WallE.Tools
@@ -16,7 +16,7 @@ namespace WallE.Tools
         LinealMemory Memory { get; set; }
         Stack<int> Stack { get; set; }
         Stack<Proc> ExecutingStack { get; set; }
-        ProcList ListRoutine { get; set; }
+        ProcList ListRout { get; set; }
         int Times { get; set; }
         void Back( );
         void Advance( );

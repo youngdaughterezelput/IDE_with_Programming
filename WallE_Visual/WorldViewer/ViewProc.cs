@@ -9,7 +9,7 @@ using WallE.Errors;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WallE.Tools;
-using WallE.Routine;
+using WallE.Rout;
 
 namespace WallE_Visual.WorldViewer
 {
@@ -35,7 +35,7 @@ namespace WallE_Visual.WorldViewer
         public ViewProcForm(IProgrammable wObjects) : this( )
         {
             this.wallE = wObjects;
-            if ( wallE.ListRoutine.Count != 0 )
+            if ( wallE.ListRout.Count != 0 )
                 this.btnDelete.Enabled = true;
             else
                 this.btnDelete.Enabled = false;
@@ -118,12 +118,12 @@ namespace WallE_Visual.WorldViewer
                 return;
             }
 
-            foreach ( var item in wallE.ListRoutine )
+            foreach ( var item in wallE.ListRout)
             {
                 if ( item.Name == rutView.Routine.Name )
                     rutView.Routine.Name += " " + ++countRepetitions;
             }
-            this.wallE.ListRoutine.AddRoutine(this.rutView.Routine);
+            this.wallE.ListRout.AddRoutine(this.rutView.Routine);
             btnDelete.Enabled = true;
             btnAdd.Enabled = false;
             CreateNew = false;
@@ -134,10 +134,10 @@ namespace WallE_Visual.WorldViewer
         {
             string rutToDeleteByName = (string) this.cboxList.SelectedItem;
 
-            foreach ( var ruts in wallE.ListRoutine )
+            foreach ( var ruts in wallE.ListRout)
                 if ( ruts.Name == rutToDeleteByName )
                 {
-                    wallE.ListRoutine.RemoveRoutineAt(ruts.Index);
+                    wallE.ListRout.RemoveRoutineAt(ruts.Index);
                     break;
                 }
 
@@ -187,14 +187,14 @@ namespace WallE_Visual.WorldViewer
                     }
 
                     bool exist = false;
-                    foreach ( var item in wallE.ListRoutine )
+                    foreach ( var item in wallE.ListRout)
                         if ( item.Equals(rut) )
                         {
                             exist = true;
                             break;
                         }
                     if ( !exist )
-                        wallE.ListRoutine.AddRoutine(rut);
+                        wallE.ListRout.AddRoutine(rut);
                 }
             }
             this.btnDelete.Enabled = true;
@@ -204,7 +204,7 @@ namespace WallE_Visual.WorldViewer
         {
             this.cboxList.Items.Clear( );
 
-            var list = wallE.ListRoutine.Select(new Func<Proc,object>(c =>
+            var list = wallE.ListRout.Select(new Func<Proc,object>(c =>
           {
               if ( c.Name == null || c.Name == string.Empty )
                   return c.Index;
@@ -249,7 +249,7 @@ namespace WallE_Visual.WorldViewer
         }
         private void ShowSelectedProc( )
         {
-            Proc selectedRut = wallE.ListRoutine.Where(c => ( c.Name == (string) this.cboxList.SelectedItem )).Take(1).ToArray( )[0];
+            Proc selectedRut = wallE.ListRout.Where(c => ( c.Name == (string) this.cboxList.SelectedItem )).Take(1).ToArray( )[0];
 
             this.rutView.SetRut(selectedRut);
             this.pnlRutineView.Controls.Clear( );
