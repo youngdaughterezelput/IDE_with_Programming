@@ -51,7 +51,7 @@ namespace WallE_Visual.MainApp
         {
             if ( CurrentSimulator.IsDebugging )
             {
-                this.adjustWorldStandartToolStripMenuItem.Enabled = true;
+                this.settingWorldStandartToolStripMenuItem.Enabled = true;
                 this.rutView.SetRut((Proc) sender);
                 this.rutView.PaintIn(Proc.LastInstruction);
             }
@@ -77,7 +77,7 @@ namespace WallE_Visual.MainApp
             MessageBox.Show(Simulator.CurrentError.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //this.Close( );
         }
-        private void ajustarTamañoDelMundoToolStripMenuItem_Click(object sender,EventArgs e)
+        private void settingsWorldSizeToolStripMenuItem_Click(object sender,EventArgs e)
         {
             DoZoom( );
         }
@@ -101,7 +101,7 @@ namespace WallE_Visual.MainApp
         {
             CurrentSimulator.Pause( );
         }
-        private void ajustarTamañoDeLaRutinaToolStripMenuItem_Click(object sender,EventArgs e)
+        private void settingWorldStandartToolStripMenuItem_Click(object sender,EventArgs e)
         {
             DoRutZoom( );
         }
@@ -109,7 +109,7 @@ namespace WallE_Visual.MainApp
         {
             ValueChange( );
         }
-        private void volverToolStripMenuItem_Click(object sender,EventArgs e)
+        private void folderToolStripMenuItem_Click(object sender,EventArgs e)
         {
             timer.Stop( );
             this.CurrentSimulator.Stop( );
@@ -143,8 +143,8 @@ namespace WallE_Visual.MainApp
         private void ReloadMenu( )
         {
             if ( rutView.Routine == null )
-                this.adjustWorldStandartToolStripMenuItem.Enabled = false;
-            else this.adjustWorldStandartToolStripMenuItem.Enabled = true;
+                this.settingWorldStandartToolStripMenuItem.Enabled = false;
+            else this.settingWorldStandartToolStripMenuItem.Enabled = true;
         }
         private void DoZoom( )
         {

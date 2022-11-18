@@ -51,8 +51,8 @@
             this.mStripOptions = new System.Windows.Forms.MenuStrip();
             this.folderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adjustWorldSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adjustWorldStandartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsWorldSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingWorldStandartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolTipGuide = new System.Windows.Forms.ToolTip(this.components);
             this.wEConsole = new WallE_Visual.Wall_E_Console();
@@ -333,7 +333,7 @@
             this.mStripOptions.Location = new System.Drawing.Point(0, 0);
             this.mStripOptions.Name = "mStripOptions";
             this.mStripOptions.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.mStripOptions.Size = new System.Drawing.Size(1810, 28);
+            this.mStripOptions.Size = new System.Drawing.Size(1810, 32);
             this.mStripOptions.TabIndex = 4;
             this.mStripOptions.Text = "Volver";
             // 
@@ -341,37 +341,37 @@
             // 
             this.folderToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("folderToolStripMenuItem.Image")));
             this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
-            this.folderToolStripMenuItem.Size = new System.Drawing.Size(36, 24);
+            this.folderToolStripMenuItem.Size = new System.Drawing.Size(36, 28);
             this.folderToolStripMenuItem.ToolTipText = "Повторная настройка симуляции";
-            this.folderToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
+            this.folderToolStripMenuItem.Click += new System.EventHandler(this.folderToolStripMenuItem_Click);
             // 
             // optionToolStripMenuItem
             // 
             this.optionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adjustWorldSizeToolStripMenuItem,
-            this.adjustWorldStandartToolStripMenuItem});
+            this.settingsWorldSizeToolStripMenuItem,
+            this.settingWorldStandartToolStripMenuItem});
             this.optionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("optionToolStripMenuItem.Image")));
             this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
-            this.optionToolStripMenuItem.Size = new System.Drawing.Size(36, 24);
+            this.optionToolStripMenuItem.Size = new System.Drawing.Size(36, 28);
             this.optionToolStripMenuItem.ToolTipText = "Изменить размер.";
             // 
-            // adjustWorldSizeToolStripMenuItem
+            // settingsWorldSizeToolStripMenuItem
             // 
-            this.adjustWorldSizeToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.trackbar;
-            this.adjustWorldSizeToolStripMenuItem.Name = "adjustWorldSizeToolStripMenuItem";
-            this.adjustWorldSizeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
-            this.adjustWorldSizeToolStripMenuItem.Size = new System.Drawing.Size(431, 34);
-            this.adjustWorldSizeToolStripMenuItem.Text = "&Настроить размер мира";
-            this.adjustWorldSizeToolStripMenuItem.Click += new System.EventHandler(this.ajustarTamañoDelMundoToolStripMenuItem_Click);
+            this.settingsWorldSizeToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.trackbar;
+            this.settingsWorldSizeToolStripMenuItem.Name = "settingsWorldSizeToolStripMenuItem";
+            this.settingsWorldSizeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
+            this.settingsWorldSizeToolStripMenuItem.Size = new System.Drawing.Size(431, 34);
+            this.settingsWorldSizeToolStripMenuItem.Text = "&Настроить размер мира";
+            this.settingsWorldSizeToolStripMenuItem.Click += new System.EventHandler(this.settingsWorldSizeToolStripMenuItem_Click);
             // 
-            // adjustWorldStandartToolStripMenuItem
+            // settingWorldStandartToolStripMenuItem
             // 
-            this.adjustWorldStandartToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.trackbar;
-            this.adjustWorldStandartToolStripMenuItem.Name = "adjustWorldStandartToolStripMenuItem";
-            this.adjustWorldStandartToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.adjustWorldStandartToolStripMenuItem.Size = new System.Drawing.Size(431, 34);
-            this.adjustWorldStandartToolStripMenuItem.Text = "&Настроить стандартный размер";
-            this.adjustWorldStandartToolStripMenuItem.Click += new System.EventHandler(this.ajustarTamañoDeLaRutinaToolStripMenuItem_Click);
+            this.settingWorldStandartToolStripMenuItem.Image = global::WallE_Visual.Properties.Resources.trackbar;
+            this.settingWorldStandartToolStripMenuItem.Name = "settingWorldStandartToolStripMenuItem";
+            this.settingWorldStandartToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
+            this.settingWorldStandartToolStripMenuItem.Size = new System.Drawing.Size(431, 34);
+            this.settingWorldStandartToolStripMenuItem.Text = "&Настроить стандартный размер";
+            this.settingWorldStandartToolStripMenuItem.Click += new System.EventHandler(this.settingWorldStandartToolStripMenuItem_Click);
             // 
             // timer
             // 
@@ -445,8 +445,8 @@
         private System.Windows.Forms.MenuStrip mStripOptions;
         private System.Windows.Forms.ToolStripMenuItem folderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adjustWorldSizeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adjustWorldStandartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsWorldSizeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingWorldStandartToolStripMenuItem;
         private System.Windows.Forms.TextBox tboxNumberRound;
         private System.Windows.Forms.Label lblNumberRound;
         private System.Windows.Forms.NumericUpDown nUpDownTime;
