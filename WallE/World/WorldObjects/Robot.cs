@@ -67,7 +67,7 @@ namespace WallE.World.WorldObjects
         public int Directions { get; set; }
 
         /// <summary>
-        /// Представляет объект, который находится внутри робота.
+        /// Представляет объект, который находится у робота.
         /// </summary>
         public WallEObjects ObjectInside
         {

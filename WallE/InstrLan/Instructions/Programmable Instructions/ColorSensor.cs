@@ -7,7 +7,7 @@ using WallE.Tools;
 
 namespace WallE.InstrLan.Instructions
 {
-    public class Webcam : Instruction, ISensor
+    public class ColorSensor : Instruction, ISensor
     {
         public void Active(ISensitive robot)
         {
@@ -16,7 +16,7 @@ namespace WallE.InstrLan.Instructions
 
         public override object Clone( )
         {
-            return new Webcam( );
+            return new ColorSensor( );
         }
 
         public override void Execute(IProgrammable robot)
@@ -24,7 +24,7 @@ namespace WallE.InstrLan.Instructions
             if ( robot is ISensitive )
                 Active(robot as ISensitive);
             else
-                Simulator.Simulator.ReportError(robot,new Errors.Error("Este objeto programable no implementa este sensor."));
+                Simulator.Simulator.ReportError(robot,new Errors.Error("Этот программируемый объект не реализует данный датчик."));
         }
         public override string ToString( )
         {
@@ -32,7 +32,7 @@ namespace WallE.InstrLan.Instructions
         }
         public override bool Equals(object obj)
         {
-            return obj is Webcam;
+            return obj is ColorSensor;
         }
         public override int GetHashCode( )
         {

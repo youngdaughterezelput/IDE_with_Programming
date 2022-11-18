@@ -26,7 +26,7 @@ namespace WallE.Simulator
         /// </summary>
         private IEnumerator<Round> enumerator;
         /// <summary>
-        /// Tiempo entre rondas.
+        /// время между "раундами"
         /// </summary>
         double time;
         #endregion

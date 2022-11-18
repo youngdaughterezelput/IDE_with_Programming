@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WallE.Tools
 {
     /// <summary>
-    /// Bмитирует работу перечисления,  является расширяемым.
+    /// Имитирует работу перечисления,  является расширяемым.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public abstract class EnumBaseType<T> where T : EnumBaseType<T>

@@ -14,7 +14,7 @@ namespace WallE.InstrLan.Instructions
             if ( robot is ISensitive )
                 Active(robot as ISensitive);
             else
-                Simulator.Simulator.ReportError(robot,new Errors.Error("Este objeto programable no implementa este sensor."));
+                Simulator.Simulator.ReportError(robot,new Errors.Error("Этот программируемый объект не реализует данный датчик."));
         }
         public override object Clone( )
         {

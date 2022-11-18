@@ -20,7 +20,7 @@ namespace WallE.InstrLan.Instructions
             if ( robot is ILoader )
                 Proceed(robot);
             else
-                Simulator.Simulator.ReportError(robot, new Errors.Error("Este objeto programable no es capaz de tener ni soltar objetos."));
+                Simulator.Simulator.ReportError(robot, new Errors.Error("Это скриптовый объект, он не может взаимодействовать или удалять объекты."));
         }
 
         public void Proceed(IProgrammable robot)

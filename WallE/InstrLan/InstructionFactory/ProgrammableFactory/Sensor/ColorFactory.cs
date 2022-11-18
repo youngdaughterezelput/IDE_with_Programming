@@ -9,6 +9,6 @@ namespace WallE.InstrLan.InstructionFactory
 {
     public class ColorFactory : InstructionsFactory
     {
-        public override Instruction Create( ) => new Webcam( );
+        public override Instruction Create( ) => new ColorSensor( );
     }
 }
