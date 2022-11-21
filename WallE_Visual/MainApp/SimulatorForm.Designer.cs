@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SimulatorForm));
             this.pnlWorld = new System.Windows.Forms.Panel();
-            this.wView = new WallE_Visual.WorldViewer.WorldViewer();
             this.gbosControls = new System.Windows.Forms.GroupBox();
             this.lblSeconds = new System.Windows.Forms.Label();
             this.nUpDownTime = new System.Windows.Forms.NumericUpDown();
@@ -47,7 +46,6 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.pnlRut = new System.Windows.Forms.Panel();
-            this.rutView = new WallE_Visual.RutViews();
             this.mStripOptions = new System.Windows.Forms.MenuStrip();
             this.folderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +54,8 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolTipGuide = new System.Windows.Forms.ToolTip(this.components);
             this.wEConsole = new WallE_Visual.Wall_E_Console();
+            this.rutView = new WallE_Visual.RutViews();
+            this.wView = new WallE_Visual.WorldViewer.WorldViewer();
             this.pnlWorld.SuspendLayout();
             this.gbosControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUpDownTime)).BeginInit();
@@ -72,18 +72,6 @@
             this.pnlWorld.Name = "pnlWorld";
             this.pnlWorld.Size = new System.Drawing.Size(1012, 838);
             this.pnlWorld.TabIndex = 0;
-            // 
-            // wView
-            // 
-            this.wView.AutoSize = true;
-            this.wView.BackColor = System.Drawing.Color.Transparent;
-            this.wView.IsReadOnly = false;
-            this.wView.Location = new System.Drawing.Point(0, 0);
-            this.wView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.wView.Name = "wView";
-            this.wView.Size = new System.Drawing.Size(1135, 1039);
-            this.wView.SizePiece = 64F;
-            this.wView.TabIndex = 0;
             // 
             // gbosControls
             // 
@@ -145,7 +133,7 @@
             this.nUpDownTime.Size = new System.Drawing.Size(62, 26);
             this.nUpDownTime.TabIndex = 11;
             this.nUpDownTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTipGuide.SetToolTip(this.nUpDownTime, "Tiempo entre ronda y ronda");
+            this.toolTipGuide.SetToolTip(this.nUpDownTime, "Время между выполненными шагами");
             this.nUpDownTime.Value = new decimal(new int[] {
             2,
             0,
@@ -179,9 +167,9 @@
             this.lblNumberRound.AutoSize = true;
             this.lblNumberRound.Location = new System.Drawing.Point(885, 19);
             this.lblNumberRound.Name = "lblNumberRound";
-            this.lblNumberRound.Size = new System.Drawing.Size(61, 20);
+            this.lblNumberRound.Size = new System.Drawing.Size(42, 20);
             this.lblNumberRound.TabIndex = 8;
-            this.lblNumberRound.Text = "Обход:";
+            this.lblNumberRound.Text = "Шаг:";
             this.toolTipGuide.SetToolTip(this.lblNumberRound, "Ronda actual");
             // 
             // rbtnNo
@@ -195,7 +183,7 @@
             this.rbtnNo.TabIndex = 7;
             this.rbtnNo.TabStop = true;
             this.rbtnNo.Text = "Нет";
-            this.toolTipGuide.SetToolTip(this.rbtnNo, "Se cerrará la simulación si tiene errores.");
+            this.toolTipGuide.SetToolTip(this.rbtnNo, "Симулятор закроется, если есть ошибки");
             this.rbtnNo.UseVisualStyleBackColor = true;
             this.rbtnNo.CheckedChanged += new System.EventHandler(this.rbtnNo_CheckedChanged);
             // 
@@ -208,7 +196,7 @@
             this.rbtnYes.Size = new System.Drawing.Size(55, 24);
             this.rbtnYes.TabIndex = 6;
             this.rbtnYes.Text = "Да";
-            this.toolTipGuide.SetToolTip(this.rbtnYes, "No se cerrará la simulación si tiene errores");
+            this.toolTipGuide.SetToolTip(this.rbtnYes, "Симулятор не закроется, даже если есть ошибки");
             this.rbtnYes.UseVisualStyleBackColor = true;
             this.rbtnYes.CheckedChanged += new System.EventHandler(this.rbtnYes_CheckedChanged);
             // 
@@ -233,7 +221,7 @@
             this.btnDebug.Name = "btnDebug";
             this.btnDebug.Size = new System.Drawing.Size(66, 66);
             this.btnDebug.TabIndex = 4;
-            this.toolTipGuide.SetToolTip(this.btnDebug, "Instrucción por instrucción");
+            this.toolTipGuide.SetToolTip(this.btnDebug, "Дебаг");
             this.btnDebug.UseVisualStyleBackColor = false;
             this.btnDebug.Click += new System.EventHandler(this.btnDebug_Click);
             // 
@@ -249,7 +237,7 @@
             this.btnAdvance.Name = "btnAdvance";
             this.btnAdvance.Size = new System.Drawing.Size(66, 66);
             this.btnAdvance.TabIndex = 3;
-            this.toolTipGuide.SetToolTip(this.btnAdvance, "Avanzar hacia la próxima ronda.");
+            this.toolTipGuide.SetToolTip(this.btnAdvance, "Перейти к следующему шагу");
             this.btnAdvance.UseVisualStyleBackColor = false;
             this.btnAdvance.Click += new System.EventHandler(this.btnAdvance_Click);
             // 
@@ -265,7 +253,7 @@
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(66, 66);
             this.btnPause.TabIndex = 2;
-            this.toolTipGuide.SetToolTip(this.btnPause, "Pausar la simulación en la próxima ronda.");
+            this.toolTipGuide.SetToolTip(this.btnPause, "Пауза");
             this.btnPause.UseVisualStyleBackColor = false;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
@@ -281,7 +269,7 @@
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(66, 66);
             this.btnPlay.TabIndex = 1;
-            this.toolTipGuide.SetToolTip(this.btnPlay, "Play a la simulación");
+            this.toolTipGuide.SetToolTip(this.btnPlay, "Старт");
             this.btnPlay.UseVisualStyleBackColor = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
@@ -297,7 +285,7 @@
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(66, 66);
             this.btnStop.TabIndex = 0;
-            this.toolTipGuide.SetToolTip(this.btnStop, "Volver la simulación al estado inicial.");
+            this.toolTipGuide.SetToolTip(this.btnStop, "Вернуть мир в изначальное состояние");
             this.btnStop.UseVisualStyleBackColor = false;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
@@ -311,18 +299,6 @@
             this.pnlRut.Size = new System.Drawing.Size(768, 612);
             this.pnlRut.TabIndex = 2;
             // 
-            // rutView
-            // 
-            this.rutView.AutoSize = true;
-            this.rutView.BackColor = System.Drawing.Color.Transparent;
-            this.rutView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rutView.IsReadOnly = true;
-            this.rutView.Location = new System.Drawing.Point(0, -4);
-            this.rutView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.rutView.Name = "rutView";
-            this.rutView.Size = new System.Drawing.Size(860, 764);
-            this.rutView.TabIndex = 0;
-            // 
             // mStripOptions
             // 
             this.mStripOptions.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
@@ -333,15 +309,15 @@
             this.mStripOptions.Location = new System.Drawing.Point(0, 0);
             this.mStripOptions.Name = "mStripOptions";
             this.mStripOptions.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.mStripOptions.Size = new System.Drawing.Size(1810, 32);
+            this.mStripOptions.Size = new System.Drawing.Size(1810, 36);
             this.mStripOptions.TabIndex = 4;
-            this.mStripOptions.Text = "Volver";
+            this.mStripOptions.Text = "Папки";
             // 
             // folderToolStripMenuItem
             // 
             this.folderToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("folderToolStripMenuItem.Image")));
             this.folderToolStripMenuItem.Name = "folderToolStripMenuItem";
-            this.folderToolStripMenuItem.Size = new System.Drawing.Size(36, 28);
+            this.folderToolStripMenuItem.Size = new System.Drawing.Size(36, 32);
             this.folderToolStripMenuItem.ToolTipText = "Повторная настройка симуляции";
             this.folderToolStripMenuItem.Click += new System.EventHandler(this.folderToolStripMenuItem_Click);
             // 
@@ -352,7 +328,7 @@
             this.settingWorldStandartToolStripMenuItem});
             this.optionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("optionToolStripMenuItem.Image")));
             this.optionToolStripMenuItem.Name = "optionToolStripMenuItem";
-            this.optionToolStripMenuItem.Size = new System.Drawing.Size(36, 28);
+            this.optionToolStripMenuItem.Size = new System.Drawing.Size(36, 32);
             this.optionToolStripMenuItem.ToolTipText = "Изменить размер.";
             // 
             // settingsWorldSizeToolStripMenuItem
@@ -380,7 +356,7 @@
             // toolTipGuide
             // 
             this.toolTipGuide.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTipGuide.ToolTipTitle = "Guía de uso";
+            this.toolTipGuide.ToolTipTitle = "Посказка:";
             // 
             // wEConsole
             // 
@@ -391,6 +367,30 @@
             this.wEConsole.Name = "wEConsole";
             this.wEConsole.Size = new System.Drawing.Size(767, 316);
             this.wEConsole.TabIndex = 5;
+            // 
+            // rutView
+            // 
+            this.rutView.AutoSize = true;
+            this.rutView.BackColor = System.Drawing.Color.Transparent;
+            this.rutView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rutView.IsReadOnly = true;
+            this.rutView.Location = new System.Drawing.Point(0, -4);
+            this.rutView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.rutView.Name = "rutView";
+            this.rutView.Size = new System.Drawing.Size(860, 764);
+            this.rutView.TabIndex = 0;
+            // 
+            // wView
+            // 
+            this.wView.AutoSize = true;
+            this.wView.BackColor = System.Drawing.Color.Transparent;
+            this.wView.IsReadOnly = false;
+            this.wView.Location = new System.Drawing.Point(0, 0);
+            this.wView.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.wView.Name = "wView";
+            this.wView.Size = new System.Drawing.Size(1135, 1039);
+            this.wView.SizePiece = 64F;
+            this.wView.TabIndex = 0;
             // 
             // SimulatorForm
             // 

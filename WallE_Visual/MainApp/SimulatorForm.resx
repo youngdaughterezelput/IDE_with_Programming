@@ -146,7 +146,7 @@
   <data name="optionToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC0pSURBVHhe7d17
+        DAAACwwBP0AiyAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC0pSURBVHhe7d17
         rGVlecfxmWEYnAIyycwQwEQG5A+1EEjbkE5A2jgGWiYE/7CBAGKbCDFcJPNHSWMiFEi0YEULBG0UiQm3
         SRMjGgk0jWkUityCjRQQigEJVS6JpYDcsb8H3pF3Fr/Due2913v5PsknwefM7LP3+/7OepZz9l5rxe9+
         9zsAS6BaLx+TbfItuUt+K/FFTF6sbaxxrHWseaz9erc3AOZnmwDmptpLLpaXJB9QmL3Yg9iLvdxeAZib
@@ -344,9 +344,6 @@
   </data>
   <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>173, 17</value>
-  </metadata>
-  <metadata name="toolTipGuide.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>265, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>81</value>
