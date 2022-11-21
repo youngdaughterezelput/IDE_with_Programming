@@ -1,0 +1,15 @@
+14
+0 0 start
+0 1 SE
+0 2 forward
+0 4 SW
+1 0 NE
+1 1 forward
+1 4 distance
+2 2 SE
+2 3 left
+2 4 NW
+3 0 SE
+3 2 drop
+4 0 backward
+4 2 NW

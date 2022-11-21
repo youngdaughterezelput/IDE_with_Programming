@@ -1,0 +1,14 @@
+13
+0 0 start
+1 0 NE
+1 1 forward
+1 2 SW
+2 0 SE
+2 2 distance
+2 4 SW
+3 0 drop
+3 2 TS
+3 4 right
+4 0 NE
+4 2 forward
+4 4 NW
